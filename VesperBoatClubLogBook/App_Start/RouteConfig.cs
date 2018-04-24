@@ -13,10 +13,11 @@ namespace VesperBoatClubLogBook
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // serves plane html
             routes.MapRoute(
-                name: "Default",
+                name: "DefaultViews",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { id = UrlParameter.Optional }
             );
         }
     }

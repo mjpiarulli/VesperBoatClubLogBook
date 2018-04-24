@@ -1,0 +1,6 @@
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\bin\Debug\Vesper.LogBook.Common.dll
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\bin\Debug\Vesper.LogBook.Common.pdb
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\obj\Debug\Vesper.LogBook.Common.csprojResolveAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\obj\Debug\Vesper.LogBook.Common.csproj.CoreCompileInputs.cache
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\obj\Debug\Vesper.LogBook.Common.dll
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.Common\obj\Debug\Vesper.LogBook.Common.pdb

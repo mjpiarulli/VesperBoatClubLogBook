@@ -51,6 +51,12 @@
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
     </Reference>
@@ -182,6 +188,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebApiControllers\MemberWebApiController.cs" />
+    <Compile Include="WebApiControllers\WebApiBaseController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin-lte\css\AdminLTE.css" />
@@ -218,19 +226,19 @@
     <Content Include="app\controllers\homeCtrl.js" />
     <Content Include="app\controllers\layoutCtrl.js" />
     <Content Include="app\controllers\logBookCtrl.js" />
+    <Content Include="app\controllers\memberListCtrl.js" />
+    <Content Include="app\services\memberService.js" />
     <Content Include="app\views\home\home.html" />
     <Content Include="app\views\logBook\logBook.html" />
+    <Content Include="app\views\memberList\memberList.html" />
     <Content Include="app\views\_layout\navBar.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\css\font-awesome.css" />
-    <Content Include="Content\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\tether\tether-theme-arrows-dark.css" />
     <Content Include="Content\tether\tether-theme-arrows-dark.min.css" />
     <Content Include="Content\tether\tether-theme-arrows.css" />
@@ -241,6 +249,8 @@
     <Content Include="Content\tether\tether.min.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -349,11 +359,6 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\fonts\FontAwesome.otf" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\fonts\fontawesome-webfont.eot" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-2.2.4.min.map" />
   </ItemGroup>
@@ -362,6 +367,20 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vesper.LogBook.Common\Vesper.LogBook.Common.csproj">
+      <Project>{9BA36EA4-DDCD-4833-B3FF-4FC60490F675}</Project>
+      <Name>Vesper.LogBook.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vesper.Logbook.LogBookServiceContract\Vesper.Logbook.LogBookServiceContract.csproj">
+      <Project>{3FF37C75-5715-454A-907D-C41439D9D133}</Project>
+      <Name>Vesper.Logbook.LogBookServiceContract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vesper.LogBook.LogBookService\Vesper.LogBook.LogBookService.csproj">
+      <Project>{AC7AA7EC-C092-45B4-945D-CA1070B34812}</Project>
+      <Name>Vesper.LogBook.LogBookService</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
