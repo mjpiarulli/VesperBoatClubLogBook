@@ -1,16 +1,18 @@
-﻿<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>First Name</th>
-        <th>Middle Initial</th>
-        <th>Last Name</th>
-    </tr>
-    </thead>
-    <tbody>
+﻿<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Middle Initial</th>
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
         <tr ng-repeat="member in vm.members track by $index">
             <td>{{member.FirstName}}</td>
             <td>{{member.MiddleInitial}}</td>
             <td>{{member.LastName}}</td>
         </tr>
-    </tbody>
-</table>
+        </tbody>
+    </table>    
+</div>

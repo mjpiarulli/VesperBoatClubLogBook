@@ -1,24 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace VesperBoatClubLogBook
 {
-    public class RouteConfig
+    public static class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             // serves plane html
-            routes.MapRoute(
-                name: "DefaultViews",
-                url: "{controller}/{action}/{id}",
-                defaults: new { id = UrlParameter.Optional }
-            );
+            routes.MapRoute("DefaultViews","{controller}/{action}/{id}",new { id = UrlParameter.Optional });
         }
     }
 }

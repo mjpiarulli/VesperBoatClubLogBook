@@ -26,6 +26,8 @@ namespace DataAccess
                     {
                         var instance = field.GetValue(this);
                         var dispose = instance.GetType().GetMethod("Dispose");
+                        if (dispose == null)
+                            break;
                         dispose.Invoke(instance, new object[] { });
                     }
                 }

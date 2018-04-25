@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Heffler.DataAccess;
+using DataAccess;
 using Vesper.Logbook.LogBookServiceContract;
 
 namespace Vesper.LogBook.LogBookService

@@ -1,7 +1,6 @@
 ﻿using System;
-using DataAccess;
 
-namespace Heffler.DataAccess
+namespace DataAccess
 {
     public class UowHelper<TUow> where TUow : UnitOfWorkBase
     {
