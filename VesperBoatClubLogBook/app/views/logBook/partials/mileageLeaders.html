@@ -1,0 +1,21 @@
+﻿<div class="box box-info">
+    <div class="box-header">
+        <h3>Mileage Leaders</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-sm">
+            <thead>
+            <tr>
+                <th>Member</th>
+                <th>Miles</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="leader in vm.mileageLeaders track by $index">
+                <td>{{leader.FirstName}} {{leader.LastName}}</td>
+                <td>{{leader.Mileage}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

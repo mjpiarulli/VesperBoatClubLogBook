@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoatDto.cs" />
     <Compile Include="MemberDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

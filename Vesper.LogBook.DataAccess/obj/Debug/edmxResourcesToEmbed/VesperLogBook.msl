@@ -11,5 +11,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Boats">
+      <EntityTypeMapping TypeName="VesperLogBookModel.Boat">
+        <MappingFragment StoreEntitySet="Boat">
+          <ScalarProperty Name="OwnedBy" ColumnName="OwnedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UseRestrictions" ColumnName="UseRestrictions" />
+          <ScalarProperty Name="RiggingAvailable" ColumnName="RiggingAvailable" />
+          <ScalarProperty Name="CurrentRigging" ColumnName="CurrentRigging" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Make" ColumnName="Make" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="BoatId" ColumnName="BoatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

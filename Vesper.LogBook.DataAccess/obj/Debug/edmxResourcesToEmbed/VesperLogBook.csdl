@@ -2,6 +2,7 @@
 <Schema Namespace="VesperLogBookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="VesperLogBookEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
+    <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
   </EntityContainer>
   <EntityType Name="Member">
     <Key>
@@ -11,5 +12,20 @@
     <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="MiddleInitial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Boat">
+    <Key>
+      <PropertyRef Name="BoatId" />
+    </Key>
+    <Property Name="BoatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentRigging" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RiggingAvailable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UseRestrictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OwnedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

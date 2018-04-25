@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="VesperLogBookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Boat">
+    <Key>
+      <PropertyRef Name="BoatId" />
+    </Key>
+    <Property Name="BoatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Make" Type="varchar" MaxLength="50" />
+    <Property Name="Size" Type="int" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CurrentRigging" Type="varchar" MaxLength="50" />
+    <Property Name="RiggingAvailable" Type="varchar" MaxLength="50" />
+    <Property Name="UseRestrictions" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Member">
     <Key>
       <PropertyRef Name="MemberId" />
@@ -10,6 +25,7 @@
     <Property Name="LastName" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="VesperLogBookModelStoreContainer">
+    <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -5,18 +5,19 @@
 
     app.config(['$routeProvider', function ($routeProvider) {
         var templateUrlBase = "app/views/";
-        var homeTemplateUrlBase = templateUrlBase + "home/";
+        var logBookTemplateUrlBase = templateUrlBase + "logBook/";
         var memberListTemplateUrlBase = templateUrlBase + "memberList/"
+        var fleetListTemplateUrlBase = templateUrlBase + "fleetList/"
 
         $routeProvider
             .when("/",
             {
-                templateUrl: homeTemplateUrlBase + "home.html",
-                controller: "homeCtrl as vm"
+                templateUrl: logBookTemplateUrlBase + "logBook.html",
+                controller: "logBookCtrl as vm"
             })
-            .when("/home",
+            .when("/logbook",
             {
-                templateUrl: homeTemplateUrlBase + "home.html",
+                templateUrl: logBookTemplateUrlBase + "home.html",
                 controller: "homeCtrl as vm"
             })
             .when("/memberlist",
@@ -24,10 +25,11 @@
                 templateUrl: memberListTemplateUrlBase + "memberList.html",
                 controller: "memberListCtrl as vm"
             })
-            //.when("/api/memberwebapi/getmemberlist",
-            //{
-                        
-            //    })
+            .when("/fleetlist",
+            {
+                templateUrl: fleetListTemplateUrlBase + "fleetList.html",
+                controller: "fleetListCtrl as vm"
+            })
 
             ;
     }]);

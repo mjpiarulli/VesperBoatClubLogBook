@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="3fd6e057469c4ab894558090409937fe" Name="Diagram1">
         <EntityTypeShape EntityType="VesperLogBookModel.Member" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="VesperLogBookModel.Boat" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

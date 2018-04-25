@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutomapperBootstrapper.cs" />
+    <Compile Include="LogBookService.Boat.cs" />
     <Compile Include="LogBookService.cs" />
     <Compile Include="LogBookService.Member.cs" />
     <Compile Include="LogBookUnitOfWork.cs" />

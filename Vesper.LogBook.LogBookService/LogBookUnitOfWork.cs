@@ -8,7 +8,8 @@ namespace Vesper.LogBook.LogBookService
 {
     public class LogBookUnitOfWork : UnitOfWorkBase
     {
-        public IMemberRepository MemberRepository;
+        public readonly IMemberRepository MemberRepository;
+        public readonly IBoatRepository BoatRepository;
 
         private readonly DbContext _context;
 
@@ -17,6 +18,7 @@ namespace Vesper.LogBook.LogBookService
             _context = new VesperLogBookEntities(entityConnectionString);
 
             MemberRepository = new MemberRepository(_context);
+            BoatRepository = new BoatRepository(_context);
         }
 
         public override bool Save()

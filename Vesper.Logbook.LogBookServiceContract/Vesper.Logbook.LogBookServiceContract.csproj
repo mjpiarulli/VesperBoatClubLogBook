@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBoatService.cs" />
     <Compile Include="ILogBookService.cs" />
     <Compile Include="IMemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

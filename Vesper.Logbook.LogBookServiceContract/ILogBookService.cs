@@ -1,6 +1,7 @@
 ﻿namespace Vesper.Logbook.LogBookServiceContract
 {
-    public interface ILogBookService : IMemberService
+    public interface ILogBookService : IMemberService,
+        IBoatService
     {
     }
 }

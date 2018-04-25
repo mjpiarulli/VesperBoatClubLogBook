@@ -32,5 +32,6 @@ namespace Vesper.LogBook.DataAccess
         }
     
         public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<Boat> Boats { get; set; }
     }
 }

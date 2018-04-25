@@ -1,0 +1,9 @@
+﻿.row-eq-height {
+    display: flex;
+    width: 100%;
+}
+
+.row-eq-height > div {
+    flex: 1;
+    padding: 16px;
+}

@@ -1,0 +1,30 @@
+﻿<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Boat Name</th>
+                <th>Make</th>
+                <th>Size</th>
+                <th>Rig Avail</th>
+                <th>Rigging</th>
+                <th>Use Restrictions</th>
+                <th>Status</th>
+                <th>Owned By</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="boat in vm.fleet track by $index">
+                <td>{{boat.Type}}</td>
+                <td>{{boat.Name}}</td>
+                <td>{{boat.Make}}</td>
+                <td>{{boat.Size}}</td>
+                <td>{{boat.RiggingAvailable}}</td>
+                <td>{{boat.CurrentRigging}}</td>
+                <td>{{boat.UseRestrictions}}</td>
+                <td>{{boat.Status}}</td>
+                <td>{{boat.OwnedBy}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

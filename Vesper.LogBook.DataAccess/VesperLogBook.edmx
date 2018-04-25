@@ -5,6 +5,21 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="VesperLogBookModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Boat">
+          <Key>
+            <PropertyRef Name="BoatId" />
+          </Key>
+          <Property Name="BoatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Make" Type="varchar" MaxLength="50" />
+          <Property Name="Size" Type="int" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CurrentRigging" Type="varchar" MaxLength="50" />
+          <Property Name="RiggingAvailable" Type="varchar" MaxLength="50" />
+          <Property Name="UseRestrictions" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Member">
           <Key>
             <PropertyRef Name="MemberId" />
@@ -15,6 +30,7 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="VesperLogBookModelStoreContainer">
+          <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -23,6 +39,7 @@
       <Schema Namespace="VesperLogBookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="VesperLogBookEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
+          <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
         </EntityContainer>
         <EntityType Name="Member">
           <Key>
@@ -32,6 +49,21 @@
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="MiddleInitial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Boat">
+          <Key>
+            <PropertyRef Name="BoatId" />
+          </Key>
+          <Property Name="BoatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Make" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Size" Type="Int32" Nullable="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CurrentRigging" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RiggingAvailable" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UseRestrictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OwnedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -46,6 +78,22 @@
                 <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Boats">
+            <EntityTypeMapping TypeName="VesperLogBookModel.Boat">
+              <MappingFragment StoreEntitySet="Boat">
+                <ScalarProperty Name="OwnedBy" ColumnName="OwnedBy" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UseRestrictions" ColumnName="UseRestrictions" />
+                <ScalarProperty Name="RiggingAvailable" ColumnName="RiggingAvailable" />
+                <ScalarProperty Name="CurrentRigging" ColumnName="CurrentRigging" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Size" ColumnName="Size" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BoatId" ColumnName="BoatId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

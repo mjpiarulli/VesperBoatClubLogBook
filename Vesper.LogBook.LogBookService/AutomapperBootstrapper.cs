@@ -10,6 +10,8 @@ namespace Vesper.LogBook.LogBookService
         {
             return new MapperConfiguration(cfg =>
             {
+                cfg.CreateMap<BoatDto, Boat>();
+                cfg.CreateMap<Boat, BoatDto>();
                 cfg.CreateMap<MemberDto, Member>();
                 cfg.CreateMap<Member, MemberDto>();
             }).CreateMapper();
