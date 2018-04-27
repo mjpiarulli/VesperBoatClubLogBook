@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IBoatService.cs" />
     <Compile Include="ILogBookService.cs" />
+    <Compile Include="IVesperLogBookService.cs" />
     <Compile Include="IMemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

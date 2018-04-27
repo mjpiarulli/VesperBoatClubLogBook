@@ -8,6 +8,7 @@
         var logBookTemplateUrlBase = templateUrlBase + "logBook/";
         var memberListTemplateUrlBase = templateUrlBase + "memberList/"
         var fleetListTemplateUrlBase = templateUrlBase + "fleetList/"
+        var reportsTemplateUrlBase = templateUrlBase + "reports/"
 
         $routeProvider
             .when("/",
@@ -30,7 +31,11 @@
                 templateUrl: fleetListTemplateUrlBase + "fleetList.html",
                 controller: "fleetListCtrl as vm"
             })
-
+            .when("/reports/equipmentusage",
+            {
+                templateUrl: reportsTemplateUrlBase + "equipmentUsage.html",
+                controller: "reportsCtrl as vm"
+            })
             ;
     }]);
 })();

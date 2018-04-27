@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoatDto.cs" />
+    <Compile Include="LogBookDto.cs" />
     <Compile Include="MemberDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

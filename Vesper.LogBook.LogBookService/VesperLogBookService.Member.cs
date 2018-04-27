@@ -5,7 +5,7 @@ using Vesper.LogBook.DataAccess;
 
 namespace Vesper.LogBook.LogBookService
 {
-    public partial class LogBookService
+    public partial class VesperLogBookService
     {
         public List<MemberDto> GetMembersAlphabeticalByLastName() => _uow.Uow(uow =>
         {

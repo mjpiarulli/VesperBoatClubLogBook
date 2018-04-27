@@ -11,7 +11,7 @@ namespace VesperBoatClubLogBook.WebApiControllers
         [HttpGet]
         public List<MemberDto> LoadMemberList()
         {
-            var memberList = LogBookService.GetMembersAlphabeticalByLastName();
+            var memberList = VesperLogBookService.GetMembersAlphabeticalByLastName();
 
             return memberList;
         }

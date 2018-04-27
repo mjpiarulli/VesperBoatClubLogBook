@@ -4,5 +4,17 @@
     "inputFiles": [
       "Content/bootstrap-eq-height.css"
     ]
+  },
+  {
+    "outputFileName": "admin-lte/css/skins/skin-vesper.min.css",
+    "inputFiles": [
+      "admin-lte/css/skins/skin-vesper.css"
+    ]
+  },
+  {
+    "outputFileName": "Content/bootstrap.min.css",
+    "inputFiles": [
+      "Content/bootstrap.css"
+    ]
   }
 ]

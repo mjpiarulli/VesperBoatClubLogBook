@@ -4,7 +4,7 @@ using Vesper.LogBook.DataAccess;
 
 namespace Vesper.LogBook.LogBookService
 {
-    public partial class LogBookService
+    public partial class VesperLogBookService
     {
         public List<BoatDto> GetAllBoats() => _uow.Uow(uow =>
         {

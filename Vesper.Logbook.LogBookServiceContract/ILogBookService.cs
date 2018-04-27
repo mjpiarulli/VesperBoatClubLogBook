@@ -1,7 +1,10 @@
-﻿namespace Vesper.Logbook.LogBookServiceContract
+﻿using System;
+
+namespace Vesper.Logbook.LogBookServiceContract
 {
-    public interface ILogBookService : IMemberService,
-        IBoatService
+    public interface ILogBookService
     {
+        int GetClubMileageYearToDate(DateTime date);
+
     }
 }

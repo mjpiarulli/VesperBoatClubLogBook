@@ -1,0 +1,74 @@
+﻿<div class="box box-info">
+    <div class="box-header">
+        <h3>Mileage and Usage by Boat</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Boat Type</th>
+                    <th>Boat Name</th>
+                    <th>Miles Rowed</th>
+                    <th>Outings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entry in vm.equipmentReport.entries">
+                    <td>{{entry.BoatType}}</td>
+                    <td>{{entry.BoatName}}</td>
+                    <td>{{entry.MilesRowed}}</td>
+                    <td>{{entry.Outings}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr />
+<div class="box box-info">
+    <div class="box-header">
+        <h3>Mileage Totals by Boat Type</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Boat Type</th>
+                    <th>Miles Rowed</th>
+                    <th>Outings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entry in vm.equipmentReport.boatTypeTotals">
+                    <td>{{entry.BoatType}}</td>
+                    <td>{{entry.MilesRowed}}</td>
+                    <td>{{entry.Outings}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<hr />
+<div class="box box-info">
+    <div class="box-header">
+        <h3>Grand Total</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>Miles Rowed</th>
+                    <th>Outings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="entry in vm.equipmentReport.grandTotals">
+                    <td>{{entry.MilesRowed}}</td>
+                    <td>{{entry.Outings}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

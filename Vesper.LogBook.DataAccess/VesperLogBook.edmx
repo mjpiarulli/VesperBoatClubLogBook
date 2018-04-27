@@ -20,6 +20,19 @@
           <Property Name="Status" Type="varchar" MaxLength="50" />
           <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="LogBook">
+          <Key>
+            <PropertyRef Name="LogBookId" />
+          </Key>
+          <Property Name="LogBookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime2" Precision="7" />
+          <Property Name="TimeOut" Type="datetime2" Precision="7" />
+          <Property Name="TimeIn" Type="datetime2" Precision="7" />
+          <Property Name="MilesRowed" Type="int" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="BoatName" Type="varchar" MaxLength="200" />
+          <Property Name="BoatType" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Member">
           <Key>
             <PropertyRef Name="MemberId" />
@@ -31,6 +44,7 @@
         </EntityType>
         <EntityContainer Name="VesperLogBookModelStoreContainer">
           <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -40,6 +54,7 @@
         <EntityContainer Name="VesperLogBookEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
           <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
+          <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
         </EntityContainer>
         <EntityType Name="Member">
           <Key>
@@ -64,6 +79,19 @@
           <Property Name="UseRestrictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="OwnedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LogBook">
+          <Key>
+            <PropertyRef Name="LogBookId" />
+          </Key>
+          <Property Name="LogBookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="7" />
+          <Property Name="TimeOut" Type="DateTime" Precision="7" />
+          <Property Name="TimeIn" Type="DateTime" Precision="7" />
+          <Property Name="MilesRowed" Type="Int32" />
+          <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -94,6 +122,20 @@
                 <ScalarProperty Name="Make" ColumnName="Make" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="BoatId" ColumnName="BoatId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogBooks">
+            <EntityTypeMapping TypeName="VesperLogBookModel.LogBook">
+              <MappingFragment StoreEntitySet="LogBook">
+                <ScalarProperty Name="BoatType" ColumnName="BoatType" />
+                <ScalarProperty Name="BoatName" ColumnName="BoatName" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="MilesRowed" ColumnName="MilesRowed" />
+                <ScalarProperty Name="TimeIn" ColumnName="TimeIn" />
+                <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="LogBookId" ColumnName="LogBookId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

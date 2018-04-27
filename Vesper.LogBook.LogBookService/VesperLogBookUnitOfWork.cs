@@ -6,19 +6,21 @@ using Vesper.LogBook.DataAccess.Repository;
 
 namespace Vesper.LogBook.LogBookService
 {
-    public class LogBookUnitOfWork : UnitOfWorkBase
+    public class VesperLogBookUnitOfWork : UnitOfWorkBase
     {
         public readonly IMemberRepository MemberRepository;
         public readonly IBoatRepository BoatRepository;
+        public readonly ILogBookRepository LogBookRepository;
 
         private readonly DbContext _context;
 
-        public LogBookUnitOfWork(string entityConnectionString)
+        public VesperLogBookUnitOfWork(string entityConnectionString)
         {
             _context = new VesperLogBookEntities(entityConnectionString);
 
             MemberRepository = new MemberRepository(_context);
             BoatRepository = new BoatRepository(_context);
+            LogBookRepository = new LogBookRepository(_context);
         }
 
         public override bool Save()

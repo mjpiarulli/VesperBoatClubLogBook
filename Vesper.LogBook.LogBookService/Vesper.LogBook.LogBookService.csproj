@@ -52,10 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutomapperBootstrapper.cs" />
-    <Compile Include="LogBookService.Boat.cs" />
-    <Compile Include="LogBookService.cs" />
-    <Compile Include="LogBookService.Member.cs" />
-    <Compile Include="LogBookUnitOfWork.cs" />
+    <Compile Include="VesperLogBookService.Boat.cs" />
+    <Compile Include="VesperLogBookService.LogBook.cs" />
+    <Compile Include="VesperLogBookService.cs" />
+    <Compile Include="VesperLogBookService.Member.cs" />
+    <Compile Include="VesperLogBookUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

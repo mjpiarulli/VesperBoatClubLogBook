@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .controller('logBookCtrl', [function () {
+        .controller('logBookCtrl', ["logBookService", function (logBookService) {
             var vm = this;
 
             vm.mileageLeaders = [
@@ -14,7 +14,11 @@
                 { FirstName: "Alanna", LastName: "Fogarty", Mileage: 386 },
             ];
 
-            vm.totalClubMileageYearToDate = 5217;
-            vm.totalClubMileageLastYearToDate = 6938;
+            logBookService.getClubMileageYearToDate().then(function(response) {
+                vm.totalClubMileageYearToDate = response.data;
+            });
+            logBookService.getClubMileageLastYearToDate().then(function (response) {
+                vm.totalClubMileageLastYearToDate = response.data;
+            });
         }]);
 })();

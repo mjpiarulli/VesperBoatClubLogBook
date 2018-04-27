@@ -1,0 +1,36 @@
+﻿<form id="parameter-form">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Equipment Usage Report</h3>
+        </div>
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="startDate">Start Date</label>
+                <div class="input-group date">
+                    <input type="text" id="startDate" name="startDate" ng-model="vm.startDate" />
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                <label for="endDate">End Date</label>
+                <div class="input-group date">
+                    <input type="text" id="endDate" name="endDate" ng-model="vm.endDate" />
+                    <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer">
+            <div class="row">
+                <button type="button" id="btn-submit" ng-click="vm.loadEquipmentUsageReport(vm.startDate, vm.endDate)" class="btn btn-primary">Display Report</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="report" ng-include="vm.report">
+    
+</div>

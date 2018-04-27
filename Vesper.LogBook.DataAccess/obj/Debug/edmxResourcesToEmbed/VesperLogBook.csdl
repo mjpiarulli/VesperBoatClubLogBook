@@ -3,6 +3,7 @@
   <EntityContainer Name="VesperLogBookEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
     <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
+    <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
   </EntityContainer>
   <EntityType Name="Member">
     <Key>
@@ -27,5 +28,18 @@
     <Property Name="UseRestrictions" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="OwnedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LogBook">
+    <Key>
+      <PropertyRef Name="LogBookId" />
+    </Key>
+    <Property Name="LogBookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Precision="7" />
+    <Property Name="TimeOut" Type="DateTime" Precision="7" />
+    <Property Name="TimeIn" Type="DateTime" Precision="7" />
+    <Property Name="MilesRowed" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>

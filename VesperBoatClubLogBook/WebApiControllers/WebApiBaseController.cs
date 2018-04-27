@@ -7,12 +7,12 @@ namespace VesperBoatClubLogBook.WebApiControllers
 {
     public class WebApiBaseController : ApiController
     {
-        protected readonly ILogBookService LogBookService;
+        protected readonly IVesperLogBookService VesperLogBookService;
 
         public WebApiBaseController()
         {
             var logBookConnectionString = ConfigurationManager.ConnectionStrings["VesperLogBookEntities"].ConnectionString;
-            LogBookService = new LogBookService(logBookConnectionString);
+            VesperLogBookService = new VesperLogBookService(logBookConnectionString);
         }
     }
 }

@@ -15,6 +15,19 @@
     <Property Name="Status" Type="varchar" MaxLength="50" />
     <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="LogBook">
+    <Key>
+      <PropertyRef Name="LogBookId" />
+    </Key>
+    <Property Name="LogBookId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date" Type="datetime2" Precision="7" />
+    <Property Name="TimeOut" Type="datetime2" Precision="7" />
+    <Property Name="TimeIn" Type="datetime2" Precision="7" />
+    <Property Name="MilesRowed" Type="int" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="BoatName" Type="varchar" MaxLength="200" />
+    <Property Name="BoatType" Type="varchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Member">
     <Key>
       <PropertyRef Name="MemberId" />
@@ -26,6 +39,7 @@
   </EntityType>
   <EntityContainer Name="VesperLogBookModelStoreContainer">
     <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
