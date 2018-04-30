@@ -2,7 +2,8 @@
 {
     public interface IVesperLogBookService : IMemberService,
         IBoatService,
-        ILogBookService
+        ILogBookService,
+        IBoatStatusLogService
     {
     }
 }

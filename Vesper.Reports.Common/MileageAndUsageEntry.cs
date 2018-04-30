@@ -1,8 +1,8 @@
 ﻿namespace Vesper.Reports.Common
 {
-    public class MileageAndUseageEntry
+    public class MileageAndUsageEntry
     {
-        public MileageAndUseageEntry()
+        public MileageAndUsageEntry()
         {
             BoatType = string.Empty;
             BoatName = string.Empty;

@@ -4,6 +4,6 @@ namespace Vesper.Reports.DataAccess.Interface
 {
     public interface IReportRepository
     {
-        Common.LogBookMileageAndUsageByBoat LoadLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate);
+        Common.LogBookMileageAndUsageByBoat GetLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate);
     }
 }

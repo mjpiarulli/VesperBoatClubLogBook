@@ -47,9 +47,6 @@
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
-.skin-vesper .main-header .logo:hover {
-  background-color: #545096;
-}
 .skin-vesper .main-header li.user-header {
   background-color: #800000;
 }

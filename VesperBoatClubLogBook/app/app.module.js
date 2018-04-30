@@ -18,8 +18,8 @@
             })
             .when("/logbook",
             {
-                templateUrl: logBookTemplateUrlBase + "home.html",
-                controller: "homeCtrl as vm"
+                templateUrl: logBookTemplateUrlBase + "logBook.html",
+                controller: "logBookCtrl as vm"
             })
             .when("/memberlist",
             {

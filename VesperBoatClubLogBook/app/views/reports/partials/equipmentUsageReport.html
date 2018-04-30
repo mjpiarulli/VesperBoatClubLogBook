@@ -14,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="entry in vm.equipmentReport.entries">
+                <tr ng-repeat="entry in vm.equipmentReport.MileageAndUsageEntries">
                     <td>{{entry.BoatType}}</td>
                     <td>{{entry.BoatName}}</td>
                     <td>{{entry.MilesRowed}}</td>
@@ -40,7 +40,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="entry in vm.equipmentReport.boatTypeTotals">
+                <tr ng-repeat="entry in vm.equipmentReport.MileageAndUsageTotalEntries">
                     <td>{{entry.BoatType}}</td>
                     <td>{{entry.MilesRowed}}</td>
                     <td>{{entry.Outings}}</td>
@@ -64,7 +64,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="entry in vm.equipmentReport.grandTotals">
+                <tr ng-init="entry = vm.equipmentReport.MileageAndUsageGrandTotal">
                     <td>{{entry.MilesRowed}}</td>
                     <td>{{entry.Outings}}</td>
                 </tr>

@@ -11,6 +11,15 @@ namespace Vesper.Reports.Common
             MileageAndUsageGrandTotal = new MileageAndUsageGrandTotal();
         }
 
+        public LogBookMileageAndUsageByBoat(List<MileageAndUsageEntry> mileageAndUsageEntries,
+            List<MileageAndUsageTotalEntry> mileageAndUsageTotalEntries,
+            MileageAndUsageGrandTotal mileageAndUsageGrandTotal)
+        {
+            MileageAndUsageEntries = mileageAndUsageEntries;
+            MileageAndUsageTotalEntries = mileageAndUsageTotalEntries;
+            MileageAndUsageGrandTotal = mileageAndUsageGrandTotal;
+        }
+
         public List<MileageAndUsageEntry> MileageAndUsageEntries { get; set; }
         public List<MileageAndUsageTotalEntry> MileageAndUsageTotalEntries { get; set; }
         public MileageAndUsageGrandTotal MileageAndUsageGrandTotal { get; set; }

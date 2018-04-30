@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
     <link rel="stylesheet" href="Content/bootstrap-eq-height.min.css" />
+    <link rel="stylesheet" href="Content/bootstrap-datepicker3.standalone.css" />
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <link rel="stylesheet" href="Content/tether/tether.min.css" />
     <link rel="stylesheet" href="admin-lte/css/AdminLTE.min.css" />
@@ -13,50 +14,58 @@
     <title>Vesper Boat Club Log Book</title>
 </head>
 <body ng-controller="layoutCtrl as vm" class="hold-transition skin-vesper sidebar-mini">
-    <div class="wrapper">
-        <header class="main-header">
-            <a href="#home" class="logo">
-                <span class="logo-mini"><b>VBC</b></span>
-                <span class="logo-lg">Vesper Boat Club</span>
+<div class="wrapper">
+    <header class="main-header">
+        <a href="#home" class="logo">
+            <span class="logo-mini"><b>VBC</b></span>
+            <span class="logo-lg">Vesper Boat Club</span>
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
             </a>
-            <nav class="navbar navbar-static-top" role="navigation">
-                <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                    <span class="sr-only">Toggle navigation</span>
-                </a>
-                <div class="navbar-custom-menu">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="javascript:void(0);" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <ng-include src="'app/views/_layout/navBar.html'"></ng-include>
-        <div class="content-wrapper">
-            <section class="content">
-                <div ng-view></div>
-            </section>
-        </div>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <ng-include src="'app/views/_layout/navBar.html'"></ng-include>
+    <div class="content-wrapper">
+        <section class="content">
+            <div ng-view></div>
+        </section>
     </div>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+        </div>
+        <strong>Copyright &copy; {{vm.currentYear}} <a href="#">Vesper Boat Club</a>.</strong> All rights reserved.
+    </footer>
+</div>
 
-    <script src="Scripts/jquery-3.0.0.min.js"></script>
-    <script src="Scripts/angular.min.js"></script>
-    <script src="Scripts/umd/popper.min.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/angular-route.min.js"></script>
-    <script src="Scripts/tether.min.js"></script>
-    <script src="Scripts/respond.min.js"></script>
-    <script src="admin-lte/js/app.min.js"></script>
-    <script src="Scripts/modernizr-2.8.3.js"></script>
-    <script src="Scripts/toastr.min.js"></script>
-    <script src="app/app.module.js"></script>
-    <script src="app/services/memberService.js"></script>
-    <script src="app/services/boatService.js"></script>
-    <script src="app/services/logBookService.js"></script>
-    <script src="app/controllers/layoutCtrl.js"></script>
-    <script src="app/controllers/logBookCtrl.js"></script>
-    <script src="app/controllers/memberListCtrl.js"></script>
-    <script src="app/controllers/fleetListCtrl.js"></script>
+<script src="Scripts/jquery-3.0.0.min.js"></script>
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/umd/popper.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/bootstrap-datepicker.min.js"></script>
+<script src="Scripts/angular-route.min.js"></script>
+<script src="Scripts/tether.min.js"></script>
+<script src="Scripts/respond.min.js"></script>
+<script src="admin-lte/js/app.min.js"></script>
+<script src="Scripts/modernizr-2.8.3.js"></script>
+<script src="Scripts/toastr.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/services/memberService.js"></script>
+<script src="app/services/boatService.js"></script>
+<script src="app/services/logBookService.js"></script>
+<script src="app/services/reportService.js"></script>
+<script src="app/controllers/layoutCtrl.js"></script>
+<script src="app/controllers/logBookCtrl.js"></script>
+<script src="app/controllers/memberListCtrl.js"></script>
+<script src="app/controllers/fleetListCtrl.js"></script>
+<script src="app/controllers/reportsCtrl.js"></script>
 </body>
 </html>

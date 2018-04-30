@@ -20,6 +20,18 @@
           <Property Name="Status" Type="varchar" MaxLength="50" />
           <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="BoatStatusLog">
+          <Key>
+            <PropertyRef Name="BoatStatusLogId" />
+          </Key>
+          <Property Name="BoatStatusLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BoatName" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Comments" Type="varchar(max)" />
+          <Property Name="RemovalOfServiceDate" Type="datetime" />
+          <Property Name="CommentOnReturn" Type="varchar(max)" />
+          <Property Name="ReturnToServiceDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="LogBook">
           <Key>
             <PropertyRef Name="LogBookId" />
@@ -44,6 +56,7 @@
         </EntityType>
         <EntityContainer Name="VesperLogBookModelStoreContainer">
           <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BoatStatusLog" EntityType="Self.BoatStatusLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -55,6 +68,7 @@
           <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
           <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
           <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
+          <EntitySet Name="BoatStatusLogs" EntityType="VesperLogBookModel.BoatStatusLog" />
         </EntityContainer>
         <EntityType Name="Member">
           <Key>
@@ -92,6 +106,18 @@
           <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
           <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BoatStatusLog">
+          <Key>
+            <PropertyRef Name="BoatStatusLogId" />
+          </Key>
+          <Property Name="BoatStatusLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BoatName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RemovalOfServiceDate" Type="DateTime" Precision="3" />
+          <Property Name="CommentOnReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ReturnToServiceDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -136,6 +162,19 @@
                 <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="LogBookId" ColumnName="LogBookId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BoatStatusLogs">
+            <EntityTypeMapping TypeName="VesperLogBookModel.BoatStatusLog">
+              <MappingFragment StoreEntitySet="BoatStatusLog">
+                <ScalarProperty Name="ReturnToServiceDate" ColumnName="ReturnToServiceDate" />
+                <ScalarProperty Name="CommentOnReturn" ColumnName="CommentOnReturn" />
+                <ScalarProperty Name="RemovalOfServiceDate" ColumnName="RemovalOfServiceDate" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BoatName" ColumnName="BoatName" />
+                <ScalarProperty Name="BoatStatusLogId" ColumnName="BoatStatusLogId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
