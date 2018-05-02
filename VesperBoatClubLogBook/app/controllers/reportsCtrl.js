@@ -8,7 +8,7 @@
 
             vm.loadEquipmentUsageReport = function(startDate, endDate) {
                 reportService.loadLogBookMileageAndUsageByBoatReport(startDate, endDate).then(function (response) {
-                    vm.report = "app/views/reports/partials/equipmentUsageReport.html"
+                    vm.report = "app/views/reports/partials/equipmentUsageReport.html";
                     vm.equipmentReport = response.data;
                 }, function () {
                     console.log("Error in loadLogBookMileageAndUsageByBoatReport()");
@@ -28,6 +28,7 @@
 
             boatService.getBoatList().then(function (response) {
                 vm.boats = response.data;
+                setTimeout(function() { angular.element(".selectpicker").selectpicker({ liveSearching: true }); }, 50);
             });
         }]);
 })();
