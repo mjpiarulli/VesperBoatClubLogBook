@@ -1,5 +1,5 @@
 -- access tables needed
--- members, fleet, log book, boat status log
+-- members, fleet, log book, boat status log, boat type
 -- notes: log book - edit mappings for dates to datetime2
 
 -- Members
@@ -94,3 +94,19 @@ Select [Boat Name], [Status], [Comments], [Date of Removal from Service], [Comme
 From [Boat Status Log]
 
 Drop Table [Boat Status Log]
+
+
+Create Table BoatType(
+	BoatTypeId int identity(1, 1) primary key,
+	[Type] varchar(20) not null,
+	Name varchar(50) not null,
+	Seats int not null,
+	StartCount int not null,
+	HasCox bit not null
+)
+
+Insert Into BoatType([Type],Name,Seats, StartCount, HasCox)
+Select [Type],[Name],[Seats],[Start Count],[Cox]
+from [Boat Type]
+
+Drop Table [Boat Type]

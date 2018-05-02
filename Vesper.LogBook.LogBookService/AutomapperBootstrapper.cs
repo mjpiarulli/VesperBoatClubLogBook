@@ -14,6 +14,8 @@ namespace Vesper.LogBook.LogBookService
                 cfg.CreateMap<Boat, BoatDto>();
                 cfg.CreateMap<BoatStatusLogDto, BoatStatusLog>();
                 cfg.CreateMap<BoatStatusLog, BoatStatusLogDto>();
+                cfg.CreateMap<BoatTypeDto, BoatType>();
+                cfg.CreateMap<BoatType, BoatTypeDto>();
                 cfg.CreateMap<LogBookDto, DataAccess.LogBook>();
                 cfg.CreateMap<DataAccess.LogBook, LogBookDto>();
                 cfg.CreateMap<MemberDto, Member>();

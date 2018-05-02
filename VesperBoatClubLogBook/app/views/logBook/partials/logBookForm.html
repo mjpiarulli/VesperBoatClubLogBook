@@ -4,7 +4,7 @@
             <h3 class="box-title">Log Book</h3>
         </div>
         <div class="box-body">
-            <div class="row">
+            <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="boatType" class="control-label">Boat Type</label>
                     <select id="boatType" name="boatType" class="form-control">
@@ -13,53 +13,90 @@
                 </div>
                 <div class="col-lg-8">
                     <label for="boatName" class="control-label">Boat Name</label>
-                    <select id="boatName" name="boatName" class="form-control">
-                        <option>V6</option>
+                    <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.log.BoatName">
+                        <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
                     </select>
                 </div>
             </div>
-            <div class="row">
+            <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="seat" class="control-label">Seat</label>
                     <input id="seat" name="seat" class="form-control" />
                 </div>
                 <div class="col-lg-8">
                     <label for="rowerName" class="control-label">Rower's Name</label>
-                    <select id="rowerName" name="rowerName" class="form-control">
-                        <option>V6</option>
+                    <select id="rowerName" name="rowerName" class="form-control selectpicker" data-live-search="true" ng-model="vm.log.RowerName">
+                        <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
                     </select>
                 </div>
             </div>
-            <div class="row">
+            <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="date" class="control-label">Date</label>
-                    <input id="date" name="date" class="form-control" />
+                    <div class="input-group date" data-provide="datepicker">
+                        <input type="text" id="date" name="date" class="form-control datetimepicker-input" data-target="#date" ng-model="vm.log.Date" data-toggle="datetimepicker" />
+                        <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#date').datetimepicker({
+                                format: 'L'
+                            });
+                        });
+                    </script>
                 </div>
                 <div class="col-lg-4">
                     <label for="timeOut" class="control-label">Time Out</label>
-                    <input id="timeOut" name="timeOut" class="form-control" />
+                    <div class="input-group" id="datetimepickerTimeOut" data-target-input="nearest">
+                        <input type="text" id="timeOut" name="timeOut" class="form-control datetimepicker-input" data-target="#datetimepickerTimeOut" ng-model="vm.log.TimeOut" data-toggle="datetimepicker" />
+                        <div class="input-group-append" data-target="#datetimepickerTimeOut" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepickerTimeOut').datetimepicker({
+                                format: 'LT'
+                            });
+                        });
+                    </script>
                 </div>
                 <div class="col-lg-4">
                     <label for="timeIn" class="control-label">Time In</label>
-                    <input id="timeIn" name="timeIn" class="form-control" />
+                    <div class="input-group" id="datetimepickerTimeIn" data-target-input="nearest">
+                        <input type="text" id="timeIn" name="timeIn" class="form-control datetimepicker-input" data-target="#datetimepickerTimeIn" ng-model="vm.log.TimeIn" data-toggle="datetimepicker" />
+                        <div class="input-group-append" data-target="#datetimepickerTimeIn" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepickerTimeIn').datetimepicker({
+                                format: 'LT'
+                            });
+                        });
+                    </script>
                 </div>
             </div>
-            <div class="row">
+            <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="milesRowed" class="control-label">Miles Rowed (1,600 meters = 1 mile)</label>
-                    <input id="milesRowed" name="milesRowed" class="form-control" />
+                    <input id="milesRowed" name="milesRowed" class="form-control" ng-model="vm.log.MilesRowed" />
                 </div>
             </div>
-            <div class="row">
+            <div class="form-group row">
                 <div class="col-lg-12">
                     <label for="workoutComment" class="control-label">Workout Comment</label>
-                    <textarea class="form-control" id="workoutComment" name="workoutComment" rows="10" required></textarea>
+                    <textarea class="form-control" id="workoutComment" name="workoutComment" rows="10" ng-model="vm.log.Comments" required></textarea>
                 </div>
             </div>
-        </div>
-        <div box-footer>
-            <br />
-            <button class="btn btn-info">Submit</button>
+            <div class="form-group row">
+                <div class="col-lg-2">
+                    <button class="btn btn-info">Submit</button>
+                </div>
+            </div>
         </div>
     </div>
 </form>

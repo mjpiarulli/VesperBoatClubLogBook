@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .controller('logBookCtrl', ["logBookService", function (logBookService) {
+        .controller('logBookCtrl', ["logBookService", "boatService", "memberService", function (logBookService, boatService, memberService) {
             var vm = this;
 
             vm.mileageLeaders = [
@@ -20,5 +20,18 @@
             logBookService.getClubMileageLastYearToDate().then(function (response) {
                 vm.totalClubMileageLastYearToDate = response.data;
             });
+
+            boatService.getBoatList().then(function(response) {
+                vm.boats = response.data;
+
+                setTimeout(function () { angular.element("#boatName").selectpicker({ liveSearching: true }); }, 50);
+            });
+
+            memberService.getMemberList().then(function(response) {
+                vm.members = response.data;
+
+                setTimeout(function () { angular.element("#rowerName").selectpicker({ liveSearching: true }); }, 50);
+            });
+
         }]);
 })();

@@ -32,6 +32,17 @@
           <Property Name="CommentOnReturn" Type="varchar(max)" />
           <Property Name="ReturnToServiceDate" Type="datetime" />
         </EntityType>
+        <EntityType Name="BoatType">
+          <Key>
+            <PropertyRef Name="BoatTypeId" />
+          </Key>
+          <Property Name="BoatTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Seats" Type="int" Nullable="false" />
+          <Property Name="StartCount" Type="int" Nullable="false" />
+          <Property Name="HasCox" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="LogBook">
           <Key>
             <PropertyRef Name="LogBookId" />
@@ -57,6 +68,7 @@
         <EntityContainer Name="VesperLogBookModelStoreContainer">
           <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BoatStatusLog" EntityType="Self.BoatStatusLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BoatType" EntityType="Self.BoatType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -69,6 +81,7 @@
           <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
           <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
           <EntitySet Name="BoatStatusLogs" EntityType="VesperLogBookModel.BoatStatusLog" />
+          <EntitySet Name="BoatTypes" EntityType="VesperLogBookModel.BoatType" />
         </EntityContainer>
         <EntityType Name="Member">
           <Key>
@@ -118,6 +131,17 @@
           <Property Name="RemovalOfServiceDate" Type="DateTime" Precision="3" />
           <Property Name="CommentOnReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="ReturnToServiceDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="BoatType">
+          <Key>
+            <PropertyRef Name="BoatTypeId" />
+          </Key>
+          <Property Name="BoatTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Seats" Type="Int32" Nullable="false" />
+          <Property Name="StartCount" Type="Int32" Nullable="false" />
+          <Property Name="HasCox" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -175,6 +199,18 @@
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="BoatName" ColumnName="BoatName" />
                 <ScalarProperty Name="BoatStatusLogId" ColumnName="BoatStatusLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BoatTypes">
+            <EntityTypeMapping TypeName="VesperLogBookModel.BoatType">
+              <MappingFragment StoreEntitySet="BoatType">
+                <ScalarProperty Name="HasCox" ColumnName="HasCox" />
+                <ScalarProperty Name="StartCount" ColumnName="StartCount" />
+                <ScalarProperty Name="Seats" ColumnName="Seats" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="BoatTypeId" ColumnName="BoatTypeId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,7 +1,7 @@
-/*
- * Skin: Purple
- * ------------
- */
+.content-wrapper {
+    min-height: 869px;
+}
+
 .skin-vesper .main-header .navbar {
   background-color: #800000;
 }
