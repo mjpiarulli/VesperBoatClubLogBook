@@ -1,4 +1,4 @@
 .vs/
 packages/
-.pdb
-.dll
+*.pdb
+*.dll
