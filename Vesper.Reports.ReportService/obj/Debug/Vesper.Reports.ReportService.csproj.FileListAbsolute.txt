@@ -37,3 +37,5 @@ C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Repor
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.pdb
+C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\Vesper.LogBook.Common.dll
+C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\Vesper.LogBook.Common.pdb

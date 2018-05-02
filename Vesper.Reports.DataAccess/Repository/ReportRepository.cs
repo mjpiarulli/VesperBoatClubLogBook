@@ -17,7 +17,7 @@ namespace Vesper.Reports.DataAccess.Repository
             _context = context;
         }
 
-        public Common.LogBookMileageAndUsageByBoat GetLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate)
+        public LogBookMileageAndUsageByBoat GetLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate)
         {
             var p1 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };
             var p2 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };

@@ -4,6 +4,7 @@
     <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
     <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
     <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
+    <EntitySet Name="BoatStatusLogs" EntityType="VesperLogBookModel.BoatStatusLog" />
   </EntityContainer>
   <EntityType Name="Member">
     <Key>
@@ -41,5 +42,17 @@
     <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
     <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BoatStatusLog">
+    <Key>
+      <PropertyRef Name="BoatStatusLogId" />
+    </Key>
+    <Property Name="BoatStatusLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BoatName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RemovalOfServiceDate" Type="DateTime" Precision="3" />
+    <Property Name="CommentOnReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ReturnToServiceDate" Type="DateTime" Precision="3" />
   </EntityType>
 </Schema>

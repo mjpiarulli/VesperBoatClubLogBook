@@ -36,6 +36,16 @@
                 templateUrl: reportsTemplateUrlBase + "equipmentUsage.html",
                 controller: "reportsCtrl as vm"
             })
+            .when("/reports/boatdamage",
+            {
+                templateUrl: reportsTemplateUrlBase + "boatDamage.html",
+                controller: "reportsCtrl as vm"
+            })
+            .when("/reports/boatstatuslogsearch",
+            {
+                templateUrl: reportsTemplateUrlBase + "boatStatusLogSearch.html",
+                controller: "reportsCtrl as vm"
+            })
             ;
     }]);
 })();

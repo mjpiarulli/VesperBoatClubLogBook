@@ -1,0 +1,78 @@
+﻿<div class="container">
+    <div class="container">
+        <form id="parameter-form">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Boat Status Log Search</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row form-group">
+                        <div class="col-lg-6">
+                            <label for="boatName" class="col-form-label">Boat Name</label>
+                            <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName" init-bootstrap-select="">
+                                <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-3">
+                            <label for="removalOfServiceStartDate" class="col-form-label">Removal of Service Start Date</label>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" id="removalOfServiceStartDate" name="removalOfServiceStartDate" ng-model="vm.searchParams.RemovalOfServiceStartDate" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="removalOfServiceEndDate" class="col-form-label">Removal of Service End Date</label>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" id="removalOfServiceEndDate" name="removalOfServiceEndDate" ng-model="vm.searchParams.RemovalOfServiceEndDate" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="comments" class="col-form-label">Comments</label>
+                            <input type="text" id="comments" name="comments" class="form-control" ng-model="vm.searchParams.Comments" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-3">
+                            <label for="returnToServiceStartDate" class="col-form-label">Return To Service Start Date</label>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" id="returnToServiceStartDate" name="returnToServiceStartDate" ng-model="vm.searchParams.ReturnToServiceStartDate" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="returnToServiceEndDate" class="col-form-label">Return To Service End Date</label>
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="text" id="returnToServiceEndDate" name="returnToServiceEndDate" ng-model="vm.searchParams.ReturnToServiceEndDate" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <label for="commentOnReturn" class="col-form-label">Comment On Return</label>
+                            <input type="text" id="commentOnReturn" name="commentOnReturn" class="form-control" ng-model="vm.searchParams.CommentOnReturn" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-lg-2">
+                            <button type="button" id="btn-submit" ng-click="vm.searchBoatStatusLog(vm.searchParams)" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    
+        <div id="report">
+            <ng-include src="vm.report"></ng-include>
+        </div>
+    </div>
+</div>

@@ -685,7 +685,7 @@ fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 2000 !important;
   display: none;
   float: left;
   min-width: 160px;

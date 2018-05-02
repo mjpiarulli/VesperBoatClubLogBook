@@ -1,0 +1,22 @@
+﻿<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Boat Name</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Comments</th>
+        <th>Return To Service Date</th>
+        <th>Return To Service Comment</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="boatStatusLog in vm.boatStatusLogSearchResults">
+            <td>{{boatStatusLog.BoatName}}</td>
+            <td>{{boatStatusLog.Status}}</td>
+            <td>{{boatStatusLog.RemovalOfServiceDate | date: "MM/dd/yyyy"}}</td>
+            <td>{{boatStatusLog.Comments}}</td>
+            <td>{{boatStatusLog.ReturnToServiceDate | date: "MM/dd/yyyy"}}</td>
+            <td>{{boatStatusLog.CommentOnReturn}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -27,3 +27,5 @@ C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\ru\Microsoft.Sq
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csproj.CopyComplete
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\Vesper.LogBook.Common.dll
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\Vesper.LogBook.Common.pdb

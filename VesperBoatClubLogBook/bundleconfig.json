@@ -16,5 +16,11 @@
     "inputFiles": [
       "Content/bootstrap.css"
     ]
+  },
+  {
+    "outputFileName": "Content/bootstrap-select.min.css",
+    "inputFiles": [
+      "Content/bootstrap-select.css"
+    ]
   }
 ]

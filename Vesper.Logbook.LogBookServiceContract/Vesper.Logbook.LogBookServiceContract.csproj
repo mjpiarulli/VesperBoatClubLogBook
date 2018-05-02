@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBoatService.cs" />
+    <Compile Include="IBoatStatusLogService.cs" />
     <Compile Include="ILogBookService.cs" />
     <Compile Include="IVesperLogBookService.cs" />
     <Compile Include="IMemberService.cs" />

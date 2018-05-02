@@ -41,5 +41,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BoatStatusLogs">
+      <EntityTypeMapping TypeName="VesperLogBookModel.BoatStatusLog">
+        <MappingFragment StoreEntitySet="BoatStatusLog">
+          <ScalarProperty Name="ReturnToServiceDate" ColumnName="ReturnToServiceDate" />
+          <ScalarProperty Name="CommentOnReturn" ColumnName="CommentOnReturn" />
+          <ScalarProperty Name="RemovalOfServiceDate" ColumnName="RemovalOfServiceDate" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BoatName" ColumnName="BoatName" />
+          <ScalarProperty Name="BoatStatusLogId" ColumnName="BoatStatusLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
