@@ -12,3 +12,17 @@ C:\Git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.pdb
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.DataAccess.dll.config
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.DataAccess.dll
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.DataAccess.pdb
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.dll
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.Common.dll
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.Common.pdb
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.xml
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csprojResolveAssemblyReference.cache
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csproj.CoreCompileInputs.cache
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csproj.CopyComplete
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.dll
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.pdb
