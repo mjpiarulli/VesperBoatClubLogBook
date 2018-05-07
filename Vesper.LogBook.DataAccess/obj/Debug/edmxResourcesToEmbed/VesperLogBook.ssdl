@@ -27,6 +27,17 @@
     <Property Name="CommentOnReturn" Type="varchar(max)" />
     <Property Name="ReturnToServiceDate" Type="datetime" />
   </EntityType>
+  <EntityType Name="BoatType">
+    <Key>
+      <PropertyRef Name="BoatTypeId" />
+    </Key>
+    <Property Name="BoatTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Seats" Type="int" Nullable="false" />
+    <Property Name="StartCount" Type="int" Nullable="false" />
+    <Property Name="HasCox" Type="bit" Nullable="false" />
+  </EntityType>
   <EntityType Name="LogBook">
     <Key>
       <PropertyRef Name="LogBookId" />
@@ -52,6 +63,7 @@
   <EntityContainer Name="VesperLogBookModelStoreContainer">
     <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BoatStatusLog" EntityType="Self.BoatStatusLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BoatType" EntityType="Self.BoatType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
   </EntityContainer>

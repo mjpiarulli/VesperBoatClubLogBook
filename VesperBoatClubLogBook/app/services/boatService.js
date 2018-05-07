@@ -7,5 +7,10 @@
             this.getBoatList = function () {
                 return $http.get("api/boat/loadboatlist");
             };
+
+            this.getBoatsByBoatType = function (boatType) {
+                var uri = "api/boat/loadboatsbyboattype?boatType=" + encodeURIComponent(boatType);
+                return $http.get(uri);
+            }
         });
 })();

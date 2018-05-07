@@ -6,5 +6,6 @@ namespace Vesper.Logbook.LogBookServiceContract
     public interface IBoatService
     {
         List<BoatDto> GetAllBoatsAlphabetical();
+        List<BoatDto> GetBoatsByBoatType(string boatType);
     }
 }

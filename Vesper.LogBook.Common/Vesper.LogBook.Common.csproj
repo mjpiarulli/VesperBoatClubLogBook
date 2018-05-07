@@ -43,6 +43,7 @@
     <Compile Include="BoatDto.cs" />
     <Compile Include="BoatStatusLogDto.cs" />
     <Compile Include="BoatStatusLogSearchParameter.cs" />
+    <Compile Include="BoatTypeDto.cs" />
     <Compile Include="LogBookDto.cs" />
     <Compile Include="MemberDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

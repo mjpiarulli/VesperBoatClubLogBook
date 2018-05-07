@@ -54,5 +54,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BoatTypes">
+      <EntityTypeMapping TypeName="VesperLogBookModel.BoatType">
+        <MappingFragment StoreEntitySet="BoatType">
+          <ScalarProperty Name="HasCox" ColumnName="HasCox" />
+          <ScalarProperty Name="StartCount" ColumnName="StartCount" />
+          <ScalarProperty Name="Seats" ColumnName="Seats" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="BoatTypeId" ColumnName="BoatTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

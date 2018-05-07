@@ -15,5 +15,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return boats;
         }
+
+        [Route("loadboatsbyboattype")]
+        [HttpGet]
+        public List<BoatDto> LoadBoatsByBoatType(string boatType)
+        {
+            var boats = VesperLogBookService.GetBoatsByBoatType(boatType);
+
+            return boats;
+        }
     }
 }

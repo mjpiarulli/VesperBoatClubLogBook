@@ -1,14 +1,13 @@
 ﻿<form id="log-book-form">
     <div class="box box-info">
-        <div class="box header with border">
+        <div class="box header with-border">
             <h3 class="box-title">Log Book</h3>
         </div>
         <div class="box-body">
             <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="boatType" class="control-label">Boat Type</label>
-                    <select id="boatType" name="boatType" class="form-control">
-                        <option>1X</option>
+                    <select id="boatType" name="boatType" class="form-control" ng-change="vm.loadBoatsByType()" ng-model="vm.selectedBoatType" ng-options="y.Type for (x, y) in vm.boatTypes">                        
                     </select>
                 </div>
                 <div class="col-lg-8">
@@ -18,14 +17,14 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row" ng-repeat="i in [].constructor(((vm.selectedBoatType.Seats) <= 0 ? 1 : (vm.selectedBoatType.Seats))) track by $index">
                 <div class="col-lg-4">
                     <label for="seat" class="control-label">Seat</label>
-                    <input id="seat" name="seat" class="form-control" />
+                    <input name="seat" class=" seat form-control" ng-value="vm.getSeatNameByIndex({{$index}})" />
                 </div>
                 <div class="col-lg-8">
                     <label for="rowerName" class="control-label">Rower's Name</label>
-                    <select id="rowerName" name="rowerName" class="form-control selectpicker" data-live-search="true" ng-model="vm.log.RowerName">
+                    <select name="rowerName" class="rowerName form-control selectpicker" data-live-search="true" ng-model="vm.log.Rower[$index].Name">
                         <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
                     </select>
                 </div>
@@ -83,7 +82,7 @@
             <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="milesRowed" class="control-label">Miles Rowed (1,600 meters = 1 mile)</label>
-                    <input id="milesRowed" name="milesRowed" class="form-control" ng-model="vm.log.MilesRowed" />
+                    <input type="number" min="0" id="milesRowed" name="milesRowed" class="form-control" ng-model="vm.log.MilesRowed" />
                 </div>
             </div>
             <div class="form-group row">

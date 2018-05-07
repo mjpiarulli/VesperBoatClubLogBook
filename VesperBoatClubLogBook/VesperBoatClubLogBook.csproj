@@ -186,6 +186,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebApiControllers\BoatTypeWebApiController.cs" />
     <Compile Include="WebApiControllers\BoatWebApiController.cs" />
     <Compile Include="WebApiControllers\LogBookWebApiController.cs" />
     <Compile Include="WebApiControllers\MemberWebApiController.cs" />
@@ -234,6 +235,7 @@
     <Content Include="app\controllers\memberListCtrl.js" />
     <Content Include="app\controllers\reportsCtrl.js" />
     <Content Include="app\services\boatService.js" />
+    <Content Include="app\services\boatTypeService.js" />
     <Content Include="app\services\logBookService.js" />
     <Content Include="app\services\memberService.js" />
     <Content Include="app\services\reportService.js" />

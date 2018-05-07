@@ -16,5 +16,15 @@ namespace Vesper.LogBook.LogBookService
 
             return dto;
         });
+
+        public List<BoatDto> GetBoatsByBoatType(string boatType) => _uow.Uow(uow =>
+        {
+            var entities = uow.BoatRepository.FindBy(b => b.Type == boatType)
+                .OrderBy(b => b.Name)
+                .ToList();
+            var dtos = _mapper.Map<List<Boat>, List<BoatDto>>(entities);
+
+            return dtos;
+        });
     }
 }

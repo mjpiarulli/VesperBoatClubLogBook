@@ -5,6 +5,7 @@
     <EntitySet Name="Boats" EntityType="VesperLogBookModel.Boat" />
     <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
     <EntitySet Name="BoatStatusLogs" EntityType="VesperLogBookModel.BoatStatusLog" />
+    <EntitySet Name="BoatTypes" EntityType="VesperLogBookModel.BoatType" />
   </EntityContainer>
   <EntityType Name="Member">
     <Key>
@@ -54,5 +55,16 @@
     <Property Name="RemovalOfServiceDate" Type="DateTime" Precision="3" />
     <Property Name="CommentOnReturn" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="ReturnToServiceDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="BoatType">
+    <Key>
+      <PropertyRef Name="BoatTypeId" />
+    </Key>
+    <Property Name="BoatTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Seats" Type="Int32" Nullable="false" />
+    <Property Name="StartCount" Type="Int32" Nullable="false" />
+    <Property Name="HasCox" Type="Boolean" Nullable="false" />
   </EntityType>
 </Schema>
