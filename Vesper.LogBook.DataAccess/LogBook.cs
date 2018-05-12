@@ -14,6 +14,12 @@ namespace Vesper.LogBook.DataAccess
     
     public partial class LogBook
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LogBook()
+        {
+            this.Boatings = new HashSet<Boating>();
+        }
+    
         public int LogBookId { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<System.DateTime> TimeOut { get; set; }
@@ -22,5 +28,8 @@ namespace Vesper.LogBook.DataAccess
         public string Comment { get; set; }
         public string BoatName { get; set; }
         public string BoatType { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Boating> Boatings { get; set; }
     }
 }

@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using Vesper.Reports.Common;
 using Vesper.Reports.DataAccess.Interface;
+using Vesper.Reports.DataAccess.SqlHelper;
+using LogBookMileageAndUsageByBoat = Vesper.Reports.Common.LogBookMileageAndUsageByBoat;
 
 namespace Vesper.Reports.DataAccess.Repository
 {
@@ -34,6 +36,19 @@ namespace Vesper.Reports.DataAccess.Repository
             var logBookMileageAndUsageByBoat = new LogBookMileageAndUsageByBoat(mileageAndUsageEntries, mileageAndUsageTotalEntry, mileageAndUsageGrandTotal);
 
             return logBookMileageAndUsageByBoat;
+        }
+
+        public MileageLeaderReport GetMileageLeaderReport()
+        {
+            var currentYear = DateTime.Now.Year;
+            var date = new DateTime(currentYear, 1, 1);
+            var p1 = new List<object> {new SqlParameter("@date", date)};
+            const string mileageLeaderReportSql = MileageLeaderReportSqlHelper.MileageLeaderReportSql;
+
+            var mileageLeaders = _context.Database.SqlQuery<MileageLeader>(mileageLeaderReportSql, p1.ToArray()).ToList();
+            var mileageLeaderReport = new MileageLeaderReport(mileageLeaders);
+
+            return mileageLeaderReport;
         }
     }
 }

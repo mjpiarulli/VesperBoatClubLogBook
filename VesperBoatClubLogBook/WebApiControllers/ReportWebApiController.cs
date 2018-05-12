@@ -35,5 +35,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return results;
         }
+
+        [Route("LoadMileageLeaderReport")]
+        [HttpGet]
+        public MileageLeaderReport LoadMileageLeaderReport()
+        {
+            var report = ReportService.GetMileageLeaderReport();
+
+            return report;
+        }
     }
 }

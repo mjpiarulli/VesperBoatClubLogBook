@@ -15,6 +15,16 @@
     <Property Name="Status" Type="varchar" MaxLength="50" />
     <Property Name="OwnedBy" Type="varchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Boating">
+    <Key>
+      <PropertyRef Name="BoatingId" />
+    </Key>
+    <Property Name="BoatingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogBookId" Type="int" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="Seat" Type="varchar" MaxLength="10" />
+    <Property Name="Order" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="BoatStatusLog">
     <Key>
       <PropertyRef Name="BoatStatusLogId" />
@@ -60,11 +70,44 @@
     <Property Name="MiddleInitial" Type="varchar" MaxLength="50" />
     <Property Name="LastName" Type="varchar" MaxLength="50" />
   </EntityType>
+  <Association Name="FK__Boating__MemberI__619B8048">
+    <End Role="Member" Type="Self.Member" Multiplicity="1" />
+    <End Role="Boating" Type="Self.Boating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberId" />
+      </Principal>
+      <Dependent Role="Boating">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Boating__Order__60A75C0F">
+    <End Role="LogBook" Type="Self.LogBook" Multiplicity="1" />
+    <End Role="Boating" Type="Self.Boating" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LogBook">
+        <PropertyRef Name="LogBookId" />
+      </Principal>
+      <Dependent Role="Boating">
+        <PropertyRef Name="LogBookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="VesperLogBookModelStoreContainer">
     <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Boating" EntityType="Self.Boating" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BoatStatusLog" EntityType="Self.BoatStatusLog" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BoatType" EntityType="Self.BoatType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Boating__MemberI__619B8048" Association="Self.FK__Boating__MemberI__619B8048">
+      <End Role="Member" EntitySet="Member" />
+      <End Role="Boating" EntitySet="Boating" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Boating__Order__60A75C0F" Association="Self.FK__Boating__Order__60A75C0F">
+      <End Role="LogBook" EntitySet="LogBook" />
+      <End Role="Boating" EntitySet="Boating" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

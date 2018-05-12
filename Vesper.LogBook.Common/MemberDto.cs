@@ -1,4 +1,6 @@
-﻿namespace Vesper.LogBook.Common
+﻿using System.Collections.Generic;
+
+namespace Vesper.LogBook.Common
 {
     public class MemberDto
     {
@@ -14,5 +16,7 @@
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string MiddleInitial { get; set; }
+
+        public List<BoatingDto> Boatings { get; set; }
     }
 }

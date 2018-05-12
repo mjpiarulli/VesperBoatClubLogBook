@@ -14,9 +14,18 @@ namespace Vesper.LogBook.DataAccess
     
     public partial class Member
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Member()
+        {
+            this.Boatings = new HashSet<Boating>();
+        }
+    
         public int MemberId { get; set; }
         public string FirstName { get; set; }
         public string MiddleInitial { get; set; }
         public string LastName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Boating> Boatings { get; set; }
     }
 }

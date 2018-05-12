@@ -11,9 +11,9 @@
             </tr>
             </thead>
             <tbody>
-            <tr ng-repeat="leader in vm.mileageLeaders track by $index">
+            <tr ng-repeat="leader in vm.mileageLeaderReport.MileageLeaders">
                 <td>{{leader.FirstName}} {{leader.LastName}}</td>
-                <td>{{leader.Mileage}}</td>
+                <td>{{leader.MilesRowed}}</td>
             </tr>
             </tbody>
         </table>

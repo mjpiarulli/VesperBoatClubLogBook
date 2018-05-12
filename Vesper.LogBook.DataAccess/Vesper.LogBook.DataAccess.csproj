@@ -52,6 +52,9 @@
     <Compile Include="Boat.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
+    <Compile Include="Boating.cs">
+      <DependentUpon>VesperLogBook.tt</DependentUpon>
+    </Compile>
     <Compile Include="BoatStatusLog.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>

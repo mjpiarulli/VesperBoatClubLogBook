@@ -273,8 +273,8 @@ E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\pt\Microsoft.SqlServer.Ty
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\ru\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csprojResolveAssemblyReference.cache
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csproj.CoreCompileInputs.cache
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.dll
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.pdb
+E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csprojAssemblyReference.cache

@@ -21,8 +21,8 @@ E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\Vesper.Reports.Common.pdb
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.xml
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csprojResolveAssemblyReference.cache
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csproj.CoreCompileInputs.cache
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.pdb
+E:\git\VesperBoatClubLogBook\Vesper.Reports.DataAccess\obj\Debug\Vesper.Reports.DataAccess.csprojAssemblyReference.cache

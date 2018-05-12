@@ -75,8 +75,8 @@ E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\pt\Microsoft
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.csprojResolveAssemblyReference.cache
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.csproj.CoreCompileInputs.cache
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.pdb
+E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportService\obj\Debug\Vesper.Reports.ReportService.csprojAssemblyReference.cache

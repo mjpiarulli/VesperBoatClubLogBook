@@ -12,7 +12,8 @@ namespace Vesper.LogBook.LogBookService
             var entities = uow.MemberRepository.FindBy(m => true)
                 .OrderBy(m => m.LastName)
                 .ToList();
-            var dtos = _mapper.Map<List<Member>, List<MemberDto>>(entities);
+            var mapper = AutomapperBootstrapper.MapMember();
+            var dtos = mapper.Map<List<Member>, List<MemberDto>>(entities);
 
             return dtos;
         });

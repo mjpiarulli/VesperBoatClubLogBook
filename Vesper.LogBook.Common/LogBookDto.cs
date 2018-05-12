@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlTypes;
 
 namespace Vesper.LogBook.Common
 {
@@ -7,6 +9,13 @@ namespace Vesper.LogBook.Common
         public LogBookDto()
         {
             LogBookId = 0;
+            Date = SqlDateTime.MinValue.Value;
+            TimeIn = SqlDateTime.MinValue.Value;
+            TimeOut = SqlDateTime.MinValue.Value;
+            MilesRowed = 0;
+            Comment = string.Empty;
+            BoatName = string.Empty;
+            BoatType = string.Empty;
         }
 
         public int LogBookId { get; set; }
@@ -17,5 +26,7 @@ namespace Vesper.LogBook.Common
         public string Comment { get; set; }
         public string BoatName { get; set; }
         public string BoatType { get; set; }
+
+        public List<BoatingDto> Boatings { get; set; }
     }
 }

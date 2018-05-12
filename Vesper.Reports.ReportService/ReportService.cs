@@ -20,5 +20,12 @@ namespace Vesper.Reports.ReportService
 
             return report;
         });
+
+        public MileageLeaderReport GetMileageLeaderReport() => _uow.Uow(uow =>
+        {
+            var report = uow.ReportRepository.GetMileageLeaderReport();
+
+            return report;
+        });
     }
 }

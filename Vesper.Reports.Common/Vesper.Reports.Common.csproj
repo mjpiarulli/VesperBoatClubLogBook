@@ -44,6 +44,8 @@
     <Compile Include="MileageAndUsageEntry.cs" />
     <Compile Include="MileageAndUsageGrandTotal.cs" />
     <Compile Include="MileageAndUsageTotalEntry.cs" />
+    <Compile Include="MileageLeader.cs" />
+    <Compile Include="MileageLeaderReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -55,8 +55,8 @@ E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\pt\Microsoft.Sq
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csprojResolveAssemblyReference.cache
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csproj.CoreCompileInputs.cache
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.dll
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.pdb
+E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csprojAssemblyReference.cache

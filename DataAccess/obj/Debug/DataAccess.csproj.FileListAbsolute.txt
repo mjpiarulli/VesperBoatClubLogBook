@@ -34,8 +34,8 @@ E:\git\VesperBoatClubLogBook\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 E:\git\VesperBoatClubLogBook\DataAccess\bin\Debug\EntityFramework.xml
 E:\git\VesperBoatClubLogBook\DataAccess\bin\Debug\EntityFramework.MappingAPI.pdb
 E:\git\VesperBoatClubLogBook\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.dll
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.pdb
+E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

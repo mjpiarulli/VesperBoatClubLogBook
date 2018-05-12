@@ -6,5 +6,6 @@ namespace Vesper.Reports.ReportServiceContract
     public interface IReportService
     {
         LogBookMileageAndUsageByBoat GetLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate);
+        MileageLeaderReport GetMileageLeaderReport();
     }
 }

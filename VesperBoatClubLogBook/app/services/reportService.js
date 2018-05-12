@@ -15,5 +15,9 @@
             this.getBoatStatusLogSearch = function(searchParams) {
                 return $http.post("/api/report/LoadBoatStatusLogSearch", searchParams);
             };
+
+            this.getMileageLeaderReport = function() {
+                return $http.get("/api/report/LoadMileageLeaderReport");
+            };
         });
 })();

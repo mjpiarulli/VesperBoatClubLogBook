@@ -11,7 +11,7 @@ namespace Vesper.LogBook.LogBookService
 
         public VesperLogBookService()
         {
-            _mapper = AutomapperBootstrapper.MapLogBook();
+            _mapper = AutomapperBootstrapper.MapVesperLogBook();
         }
 
         public VesperLogBookService(string entityConnectionString) : this()

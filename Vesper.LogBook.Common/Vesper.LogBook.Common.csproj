@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoatDto.cs" />
+    <Compile Include="BoatingDto.cs" />
     <Compile Include="BoatStatusLogDto.cs" />
     <Compile Include="BoatStatusLogSearchParameter.cs" />
     <Compile Include="BoatTypeDto.cs" />
