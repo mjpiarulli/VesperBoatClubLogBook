@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Interface\IReportRepository.cs" />
     <Compile Include="Repository\ReportRepository.cs" />
+    <Compile Include="SqlHelper\IndividualMileageReportSqlHelper.cs" />
     <Compile Include="SqlHelper\LogBookMileageAndUsageByBoatSqlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper\MileageLeaderReportSqlHelper.cs" />

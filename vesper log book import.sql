@@ -1,5 +1,5 @@
 -- access tables needed
--- members, fleet, log book, boat status log, boat type
+-- members, fleet, log book, boat status log, boat type, boatings
 -- notes: log book - edit mappings for dates to datetime2
 
 -- Members
@@ -110,3 +110,23 @@ Select [Type],[Name],[Seats],[Start Count],[Cox]
 from [Boat Type]
 
 Drop Table [Boat Type]
+
+Create Table Boating(
+	BoatingId int identity(1, 1) primary key,
+	LogBookId int not null,
+	MemberId int not null,
+	Seat varchar(10),
+	[Order] int not null
+	FOREIGN KEY (LogBookId) REFERENCES LogBook(LogBookId),
+	FOREIGN KEY (MemberId) REFERENCES Member(MemberId)
+)
+
+Insert Into Boating(LogBookId, MemberId, Seat, [Order])
+Select [Log entry number], [Member number], [Seat], [Order]
+From Boatings b
+join LogBook lb
+on b.[Log entry number] = lb.LogBookId
+join Member m
+on b.[Member number] = m.MemberId
+
+Drop Table Boatings

@@ -24,7 +24,6 @@ namespace Vesper.LogBook.DataAccess
             : base(connectionString)
         {
     		Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
-            Configuration.LazyLoadingEnabled = true;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

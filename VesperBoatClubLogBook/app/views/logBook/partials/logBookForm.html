@@ -25,6 +25,7 @@
                 <div class="col-lg-8">
                     <label for="rowerName" class="control-label">Rower's Name</label>
                     <select name="rowerName" class="rowerName form-control selectpicker" data-live-search="true" ng-model="vm.log.Rower[$index].Name">
+                        <option value="">Nothing selected</option>
                         <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
                     </select>
                 </div>

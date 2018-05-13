@@ -1,6 +1,6 @@
 ﻿namespace Vesper.Reports.DataAccess.SqlHelper
 {
-    public static class LogBookMileageAndUsageByBoat
+    public static class LogBookMileageAndUsageByBoatSqlHelper
     {
         public const string MileageAndUsageEntrySql = @"
                                                         select BoatName, BoatType, Sum(MilesRowed) as MilesRowed, count(0) as Outings

@@ -44,5 +44,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return report;
         }
+
+        [Route("LoadIndividualMileageReport")]
+        [HttpGet]
+        public IndividualMileageReport LoadIndividualMileageReport(int memberId, DateTime startDate, DateTime endDate)
+        {
+            var report = ReportService.GetIndividualMileageReport(memberId, startDate, endDate);
+
+            return report;
+        }
     }
 }

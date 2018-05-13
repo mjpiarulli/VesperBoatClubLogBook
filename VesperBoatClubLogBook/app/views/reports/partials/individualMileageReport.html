@@ -1,0 +1,29 @@
+﻿<div class="box box-info">
+    <div class="box-header">
+        <h3>Individual Mileage Report</h3>
+    </div>
+    <div class="box-body">
+        <h3>Total Miles Rowed: {{vm.individualMileageReport.TotalMilesRowed}}</h3>
+        <table class="table table-striped">
+            <caption></caption>
+            <thead>
+            <tr>
+                <th>Entry No.</th>
+                <th>Date</th>
+                <th>Boat Name</th>
+                <th>Miles Rowed</th>
+                <th>Workout or Comment</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="entry in vm.individualMileageReport.IndividualMileageReportEntries">
+                <td>{{entry.LogBookId}}</td>
+                <td>{{entry.Date | date: "MM/dd/yyyy"}}</td>
+                <td>{{entry.BoatName}}</td>
+                <td>{{entry.MilesRowed}}</td>
+                <td>{{entry.Comment}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

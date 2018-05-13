@@ -25,9 +25,9 @@ namespace Vesper.Reports.DataAccess.Repository
             var p2 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };
             var p3 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };
 
-            const string mileageAndUsageEntrySql = SqlHelper.LogBookMileageAndUsageByBoat.MileageAndUsageEntrySql;
-            const string mileageAndUsageTotalEntrySql = SqlHelper.LogBookMileageAndUsageByBoat.MileageAndUsageTotalEntrySql;
-            const string mileageAndUsageGrandTotalSql = SqlHelper.LogBookMileageAndUsageByBoat.MileageAndUsageGrandTotalSql;
+            const string mileageAndUsageEntrySql = LogBookMileageAndUsageByBoatSqlHelper.MileageAndUsageEntrySql;
+            const string mileageAndUsageTotalEntrySql = LogBookMileageAndUsageByBoatSqlHelper.MileageAndUsageTotalEntrySql;
+            const string mileageAndUsageGrandTotalSql = LogBookMileageAndUsageByBoatSqlHelper.MileageAndUsageGrandTotalSql;
 
             var mileageAndUsageEntries = _context.Database.SqlQuery<MileageAndUsageEntry>(mileageAndUsageEntrySql, p1.ToArray()).ToList();
             var mileageAndUsageTotalEntry = _context.Database.SqlQuery<MileageAndUsageTotalEntry>(mileageAndUsageTotalEntrySql, p2.ToArray()).ToList();
@@ -49,6 +49,19 @@ namespace Vesper.Reports.DataAccess.Repository
             var mileageLeaderReport = new MileageLeaderReport(mileageLeaders);
 
             return mileageLeaderReport;
+        }
+
+        public IndividualMileageReport GetIndividualMileageReport(int memberId, DateTime startDate, DateTime endDate)
+        {
+            var p1 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate), new SqlParameter("@memberId", memberId) };
+            var p2 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate), new SqlParameter("@memberId", memberId) };
+            const string individualMileageReportSql = IndividualMileageReportSqlHelper.IndividualMileageReportSql;
+            const string totalMilesRowedSql = IndividualMileageReportSqlHelper.TotalMilesRowedSql;
+            var entries = _context.Database.SqlQuery<IndividualMileageReportEntry>(individualMileageReportSql, p1.ToArray()).ToList();
+            var totalMilesRowed = _context.Database.SqlQuery<int>(totalMilesRowedSql, p2.ToArray()).First();
+            var report = new IndividualMileageReport(entries, totalMilesRowed);
+
+            return report;
         }
     }
 }

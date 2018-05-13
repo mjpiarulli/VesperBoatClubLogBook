@@ -46,6 +46,11 @@
                 templateUrl: reportsTemplateUrlBase + "boatStatusLogSearch.html",
                 controller: "reportsCtrl as vm"
             })
+            .when("/reports/individualmileage",
+            {
+                templateUrl: reportsTemplateUrlBase + "individualMileage.html",
+                controller: "reportsCtrl as vm"
+            })
             ;
     }]);
 })();

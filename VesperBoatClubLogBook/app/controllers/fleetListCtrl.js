@@ -1,9 +1,9 @@
 ﻿(function () {
-    'use strict';
+    "use strict";
 
     angular
-        .module('app')
-        .controller('fleetListCtrl', ["boatService", function (boatService) {
+        .module("app")
+        .controller("fleetListCtrl", ["boatService", function (boatService) {
             var vm = this;
 
             boatService.getBoatList().then(function (response) {

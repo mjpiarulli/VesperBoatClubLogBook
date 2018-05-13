@@ -27,5 +27,12 @@ namespace Vesper.Reports.ReportService
 
             return report;
         });
+
+        public IndividualMileageReport GetIndividualMileageReport(int memberId, DateTime startDate, DateTime endDate) => _uow.Uow(uow =>
+        {
+            var report = uow.ReportRepository.GetIndividualMileageReport(memberId, startDate, endDate);
+
+            return report;
+        });
     }
 }

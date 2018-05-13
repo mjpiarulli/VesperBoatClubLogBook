@@ -1,9 +1,9 @@
 ﻿(function () {
-    'use strict';
+    "use strict";
 
     angular
-        .module('app')
-        .service('reportService', function ($http) {
+        .module("app")
+        .service("reportService", function ($http) {
             this.getLogBookMileageAndUsageByBoatReport = function (startDate, endDate) {
                 return $http.get("api/report/loadlogbookmileageandusagebyboatreport?startDate=" + startDate + "&endDate=" + endDate);
             };
@@ -18,6 +18,10 @@
 
             this.getMileageLeaderReport = function() {
                 return $http.get("/api/report/LoadMileageLeaderReport");
+            };
+
+            this.getIndividualMileageReport = function(memberId, startDate, endDate) {
+                return $http.get("/api/report/LoadIndividualMileageReport?memberId=" + memberId + "&startDate=" + startDate + "&endDate=" + endDate);
             };
         });
 })();
