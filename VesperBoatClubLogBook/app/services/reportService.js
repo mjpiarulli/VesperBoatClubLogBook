@@ -27,5 +27,9 @@
             this.getClubMileageByMemberReport = function (startDate, endDate) {
                 return $http.get("api/report/loadClubMileageByMemberReport?startDate=" + startDate + "&endDate=" + endDate);
             };
+
+            this.getClubLogBookReport = function(startDate, endDate) {
+                return $http.get("api/report/LoadClubLogBookReport?startDate=" + startDate + "&endDate=" + endDate);
+            };
         });
 })();

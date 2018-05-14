@@ -248,10 +248,12 @@
     <Content Include="app\views\memberList\memberList.html" />
     <Content Include="app\views\reports\boatDamage.html" />
     <Content Include="app\views\reports\boatStatusLogSearch.html" />
+    <Content Include="app\views\reports\clubLogBook.html" />
     <Content Include="app\views\reports\clubMileageByMember.html" />
     <Content Include="app\views\reports\equipmentUsage.html" />
     <Content Include="app\views\reports\individualMileage.html" />
     <Content Include="app\views\reports\partials\boatStatusLogList.html" />
+    <Content Include="app\views\reports\partials\clubLogBookReport.html" />
     <Content Include="app\views\reports\partials\clubMileageByMemberReport.html" />
     <Content Include="app\views\reports\partials\equipmentUsageReport.html" />
     <Content Include="app\views\reports\partials\individualMileageReport.html" />

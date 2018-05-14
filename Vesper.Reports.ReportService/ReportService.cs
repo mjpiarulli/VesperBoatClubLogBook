@@ -41,5 +41,12 @@ namespace Vesper.Reports.ReportService
 
             return report;
         });
+
+        public ClubLogBookReport GetClubLogBookReport(DateTime startDate, DateTime endDate) => _uow.Uow(uow =>
+        {
+            var report = uow.ReportRepository.GetClubLogBookReport(startDate, endDate);
+
+            return report;
+        });
     }
 }

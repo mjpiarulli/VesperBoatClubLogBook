@@ -73,5 +73,15 @@ namespace Vesper.Reports.DataAccess.Repository
 
             return report;
         }
+
+        public ClubLogBookReport GetClubLogBookReport(DateTime startDate, DateTime endDate)
+        {
+            var p1 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };
+            const string clubLogBookReportSql = ClubLogBookReportSqlHelper.ClubLogBookReportSql;
+            var entries = _context.Database.SqlQuery<ClubLogBookEntry>(clubLogBookReportSql, p1.ToArray()).ToList();
+            var report = new ClubLogBookReport(entries);
+
+            return report;
+        }
     }
 }

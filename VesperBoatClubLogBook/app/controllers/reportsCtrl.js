@@ -61,5 +61,14 @@
                     console.log("Error in getClubMileageByMemberReport()")
                 });
             };
+
+            vm.loadClubLogBookReport = function(startDate, endDate) {
+                reportService.getClubLogBookReport(startDate, endDate).then(function(response) {
+                    vm.report = "app/views/reports/partials/clubLogBookReport.html";
+                    vm.clubLogBookReport = response.data;
+                }, function() {
+                    console.log("Error in getClubLogBookReport()");
+                });
+            };
         }]);
 })();

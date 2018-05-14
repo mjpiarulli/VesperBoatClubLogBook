@@ -9,5 +9,6 @@ namespace Vesper.Reports.ReportServiceContract
         MileageLeaderReport GetMileageLeaderReport();
         IndividualMileageReport GetIndividualMileageReport(int memberId, DateTime startDate, DateTime endDate);
         ClubMileageByMemberReport GetClubMileageByMemberReport(DateTime startDate, DateTime endDate);
+        ClubLogBookReport GetClubLogBookReport(DateTime startDate, DateTime endDate);
     }
 }

@@ -62,5 +62,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return report;
         }
+
+        [Route("LoadClubLogBookReport")]
+        [HttpGet]
+        public ClubLogBookReport LoadClubLogBookReport(DateTime startDate, DateTime endDate)
+        {
+            var report = ReportService.GetClubLogBookReport(startDate, endDate);
+
+            return report;
+        }
     }
 }

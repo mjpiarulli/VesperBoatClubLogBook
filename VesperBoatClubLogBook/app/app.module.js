@@ -56,6 +56,11 @@
                     templateUrl: reportsTemplateUrlBase + "clubMileageByMember.html",
                     controller: "reportsCtrl as vm"
                 })
+            .when("/reports/clublogbook",
+                {
+                    templateUrl: reportsTemplateUrlBase + "clubLogBook.html",
+                    controller: "reportsCtrl as vm"
+                })
             ;
     }]);
 })();

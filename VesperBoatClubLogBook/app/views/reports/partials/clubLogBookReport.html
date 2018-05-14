@@ -1,0 +1,26 @@
+﻿<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Boat Name</th>
+            <th>Type</th>
+            <th>Crew</th>
+            <th>Comment</th>
+            <th>Time Out</th>
+            <th>Time In</th>
+            <th>Miles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="entry in vm.clubLogBookReport.ClubLogBookEntries">
+            <td>{{entry.Date | date: "MM/dd/yyyy"}}</td>
+            <td>{{entry.BoatName}}</td>
+            <td>{{entry.BoatType}}</td>
+            <td>{{entry.Crew}}</td>
+            <td>{{entry.Comment}}</td>
+            <td>{{entry.TimeOut | date: "hh:mm a"}}</td>
+            <td>{{entry.TimeIn | date: "hh:mm a"}}</td>
+            <td>{{entry.MilesRowed}}</td>
+        </tr>
+    </tbody>
+</table>

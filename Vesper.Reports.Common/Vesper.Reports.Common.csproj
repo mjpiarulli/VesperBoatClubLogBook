@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubLogBookEntry.cs" />
+    <Compile Include="ClubLogBookReport.cs" />
     <Compile Include="ClubMileageByMemberReport.cs" />
     <Compile Include="IndividualMileageReport.cs" />
     <Compile Include="IndividualMileageReportEntry.cs" />

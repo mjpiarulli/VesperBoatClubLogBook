@@ -9,7 +9,7 @@
 		Individual Mileage Report - COMPLETE
 		Equipment Usage Report - COMPLETE
 		Club Mileage By Member - COMPLETE
-		Club Log Book
+		Club Log Book - COMPLETE
 		Boat Damage Report
 			Add button for user to add date and comment for returning a boat to service
 		Boat Status Log Search
