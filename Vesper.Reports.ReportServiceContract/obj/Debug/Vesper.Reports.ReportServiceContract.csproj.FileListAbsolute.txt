@@ -2,7 +2,6 @@ C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\bin\Debug\Vesp
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\bin\Debug\Vesper.Reports.ReportServiceContract.pdb
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\bin\Debug\Vesper.Reports.Common.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\bin\Debug\Vesper.Reports.Common.pdb
-C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.dll
@@ -16,3 +15,4 @@ E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesp
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.pdb
 E:\git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\Vesper.Reports.ReportServiceContract\obj\Debug\Vesper.Reports.ReportServiceContract.csprojAssemblyReference.cache

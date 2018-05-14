@@ -1,4 +1,3 @@
-C:\Git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.Common\bin\Debug\Vesper.Reports.Common.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Reports.Common\bin\Debug\Vesper.Reports.Common.pdb
@@ -10,3 +9,4 @@ E:\git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Comm
 E:\git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.dll
 E:\git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.pdb
 E:\git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\Vesper.Reports.Common\obj\Debug\Vesper.Reports.Common.csprojAssemblyReference.cache

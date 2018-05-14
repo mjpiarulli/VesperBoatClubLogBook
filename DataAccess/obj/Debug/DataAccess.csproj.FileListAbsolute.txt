@@ -19,7 +19,6 @@ C:\Git\VesperBoatClubLogBook\DataAccess\bin\Debug\pt\Microsoft.SqlServer.Types.r
 C:\Git\VesperBoatClubLogBook\DataAccess\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Git\VesperBoatClubLogBook\DataAccess\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Git\VesperBoatClubLogBook\DataAccess\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.dll
@@ -39,3 +38,4 @@ E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.dll
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.pdb
 E:\git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache

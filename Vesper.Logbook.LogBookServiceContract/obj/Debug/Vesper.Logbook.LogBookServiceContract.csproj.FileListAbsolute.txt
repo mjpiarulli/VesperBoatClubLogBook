@@ -1,6 +1,5 @@
 C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\bin\Debug\Vesper.Logbook.LogBookServiceContract.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\bin\Debug\Vesper.Logbook.LogBookServiceContract.pdb
-C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.dll
 C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.pdb
@@ -16,3 +15,4 @@ E:\git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Ves
 E:\git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.dll
 E:\git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.pdb
 E:\git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\Vesper.Logbook.LogBookServiceContract\obj\Debug\Vesper.Logbook.LogBookServiceContract.csprojAssemblyReference.cache

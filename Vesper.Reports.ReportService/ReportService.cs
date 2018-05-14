@@ -34,5 +34,12 @@ namespace Vesper.Reports.ReportService
 
             return report;
         });
+
+        public ClubMileageByMemberReport GetClubMileageByMemberReport(DateTime startDate, DateTime endDate) => _uow.Uow(uow =>
+        {
+            var report = uow.ReportRepository.GetClubMileageByMemberReport(startDate, endDate);
+
+            return report;
+        });
     }
 }

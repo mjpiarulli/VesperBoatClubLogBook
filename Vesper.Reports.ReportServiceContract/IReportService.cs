@@ -8,5 +8,6 @@ namespace Vesper.Reports.ReportServiceContract
         LogBookMileageAndUsageByBoat GetLogBookMileageAndUsageByBoatReport(DateTime startDate, DateTime endDate);
         MileageLeaderReport GetMileageLeaderReport();
         IndividualMileageReport GetIndividualMileageReport(int memberId, DateTime startDate, DateTime endDate);
+        ClubMileageByMemberReport GetClubMileageByMemberReport(DateTime startDate, DateTime endDate);
     }
 }

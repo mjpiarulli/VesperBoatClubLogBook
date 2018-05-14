@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClubMileageByMemberReport.cs" />
     <Compile Include="IndividualMileageReport.cs" />
     <Compile Include="IndividualMileageReportEntry.cs" />
     <Compile Include="LogBookMileageAndUsageByBoat.cs" />
+    <Compile Include="MemberMileageEntry.cs" />
     <Compile Include="MileageAndUsageEntry.cs" />
     <Compile Include="MileageAndUsageGrandTotal.cs" />
     <Compile Include="MileageAndUsageTotalEntry.cs" />

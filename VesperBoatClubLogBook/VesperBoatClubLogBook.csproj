@@ -248,9 +248,11 @@
     <Content Include="app\views\memberList\memberList.html" />
     <Content Include="app\views\reports\boatDamage.html" />
     <Content Include="app\views\reports\boatStatusLogSearch.html" />
+    <Content Include="app\views\reports\clubMileageByMember.html" />
     <Content Include="app\views\reports\equipmentUsage.html" />
     <Content Include="app\views\reports\individualMileage.html" />
     <Content Include="app\views\reports\partials\boatStatusLogList.html" />
+    <Content Include="app\views\reports\partials\clubMileageByMemberReport.html" />
     <Content Include="app\views\reports\partials\equipmentUsageReport.html" />
     <Content Include="app\views\reports\partials\individualMileageReport.html" />
     <Content Include="app\views\_layout\navBar.html" />
@@ -296,6 +298,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="README.txt" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />

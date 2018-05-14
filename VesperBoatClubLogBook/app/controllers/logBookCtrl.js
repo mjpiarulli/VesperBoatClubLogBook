@@ -8,7 +8,7 @@
 
                 var vm = this;
 
-                reportService.getMileageLeaderReport().then(function(response) {
+                reportService.getMileageLeaderReport().then(function (response) {
                     vm.mileageLeaderReport = response.data;
                 }, function () {
                     console.log("Error in getMileageLeaderReport()");

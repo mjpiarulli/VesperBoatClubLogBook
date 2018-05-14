@@ -52,5 +52,14 @@
                     console.log("Error in getIndividualMileageReport()");
                 });
             };
+
+            vm.loadClubMileageByMemberReport = function(startDate, endDate) {
+                reportService.getClubMileageByMemberReport(startDate, endDate).then(function(response) {
+                    vm.report = "app/views/reports/partials/clubMileageByMemberReport.html";
+                    vm.clubMileageReport = response.data;
+                }, function() {
+                    console.log("Error in getClubMileageByMemberReport()")
+                });
+            };
         }]);
 })();

@@ -1,6 +1,5 @@
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\Vesper.LogBook.DataAccess.dll
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\bin\Debug\Vesper.LogBook.DataAccess.pdb
-C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.dll
 C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.pdb
@@ -60,3 +59,4 @@ E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.dll
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.pdb
 E:\git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\Vesper.LogBook.DataAccess\obj\Debug\Vesper.LogBook.DataAccess.csprojAssemblyReference.cache

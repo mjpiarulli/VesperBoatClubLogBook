@@ -90,7 +90,6 @@ C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\System.Web.WebPages.xml
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\System.Web.WebPages.Deployment.xml
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\System.Web.WebPages.Razor.xml
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\System.Web.Optimization.xml
-C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.dll
@@ -278,3 +277,4 @@ E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBo
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.dll
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.pdb
 E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csprojAssemblyReference.cache
+C:\Git\VesperBoatClubLogBook\VesperBoatClubLogBook\obj\Debug\VesperBoatClubLogBook.csprojAssemblyReference.cache

@@ -63,5 +63,15 @@ namespace Vesper.Reports.DataAccess.Repository
 
             return report;
         }
+
+        public ClubMileageByMemberReport GetClubMileageByMemberReport(DateTime startDate, DateTime endDate)
+        {
+            var p1 = new List<object> { new SqlParameter("@startDate", startDate), new SqlParameter("@endDate", endDate) };
+            const string clubMileageByMemberReportSql = ClubMileageByMemberReportSqlHelper.ClubMileageByMemberReportSql;
+            var entries = _context.Database.SqlQuery<MemberMileageEntry>(clubMileageByMemberReportSql, p1.ToArray()).ToList();
+            var report = new ClubMileageByMemberReport(entries);
+
+            return report;
+        }
     }
 }

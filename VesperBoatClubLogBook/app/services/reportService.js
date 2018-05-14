@@ -23,5 +23,9 @@
             this.getIndividualMileageReport = function(memberId, startDate, endDate) {
                 return $http.get("/api/report/LoadIndividualMileageReport?memberId=" + memberId + "&startDate=" + startDate + "&endDate=" + endDate);
             };
+
+            this.getClubMileageByMemberReport = function (startDate, endDate) {
+                return $http.get("api/report/loadClubMileageByMemberReport?startDate=" + startDate + "&endDate=" + endDate);
+            };
         });
 })();

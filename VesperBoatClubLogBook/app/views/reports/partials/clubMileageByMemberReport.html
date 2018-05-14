@@ -1,0 +1,16 @@
+﻿<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Member</th>
+        <th>Miles Rowed</th>
+        <th>Outings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="entry in vm.clubMileageReport.MemberMileageEntries">
+        <td>{{entry.LastName}}, {{entry.FirstName}}</td>
+        <td>{{entry.MilesRowed}}</td>
+        <td>{{entry.Outings}}</td>
+    </tr>
+    </tbody>
+</table>
