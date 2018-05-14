@@ -9,10 +9,10 @@
         <EntityTypeShape EntityType="VesperLogBookModel.BoatStatusLog" Width="1.5" PointX="3.375" PointY="4.75" />
         <EntityTypeShape EntityType="VesperLogBookModel.BoatType" Width="1.5" PointX="5.375" PointY="0.75" />
         <EntityTypeShape EntityType="VesperLogBookModel.Boating" Width="1.5" PointX="7.625" PointY="4.125" />
-        <EntityTypeShape EntityType="VesperLogBookModel.LogBook" Width="1.5" PointX="5.375" PointY="4" />
         <EntityTypeShape EntityType="VesperLogBookModel.Member" Width="1.5" PointX="5.375" PointY="8.375" />
         <AssociationConnector Association="VesperLogBookModel.FK__Boating__MemberI__619B8048" />
-        <AssociationConnector Association="VesperLogBookModel.FK__Boating__Order__60A75C0F" />
+        <EntityTypeShape EntityType="VesperLogBookModel.LogBook" Width="1.5" PointX="0.75" PointY="1" />
+        <AssociationConnector Association="VesperLogBookModel.FK__Boating__Order__30F848ED" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

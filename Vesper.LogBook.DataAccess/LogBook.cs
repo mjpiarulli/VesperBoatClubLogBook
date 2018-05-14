@@ -21,7 +21,7 @@ namespace Vesper.LogBook.DataAccess
         }
     
         public int LogBookId { get; set; }
-        public Nullable<System.DateTime> Date { get; set; }
+        public System.DateTime Date { get; set; }
         public Nullable<System.DateTime> TimeOut { get; set; }
         public Nullable<System.DateTime> TimeIn { get; set; }
         public Nullable<int> MilesRowed { get; set; }

@@ -232,6 +232,7 @@
     <Content Include="app\controllers\fleetListCtrl.js" />
     <Content Include="app\controllers\layoutCtrl.js" />
     <Content Include="app\controllers\logBookCtrl.js" />
+    <Content Include="app\controllers\logBookSearchCtrl.js" />
     <Content Include="app\controllers\memberListCtrl.js" />
     <Content Include="app\controllers\reportsCtrl.js" />
     <Content Include="app\services\boatService.js" />
@@ -240,6 +241,8 @@
     <Content Include="app\services\memberService.js" />
     <Content Include="app\services\reportService.js" />
     <Content Include="app\views\fleetList\fleetList.html" />
+    <Content Include="app\views\logBookSearch\logBookSearch.html" />
+    <Content Include="app\views\logBookSearch\partials\logBookList.html" />
     <Content Include="app\views\logBook\logBook.html" />
     <Content Include="app\views\logBook\partials\clubMileage.html" />
     <Content Include="app\views\logBook\partials\logBookForm.html" />

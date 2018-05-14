@@ -56,7 +56,7 @@ Drop table Fleet
 
 Create Table LogBook(
 	LogBookId int identity(1,1) primary key,
-	[Date] datetime2 null,
+	[Date] datetime2 not null,
 	TimeOut datetime2 null,
 	TimeIn datetime2 null,
 	MilesRowed int null,
@@ -71,6 +71,7 @@ go
 Insert Into LogBook(LogBookId, [Date], TimeOut, TimeIn, MilesRowed, Comment, BoatName, BoatType)
 Select [Entry No], [Date], [Time out], [Time in], [Miles Rowed], Comment, BoatName, [Type]
 From [Log Book]
+Where [Date] Is Not Null
 
 set identity_insert LogBook off
 go

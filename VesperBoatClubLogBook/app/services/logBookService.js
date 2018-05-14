@@ -11,5 +11,9 @@
             this.getClubMileageLastYearToDate = function () {
                 return $http.get("api/logbook/loadclubmileagelastyeartodate");
             };
+
+            this.searchLogBook = function(searchParams) {
+                return $http.post("api/logbook/searchlogbook", searchParams);
+            };
         });
 })();

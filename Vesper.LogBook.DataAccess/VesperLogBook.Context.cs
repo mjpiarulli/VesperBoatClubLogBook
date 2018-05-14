@@ -23,7 +23,7 @@ namespace Vesper.LogBook.DataAccess
     		public VesperLogBookEntities(string connectionString)
             : base(connectionString)
         {
-    		Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+    		Database.Log = s => System.Diagnostics.Debug.WriteLine(s);        
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -35,7 +35,7 @@ namespace Vesper.LogBook.DataAccess
         public virtual DbSet<BoatStatusLog> BoatStatusLogs { get; set; }
         public virtual DbSet<BoatType> BoatTypes { get; set; }
         public virtual DbSet<Boating> Boatings { get; set; }
-        public virtual DbSet<LogBook> LogBooks { get; set; }
         public virtual DbSet<Member> Members { get; set; }
+        public virtual DbSet<LogBook> LogBooks { get; set; }
     }
 }

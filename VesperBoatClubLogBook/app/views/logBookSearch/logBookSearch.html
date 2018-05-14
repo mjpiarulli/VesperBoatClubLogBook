@@ -1,0 +1,83 @@
+﻿<div class="container">
+    <form id="parameter-form">
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">Boat Status Log Search</h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group row">
+                    <div class="col-lg-6">
+                        <label for="rowerName" class="control-label">Rower's Name</label>
+                        <select name="rowerName" id="rowerName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.MemberId">
+                            <option value="">Nothing selected</option>
+                            <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-lg-6">
+                        <label for="boatName" class="col-form-label">Boat Name</label>
+                        <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName">
+                            <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="boatType" class="col-form-label">Boat Type</label>
+                        <select id="boatType" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatType">
+                            <option ng-repeat="boatType in vm.boatTypes" value="{{boatType.Type}}">{{boatType.Type}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-3">
+                        <label for="startDate" class="col-form-label">Start Date</label>
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" id="startDate" name="startDate" class="form-control datetimepicker-input" data-target="#startDate" ng-model="vm.searchParams.StartDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#startDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#startDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
+                    </div>
+                    <div class="col-lg-3">
+                        <label for="endDate" class="col-form-label">End Date</label>
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" id="endDate" name="endDate" class="form-control datetimepicker-input" data-target="#endDate" ng-model="vm.searchParams.EndDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#endDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#endDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-6">
+                        <label for="comments" class="col-form-label">Comments</label>
+                        <input type="text" id="comments" name="comments" class="form-control" ng-model="vm.searchParams.Comment" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-lg-2">
+                        <button type="button" id="btn-submit" ng-click="vm.searchLogBook(vm.searchParams)" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="report">
+        <ng-include src="vm.report"></ng-include>
+    </div>
+</div>

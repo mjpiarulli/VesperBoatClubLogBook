@@ -2,14 +2,13 @@
 	Log Book
 		Submit logbook entry and clear form
 	Log Book History Search
+		edit/remove log entries
 	Report Boat Damage
-	Member List - COMPLETE
-	Fleet List - COMPLETE
-	Reports
-		Individual Mileage Report - COMPLETE
-		Equipment Usage Report - COMPLETE
-		Club Mileage By Member - COMPLETE
-		Club Log Book - COMPLETE
+	Fleet List
+		add boats to fleet
+	Member List
+		add members to roster
+	Reports		
 		Boat Damage Report
 			Add button for user to add date and comment for returning a boat to service
 		Boat Status Log Search

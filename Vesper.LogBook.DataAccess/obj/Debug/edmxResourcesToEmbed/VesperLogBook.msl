@@ -53,6 +53,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="VesperLogBookModel.Member">
+        <MappingFragment StoreEntitySet="Member">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="LogBooks">
       <EntityTypeMapping TypeName="VesperLogBookModel.LogBook">
         <MappingFragment StoreEntitySet="LogBook">
@@ -64,16 +74,6 @@
           <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
           <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="LogBookId" ColumnName="LogBookId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Members">
-      <EntityTypeMapping TypeName="VesperLogBookModel.Member">
-        <MappingFragment StoreEntitySet="Member">
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="MiddleInitial" ColumnName="MiddleInitial" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="MemberId" ColumnName="MemberId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

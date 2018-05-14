@@ -5,13 +5,13 @@
     <EntitySet Name="BoatStatusLogs" EntityType="VesperLogBookModel.BoatStatusLog" />
     <EntitySet Name="BoatTypes" EntityType="VesperLogBookModel.BoatType" />
     <EntitySet Name="Boatings" EntityType="VesperLogBookModel.Boating" />
-    <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
     <EntitySet Name="Members" EntityType="VesperLogBookModel.Member" />
     <AssociationSet Name="FK__Boating__MemberI__619B8048" Association="VesperLogBookModel.FK__Boating__MemberI__619B8048">
       <End Role="Member" EntitySet="Members" />
       <End Role="Boating" EntitySet="Boatings" />
     </AssociationSet>
-    <AssociationSet Name="FK__Boating__Order__60A75C0F" Association="VesperLogBookModel.FK__Boating__Order__60A75C0F">
+    <EntitySet Name="LogBooks" EntityType="VesperLogBookModel.LogBook" />
+    <AssociationSet Name="FK__Boating__Order__30F848ED" Association="VesperLogBookModel.FK__Boating__Order__30F848ED">
       <End Role="LogBook" EntitySet="LogBooks" />
       <End Role="Boating" EntitySet="Boatings" />
     </AssociationSet>
@@ -64,21 +64,7 @@
     <Property Name="Seat" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
     <Property Name="Order" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Member" Relationship="VesperLogBookModel.FK__Boating__MemberI__619B8048" FromRole="Boating" ToRole="Member" />
-    <NavigationProperty Name="LogBook" Relationship="VesperLogBookModel.FK__Boating__Order__60A75C0F" FromRole="Boating" ToRole="LogBook" />
-  </EntityType>
-  <EntityType Name="LogBook">
-    <Key>
-      <PropertyRef Name="LogBookId" />
-    </Key>
-    <Property Name="LogBookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Date" Type="DateTime" Precision="7" />
-    <Property Name="TimeOut" Type="DateTime" Precision="7" />
-    <Property Name="TimeIn" Type="DateTime" Precision="7" />
-    <Property Name="MilesRowed" Type="Int32" />
-    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Boatings" Relationship="VesperLogBookModel.FK__Boating__Order__60A75C0F" FromRole="LogBook" ToRole="Boating" />
+    <NavigationProperty Name="LogBook" Relationship="VesperLogBookModel.FK__Boating__Order__30F848ED" FromRole="Boating" ToRole="LogBook" />
   </EntityType>
   <EntityType Name="Member">
     <Key>
@@ -102,7 +88,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Boating__Order__60A75C0F">
+  <EntityType Name="LogBook">
+    <Key>
+      <PropertyRef Name="LogBookId" />
+    </Key>
+    <Property Name="LogBookId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="TimeOut" Type="DateTime" Precision="7" />
+    <Property Name="TimeIn" Type="DateTime" Precision="7" />
+    <Property Name="MilesRowed" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BoatName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="BoatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Boatings" Relationship="VesperLogBookModel.FK__Boating__Order__30F848ED" FromRole="LogBook" ToRole="Boating" />
+  </EntityType>
+  <Association Name="FK__Boating__Order__30F848ED">
     <End Type="VesperLogBookModel.LogBook" Role="LogBook" Multiplicity="1" />
     <End Type="VesperLogBookModel.Boating" Role="Boating" Multiplicity="*" />
     <ReferentialConstraint>

@@ -6,9 +6,10 @@
     app.config(['$routeProvider', function ($routeProvider) {
         var templateUrlBase = "app/views/";
         var logBookTemplateUrlBase = templateUrlBase + "logBook/";
-        var memberListTemplateUrlBase = templateUrlBase + "memberList/"
-        var fleetListTemplateUrlBase = templateUrlBase + "fleetList/"
-        var reportsTemplateUrlBase = templateUrlBase + "reports/"
+        var memberListTemplateUrlBase = templateUrlBase + "memberList/";
+        var fleetListTemplateUrlBase = templateUrlBase + "fleetList/";
+        var logBookSearchTemplateUrlBase = templateUrlBase + "logBookSearch/";
+        var reportsTemplateUrlBase = templateUrlBase + "reports/";
 
         $routeProvider
             .when("/",
@@ -30,6 +31,11 @@
                 {
                     templateUrl: fleetListTemplateUrlBase + "fleetList.html",
                     controller: "fleetListCtrl as vm"
+                })
+            .when("/logbooksearch",
+                {
+                    templateUrl: logBookSearchTemplateUrlBase + "logBookSearch.html",
+                    controller: "logBookSearchCtrl as vm"
                 })
             .when("/reports/equipmentusage",
                 {

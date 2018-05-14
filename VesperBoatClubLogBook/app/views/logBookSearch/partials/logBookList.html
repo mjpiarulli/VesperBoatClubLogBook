@@ -1,0 +1,30 @@
+﻿<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Boat Name</th>
+            <th>Boat Type</th>
+            <th>Member</th>
+            <th>Comment</th>
+            <th>Time Out</th>
+            <th>Time In</th>
+            <th>Miles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="entry in vm.logBookEntries">
+            <td>{{entry.Date | date: "MM/dd/yyyy"}}</td>
+            <td>{{entry.BoatName}}</td>
+            <td>{{entry.BoatType}}</td>
+            <td>
+                <span ng-repeat="boating in entry.Boatings">{{boating.Member.FirstName}} {{boating.Member.LastName}}<br /></span>
+            </td>
+            <td>{{entry.Comment}}</td>
+            <td>{{entry.TimeOut | date: "hh:mm a"}}</td>
+            <td>{{entry.TimeIn | date: "hh:mm a"}}</td>
+            <td>{{entry.MilesRowed}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

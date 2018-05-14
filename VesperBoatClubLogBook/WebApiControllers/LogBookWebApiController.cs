@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
+using Vesper.LogBook.Common;
 
 namespace VesperBoatClubLogBook.WebApiControllers
 {
@@ -22,6 +24,15 @@ namespace VesperBoatClubLogBook.WebApiControllers
             var mileage = VesperLogBookService.GetClubMileageYearToDate(DateTime.Now.AddYears(-1));
 
             return mileage;
+        }
+
+        [Route("SearchLogBook")]
+        [HttpPost]
+        public List<LogBookDto> SearchLogBook(LogBookSearchParameter param)
+        {
+            var logBooks = VesperLogBookService.SearchLogBook(param);
+
+            return logBooks;
         }
     }
 }

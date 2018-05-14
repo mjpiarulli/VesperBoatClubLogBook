@@ -19,7 +19,7 @@ namespace Vesper.LogBook.LogBookService
                 cfg.CreateMap<BoatTypeDto, BoatType>();
                 cfg.CreateMap<BoatType, BoatTypeDto>();
                 cfg.CreateMap<LogBookDto, DataAccess.LogBook>();
-                cfg.CreateMap<DataAccess.LogBook, LogBookDto>();
+                cfg.CreateMap<DataAccess.LogBook, LogBookDto>().MaxDepth(1);
                 cfg.CreateMap<MemberDto, Member>();
                 cfg.CreateMap<Member, MemberDto>();
             }).CreateMapper();

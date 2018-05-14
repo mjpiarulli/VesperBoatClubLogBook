@@ -13,7 +13,6 @@ C:\Git\VesperBoatClubLogBook\Common\bin\Debug\System.Web.Razor.xml
 C:\Git\VesperBoatClubLogBook\Common\bin\Debug\System.Web.WebPages.xml
 C:\Git\VesperBoatClubLogBook\Common\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Git\VesperBoatClubLogBook\Common\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Git\VesperBoatClubLogBook\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 C:\Git\VesperBoatClubLogBook\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 C:\Git\VesperBoatClubLogBook\Common\obj\Debug\Common.csproj.CopyComplete
 C:\Git\VesperBoatClubLogBook\Common\obj\Debug\Common.dll
