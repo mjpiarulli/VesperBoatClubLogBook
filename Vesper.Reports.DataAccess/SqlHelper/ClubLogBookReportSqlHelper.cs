@@ -4,7 +4,7 @@
     {
         public const string ClubLogBookReportSql = @"
                                                     Select Distinct lb.Date, lb.BoatName, lb.BoatType, IsNull(lb.Comment, '') As Comment
-                                                        , IsNull(lb.TimeOut, lb.Date) As TimeOut, IsNull(lb.TimeIn, lb.Date) As TimeIn, lb.MilesRowed,
+                                                        , IsNull(lb.TimeOut, lb.Date) As TimeOut, IsNull(lb.TimeIn, lb.Date) As TimeIn, IsNull(lb.MilesRowed, 0) As MilesRowed,
 	                                                    Stuff((Select Distinct ', ' + m1.FirstName + ' ' + m1.LastName
 			                                                    From Member m1
 			                                                    Join Boating b1

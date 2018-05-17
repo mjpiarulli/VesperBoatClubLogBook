@@ -8,6 +8,8 @@
 
                 var vm = this;
 
+                vm.loading = false;
+
                 boatService.getBoatList().then(function (response) {
                     vm.boats = response.data;
 
@@ -42,10 +44,15 @@
                     });
                 };
 
-                vm.searchLogBook = function(searchParam) {
-                    logBookService.searchLogBook(searchParam).then(function(response) {
+                vm.searchLogBook = function (searchParam) {
+                    vm.loading = true;
+                    logBookService.searchLogBook(searchParam).then(function (response) {
                         vm.logBookEntries = response.data;
                         vm.report = "app/views/logBookSearch/partials/logBookList.html";
+                    }, function () {
+                        console.log("Error in searchLogBook()");
+                    }).finally(function () {
+                        vm.loading = false;
                     });
                 };
             }]);

@@ -11,5 +11,21 @@
             }, function () {
                 console.log("Error in getMemberList()");
             });
+
+            vm.showNewMemberModal = function() {
+                angular.element(".add-member-modal").modal("show");
+            };
+
+            vm.addNewMember = function(member) {
+                memberService.addNewMember(member).then(function(response) {
+                    if (response.data.MemberId == 0) {
+                        toastr.error("Error adding new member.");
+                    } else {
+                        toastr.success("Successfully added new member");
+                    }
+                }, function() {
+                    console.log("Error in addNewMember()");
+                });
+            };
         }]);
 })();

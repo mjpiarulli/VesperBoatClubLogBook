@@ -17,20 +17,34 @@
                     <div class="col-lg-3">
                         <label for="removalOfServiceStartDate" class="col-form-label">Removal of Service Start Date</label>
                         <div class="input-group date" data-provide="datepicker">
-                            <input type="text" id="removalOfServiceStartDate" name="removalOfServiceStartDate" ng-model="vm.searchParams.RemovalOfServiceStartDate" class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </span>
+                            <input type="text" id="removalOfServiceStartDate" name="removalOfServiceStartDate" class="form-control datetimepicker-input" data-target="#removalOfServiceStartDate" ng-model="vm.searchParams.RemovalOfServiceStartDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#removalOfServiceStartDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
                         </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#removalOfServiceStartDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-3">
                         <label for="removalOfServiceEndDate" class="col-form-label">Removal of Service End Date</label>
                         <div class="input-group date" data-provide="datepicker">
-                            <input type="text" id="removalOfServiceEndDate" name="removalOfServiceEndDate" ng-model="vm.searchParams.RemovalOfServiceEndDate" class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </span>
+                            <input type="text" id="removalOfServiceEndDate" name="removalOfServiceEndDate" class="form-control datetimepicker-input" data-target="#removalOfServiceEndDate" ng-model="vm.searchParams.RemovalOfServiceEndDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#removalOfServiceEndDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
                         </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#removalOfServiceEndDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-6">
                         <label for="comments" class="col-form-label">Comments</label>
@@ -41,20 +55,34 @@
                     <div class="col-lg-3">
                         <label for="returnToServiceStartDate" class="col-form-label">Return To Service Start Date</label>
                         <div class="input-group date" data-provide="datepicker">
-                            <input type="text" id="returnToServiceStartDate" name="returnToServiceStartDate" ng-model="vm.searchParams.ReturnToServiceStartDate" class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </span>
+                            <input type="text" id="returnToServiceStartDate" name="returnToServiceStartDate" class="form-control datetimepicker-input" data-target="#returnToServiceStartDate" ng-model="vm.searchParams.ReturnToServiceStartDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#returnToServiceStartDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
                         </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#returnToServiceStartDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-3">
                         <label for="returnToServiceEndDate" class="col-form-label">Return To Service End Date</label>
                         <div class="input-group date" data-provide="datepicker">
-                            <input type="text" id="returnToServiceEndDate" name="returnToServiceEndDate" ng-model="vm.searchParams.ReturnToServiceEndDate" class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </span>
+                            <input type="text" id="returnToServiceEndDate" name="returnToServiceEndDate" class="form-control datetimepicker-input" data-target="#returnToServiceEndDate" ng-model="vm.searchParams.ReturnToServiceEndDate" data-toggle="datetimepicker" />
+                            <div class="input-group-append" data-target="#returnToServiceEndDate" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                            </div>
                         </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#returnToServiceEndDate').datetimepicker({
+                                    format: 'L'
+                                });
+                            });
+                        </script>
                     </div>
                     <div class="col-lg-6">
                         <label for="commentOnReturn" class="col-form-label">Comment On Return</label>

@@ -249,6 +249,7 @@
     <Content Include="app\views\logBook\partials\mileageLeaders.html" />
     <Content Include="app\views\logBook\partials\safetyFirst.html" />
     <Content Include="app\views\memberList\memberList.html" />
+    <Content Include="app\views\memberList\partials\newMemberForm.html" />
     <Content Include="app\views\reports\boatDamage.html" />
     <Content Include="app\views\reports\boatStatusLogSearch.html" />
     <Content Include="app\views\reports\clubLogBook.html" />
@@ -286,6 +287,7 @@
     </Content>
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\images\loading.gif" />
     <Content Include="Content\tempusdominus-bootstrap-4.min.css" />
     <Content Include="Content\tether\tether-theme-arrows-dark.css" />
     <Content Include="Content\tether\tether-theme-arrows-dark.min.css" />

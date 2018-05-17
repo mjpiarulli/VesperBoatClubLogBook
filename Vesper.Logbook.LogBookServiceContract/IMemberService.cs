@@ -6,5 +6,6 @@ namespace Vesper.Logbook.LogBookServiceContract
     public interface IMemberService
     {
         List<MemberDto> GetMembersAlphabeticalByLastName();
+        MemberDto AddNewMember(MemberDto dto);
     }
 }
