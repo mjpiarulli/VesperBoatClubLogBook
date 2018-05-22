@@ -24,5 +24,15 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return boats;
         }
+
+        [Route("addnewboat")]
+        [HttpPost]
+        public BoatDto AddNewBoat(BoatDto dto)
+        {
+            var addedDto = VesperLogBookService.AddNewBoat(dto);
+
+            return addedDto;
+        }
+
     }
 }

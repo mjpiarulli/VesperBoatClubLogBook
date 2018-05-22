@@ -7,5 +7,6 @@ namespace Vesper.Logbook.LogBookServiceContract
     {
         List<BoatDto> GetAllBoatsAlphabetical();
         List<BoatDto> GetBoatsByBoatType(string boatType);
+        BoatDto AddNewBoat(BoatDto dto);
     }
 }
