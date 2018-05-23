@@ -6,8 +6,6 @@
 	Report Boat Damage
 	Fleet List
 		add boats to fleet
-	Member List
-		add members to roster
 	Reports		
 		Boat Damage Report
 			Add button for user to add date and comment for returning a boat to service

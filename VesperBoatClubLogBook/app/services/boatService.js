@@ -1,16 +1,20 @@
 ﻿(function () {
-    'use strict';
+    "use strict";
 
     angular
-        .module('app')
-        .service('boatService', function ($http) {
+        .module("app")
+        .service("boatService", function ($http) {
             this.getBoatList = function () {
                 return $http.get("api/boat/loadboatlist");
             };
 
-            this.getBoatsByBoatType = function (boatType) {
+            this.getBoatsByBoatType = function(boatType) {
                 var uri = "api/boat/loadboatsbyboattype?boatType=" + encodeURIComponent(boatType);
                 return $http.get(uri);
-            }
+            };
+
+            this.addNewBoat = function(boat) {
+                return $http.post("api/boat/addnewboat", boat);
+            };
         });
 })();

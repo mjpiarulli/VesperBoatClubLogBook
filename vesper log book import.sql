@@ -1,5 +1,5 @@
 -- access tables needed
--- members, fleet, log book, boat status log, boat type, boatings
+-- members, fleet, log book, boat status log, boat type, boatings, available rigging, boat status, use restrictions
 -- notes: log book - edit mappings for dates to datetime2
 
 -- Members
@@ -131,3 +131,36 @@ join Member m
 on b.[Member number] = m.MemberId
 
 Drop Table Boatings
+
+Create Table Rigging(
+	RiggingId int identity(1, 1) primary key,
+	[Name] varchar(50) not null
+)
+
+Insert Into Rigging([Name])
+Select [Available Rigging]
+From [Available Rigging]
+
+Drop Table [Available Rigging]
+
+Create Table BoatStatus(
+	BoatStatusId int identity(1, 1) primary key,
+	[Status] varchar(50) not null
+)
+
+Insert Into BoatStatus([Status])
+Select [Boat Status]
+From [Boat Status]
+
+Drop Table [Boat Status]
+
+Create Table UseRestriction(
+	UseRestrictionId int identity(1, 1) primary key,
+	Restriction varchar(50) not null
+)
+
+Insert Into UseRestriction(Restriction)
+Select [Use Restritions]
+From [Use Restrictions]
+
+Drop Table [Use Restrictions]
