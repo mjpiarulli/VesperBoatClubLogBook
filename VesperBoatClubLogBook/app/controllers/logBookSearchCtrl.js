@@ -26,12 +26,12 @@
                     console.log("Error in getMemberList()");
                 });
 
-                boatTypeService.getBoatTypesBySeats().then(function (response) {
+                boatTypeService.getBoatTypesOrderedBySeats().then(function (response) {
                     vm.boatTypes = response.data;
 
                     setTimeout(function () { angular.element("#boatType").selectpicker({ liveSearching: true }); }, 50);
                 }, function () {
-                    console.log("Error in getBoatTypesBySeats()");
+                    console.log("Error in getBoatTypesOrderedBySeats()");
                 });
 
                 vm.loadBoatsByType = function () {

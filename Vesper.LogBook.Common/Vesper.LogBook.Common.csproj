@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BoatDto.cs" />
     <Compile Include="BoatingDto.cs" />
+    <Compile Include="BoatStatusDto.cs" />
     <Compile Include="BoatStatusLogDto.cs" />
     <Compile Include="BoatStatusLogSearchParameter.cs" />
     <Compile Include="BoatTypeDto.cs" />
@@ -49,6 +50,8 @@
     <Compile Include="LogBookSearchParameter.cs" />
     <Compile Include="MemberDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiggingDto.cs" />
+    <Compile Include="UseRestrictionDto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

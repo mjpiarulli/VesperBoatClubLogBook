@@ -41,10 +41,10 @@
                     console.log("Error in getMemberList()");
                 });
 
-                boatTypeService.getBoatTypesBySeats().then(function (response) {
+                boatTypeService.getBoatTypesOrderedBySeats().then(function (response) {
                     vm.boatTypes = response.data;
                 }, function () {
-                    console.log("Error in getBoatTypesBySeats()");
+                    console.log("Error in getBoatTypesOrderedBySeats()");
                 });
 
                 vm.loadBoatsByType = function () {

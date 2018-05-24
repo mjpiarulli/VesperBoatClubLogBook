@@ -3,9 +3,7 @@
 		Submit logbook entry and clear form
 	Log Book History Search
 		edit/remove log entries
-	Report Boat Damage
-	Fleet List
-		add boats to fleet
+	Report Boat Damage	
 	Reports		
 		Boat Damage Report
 			Add button for user to add date and comment for returning a boat to service

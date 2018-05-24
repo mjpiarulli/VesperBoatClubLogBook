@@ -30,6 +30,13 @@
           <Property Name="Seat" Type="varchar" MaxLength="10" />
           <Property Name="Order" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="BoatStatus">
+          <Key>
+            <PropertyRef Name="BoatStatusId" />
+          </Key>
+          <Property Name="BoatStatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="BoatStatusLog">
           <Key>
             <PropertyRef Name="BoatStatusLogId" />
@@ -75,6 +82,20 @@
           <Property Name="MiddleInitial" Type="varchar" MaxLength="50" />
           <Property Name="LastName" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Rigging">
+          <Key>
+            <PropertyRef Name="RiggingId" />
+          </Key>
+          <Property Name="RiggingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UseRestriction">
+          <Key>
+            <PropertyRef Name="UseRestrictionId" />
+          </Key>
+          <Property Name="UseRestrictionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Restriction" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <Association Name="FK__Boating__MemberI__31EC6D26">
           <End Role="Member" Type="Self.Member" Multiplicity="1" />
           <End Role="Boating" Type="Self.Boating" Multiplicity="*" />
@@ -102,10 +123,13 @@
         <EntityContainer Name="VesperLogBookModelStoreContainer">
           <EntitySet Name="Boat" EntityType="Self.Boat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Boating" EntityType="Self.Boating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BoatStatus" EntityType="Self.BoatStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BoatStatusLog" EntityType="Self.BoatStatusLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BoatType" EntityType="Self.BoatType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LogBook" EntityType="Self.LogBook" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rigging" EntityType="Self.Rigging" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UseRestriction" EntityType="Self.UseRestriction" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Boating__MemberI__31EC6D26" Association="Self.FK__Boating__MemberI__31EC6D26">
             <End Role="Member" EntitySet="Member" />
             <End Role="Boating" EntitySet="Boating" />
@@ -134,6 +158,9 @@
             <End Role="LogBook" EntitySet="LogBooks" />
             <End Role="Boating" EntitySet="Boatings" />
           </AssociationSet>
+          <EntitySet Name="BoatStatus" EntityType="VesperLogBookModel.BoatStatu" />
+          <EntitySet Name="Riggings" EntityType="VesperLogBookModel.Rigging" />
+          <EntitySet Name="UseRestrictions" EntityType="VesperLogBookModel.UseRestriction" />
         </EntityContainer>
         <EntityType Name="Boat">
           <Key>
@@ -233,6 +260,27 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="BoatStatu">
+          <Key>
+            <PropertyRef Name="BoatStatusId" />
+          </Key>
+          <Property Name="BoatStatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Rigging">
+          <Key>
+            <PropertyRef Name="RiggingId" />
+          </Key>
+          <Property Name="RiggingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UseRestriction">
+          <Key>
+            <PropertyRef Name="UseRestrictionId" />
+          </Key>
+          <Property Name="UseRestrictionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Restriction" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -312,6 +360,30 @@
                 <ScalarProperty Name="TimeOut" ColumnName="TimeOut" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="LogBookId" ColumnName="LogBookId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BoatStatus">
+            <EntityTypeMapping TypeName="VesperLogBookModel.BoatStatu">
+              <MappingFragment StoreEntitySet="BoatStatus">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="BoatStatusId" ColumnName="BoatStatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Riggings">
+            <EntityTypeMapping TypeName="VesperLogBookModel.Rigging">
+              <MappingFragment StoreEntitySet="Rigging">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="RiggingId" ColumnName="RiggingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UseRestrictions">
+            <EntityTypeMapping TypeName="VesperLogBookModel.UseRestriction">
+              <MappingFragment StoreEntitySet="UseRestriction">
+                <ScalarProperty Name="Restriction" ColumnName="Restriction" />
+                <ScalarProperty Name="UseRestrictionId" ColumnName="UseRestrictionId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

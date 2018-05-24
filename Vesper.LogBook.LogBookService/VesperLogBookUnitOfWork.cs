@@ -13,6 +13,9 @@ namespace Vesper.LogBook.LogBookService
         public readonly ILogBookRepository LogBookRepository;
         public readonly IBoatStatusLogRepository BoatStatusLogRepository;
         public readonly IBoatTypeRepository BoatTypeRepository;
+        public readonly IBoatStatusRepository BoatStatusRepository;
+        public readonly IRiggingRepository RiggingRepository;
+        public readonly IUseRestrictionRepository UseRestrictionRepository;
 
         private readonly DbContext _context;
 
@@ -25,6 +28,9 @@ namespace Vesper.LogBook.LogBookService
             LogBookRepository = new LogBookRepository(_context);
             BoatStatusLogRepository = new BoatStatusLogRepository(_context);
             BoatTypeRepository = new BoatTypeRepository(_context);
+            BoatStatusRepository = new BoatStatusRepository(_context);
+            RiggingRepository = new RiggingRepository(_context);
+            UseRestrictionRepository = new UseRestrictionRepository(_context);
         }
 
         public override bool Save()

@@ -55,6 +55,9 @@
     <Compile Include="Boating.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
+    <Compile Include="BoatStatu.cs">
+      <DependentUpon>VesperLogBook.tt</DependentUpon>
+    </Compile>
     <Compile Include="BoatStatusLog.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
@@ -63,9 +66,12 @@
     </Compile>
     <Compile Include="Interface\IBoatRepository.cs" />
     <Compile Include="Interface\IBoatStatusLogRepository.cs" />
+    <Compile Include="Interface\IBoatStatusRepository.cs" />
     <Compile Include="Interface\IBoatTypeRepository.cs" />
     <Compile Include="Interface\ILogbookRepository.cs" />
     <Compile Include="Interface\IMemberRepository.cs" />
+    <Compile Include="Interface\IRiggingRepository.cs" />
+    <Compile Include="Interface\IUseRestrictionRepository.cs" />
     <Compile Include="LogBook.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
@@ -75,9 +81,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BoatRepository.cs" />
     <Compile Include="Repository\BoatStatusLogRepository.cs" />
+    <Compile Include="Repository\BoatStatusRepository.cs" />
     <Compile Include="Repository\BoatTypeRepository.cs" />
     <Compile Include="Repository\LogBookRepository.cs" />
     <Compile Include="Repository\MemberRepository.cs" />
+    <Compile Include="Repository\RiggingRepository.cs" />
+    <Compile Include="Repository\UseRestrictionRepository.cs" />
+    <Compile Include="Rigging.cs">
+      <DependentUpon>VesperLogBook.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UseRestriction.cs">
+      <DependentUpon>VesperLogBook.tt</DependentUpon>
+    </Compile>
     <Compile Include="VesperLogBook.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

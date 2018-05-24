@@ -42,8 +42,11 @@
   <ItemGroup>
     <Compile Include="IBoatService.cs" />
     <Compile Include="IBoatStatusLogService.cs" />
+    <Compile Include="IBoatStatusService.cs" />
     <Compile Include="IBoatTypeService.cs" />
     <Compile Include="ILogBookService.cs" />
+    <Compile Include="IRiggingService.cs" />
+    <Compile Include="IUseRestrictionService.cs" />
     <Compile Include="IVesperLogBookService.cs" />
     <Compile Include="IMemberService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

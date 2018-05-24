@@ -7,7 +7,7 @@ namespace Vesper.LogBook.LogBookService
 {
     public partial class VesperLogBookService
     {
-        public List<BoatTypeDto> GetAllBoatTypesBySeats() => _uow.Uow(uow =>
+        public List<BoatTypeDto> GetAllBoatTypesOrderedBySeats() => _uow.Uow(uow =>
         {
             var entities = uow.BoatTypeRepository.FindBy(bt => true)
                 .OrderBy(bt => bt.Seats)

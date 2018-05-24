@@ -1,0 +1,80 @@
+﻿<form id="boat-form" name="boatForm" ng-submit="vm.addEditBoat(vm.Boat)">
+    <div class="box box-info">
+        <div class="box-body">
+            <input type="hidden" value="{{vm.Boat.BoatId}}" />
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <label for="boatName">Boat Name</label>
+                    <input id="boatName" name="boatName" class="form-control" ng-model="vm.Boat.Name" required />
+                    <div ng-show="boatForm.boatName.$invalid && boatForm.boatName.$touched" class="alert alert-danger">
+                        <div ng-show="boatForm.boatName.$error.required">Boat Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <label for="make">Boat Make</label>
+                    <input id="make" name="make" class="form-control" ng-model="vm.Boat.Make" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-6">
+                    <label for="size">Boat Size (kg)</label>
+                    <input id="size" name="size" class="form-control" ng-model="vm.Boat.Size" required min="0" />
+                    <div ng-show="boatForm.size.$invalid && boatForm.size.$touched" class="alert alert-danger">
+                        <div ng-show="boatForm.size.$error.required">Boat Size is required</div>
+                        <div ng-show="boatForm.size.$error.number">Boat Size needs to be a valid number</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <label for="type">Boat Type</label>
+                    <select id="type" name="type" class="form-control selectpicker" data-live-search="true" ng-model="vm.Boat.Type" required>
+                        <option ng-repeat="boatType in vm.boatTypes" value="{{boatType.Type}}">{{boatType.Type}}</option>
+                    </select>
+                    <div ng-show="boatForm.type.$invalid && boatForm.type.$touched" class="alert alert-danger">
+                        <div ng-show="boatForm.type.$error.required">Boat Type is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-6">
+                    <label for="currentRigging">Current Rigging</label>
+                    <select id="currentRigging" name="currentRigging" class="form-control selectpicker" data-live-search="true" ng-model="vm.Boat.CurrentRigging">
+                        <option ng-repeat="rigging in vm.riggings" value="{{rigging.Name}}">{{rigging.Name}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label for="riggingAvailable">Rigging Available</label>
+                    <select id="riggingAvailable" name="riggingAvailable" class="form-control selectpicker" data-live-search="true" ng-model="vm.Boat.RiggingAvailable">
+                        <option ng-repeat="rigging in vm.riggings" value="{{rigging.Name}}">{{rigging.Name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-6">
+                    <label for="useRestrictions">Use Restrictions</label>
+                    <select id="useRestrictions" name="useRestrictions" class="form-control selectpicker" data-live-search="true" ng-model="vm.Boat.UseRestrictions">
+                        <option ng-repeat="useRestriction in vm.useRestrictions" value="{{useRestriction.Restriction}}">{{useRestriction.Restriction}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" class="form-control selectpicker" data-live-search="true" ng-model="vm.Boat.Status">
+                        <option ng-repeat="boatStatus in vm.boatStatuses" value="{{boatStatus.Status}}">{{boatStatus.Status}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <label for="ownedBy">Owned By</label>
+                    <input id="ownedBy" name="ownedBy" class="form-control" ng-model="vm.Boat.OwnedBy" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <button type="submit" id="btn-submit" class="btn btn-primary form-control">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

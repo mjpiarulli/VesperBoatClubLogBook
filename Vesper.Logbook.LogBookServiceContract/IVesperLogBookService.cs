@@ -4,7 +4,10 @@
         IBoatService,
         ILogBookService,
         IBoatStatusLogService,
-        IBoatTypeService
+        IBoatTypeService,
+        IBoatStatusService,
+        IRiggingService,
+        IUseRestrictionService
     {
     }
 }

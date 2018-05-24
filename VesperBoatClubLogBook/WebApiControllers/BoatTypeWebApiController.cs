@@ -7,11 +7,11 @@ namespace VesperBoatClubLogBook.WebApiControllers
     [RoutePrefix("api/boattype")]
     public class BoatTypeWebApiController : WebApiBaseController
     {
-        [Route("loadallboattypesbyseats")]
+        [Route("loadallboattypesorderedbyseats")]
         [HttpGet]
-        public List<BoatTypeDto> LoadAllBoatTypesBySeats()
+        public List<BoatTypeDto> LoadAllBoatTypesOrderedBySeats()
         {
-            var boatTypes = VesperLogBookService.GetAllBoatTypesBySeats();
+            var boatTypes = VesperLogBookService.GetAllBoatTypesOrderedBySeats();
 
             return boatTypes;
         }

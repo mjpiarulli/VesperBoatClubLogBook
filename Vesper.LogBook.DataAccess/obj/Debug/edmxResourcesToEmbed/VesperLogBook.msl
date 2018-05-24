@@ -77,5 +77,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="BoatStatus">
+      <EntityTypeMapping TypeName="VesperLogBookModel.BoatStatu">
+        <MappingFragment StoreEntitySet="BoatStatus">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="BoatStatusId" ColumnName="BoatStatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Riggings">
+      <EntityTypeMapping TypeName="VesperLogBookModel.Rigging">
+        <MappingFragment StoreEntitySet="Rigging">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="RiggingId" ColumnName="RiggingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UseRestrictions">
+      <EntityTypeMapping TypeName="VesperLogBookModel.UseRestriction">
+        <MappingFragment StoreEntitySet="UseRestriction">
+          <ScalarProperty Name="Restriction" ColumnName="Restriction" />
+          <ScalarProperty Name="UseRestrictionId" ColumnName="UseRestrictionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>
