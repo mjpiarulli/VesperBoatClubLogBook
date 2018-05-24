@@ -7,7 +7,7 @@ namespace VesperBoatClubLogBook.WebApiControllers
     [RoutePrefix("api/member")]
     public class MemberWebApiController : WebApiBaseController
     {
-        [Route("loadmemberlist")]
+        [Route("LoadMemberList")]
         [HttpGet]
         public List<MemberDto> LoadMemberList()
         {
@@ -16,13 +16,31 @@ namespace VesperBoatClubLogBook.WebApiControllers
             return memberList;
         }
 
-        [Route("addnewmember")]
+        [Route("AddNewMember")]
         [HttpPost]
         public MemberDto AddNewMember(MemberDto dto)
         {
             var addedDto = VesperLogBookService.AddNewMember(dto);
 
             return addedDto;
+        }
+
+        [Route("GetMemberById")]
+        [HttpGet]
+        public MemberDto GetMemberById(int id)
+        {
+            var member = VesperLogBookService.GetMemberById(id);
+
+            return member;
+        }
+
+        [Route("EditMember")]
+        [HttpPost]
+        public MemberDto EditMember([FromBody] MemberDto dto)
+        {
+            var editedDto = VesperLogBookService.EditMember(dto);
+
+            return editedDto;
         }
     }
 }

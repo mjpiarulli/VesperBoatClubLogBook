@@ -1,20 +1,39 @@
 ﻿<div class="container">
     <table class="table table-striped">
         <thead>
-            <tr>
-                <th>Boat Name</th>
-                <th>Status</th>
-                <th>Date</th>
-                <th>Comments</th>
-            </tr>
+        <tr>
+            <th>Boat Name</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Comments</th>
+            <th></th>
+        </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="damagedBoat in vm.damagedBoats">
-                <td>{{damagedBoat.BoatName}}</td>
-                <td>{{damagedBoat.Status}}</td>
-                <td>{{damagedBoat.RemovalOfServiceDate | date: "MM/dd/yyyy"}}</td>
-                <td>{{damagedBoat.Comments}}</td>
-            </tr>
+        <tr ng-repeat="damagedBoat in vm.damagedBoats">
+            <td>{{damagedBoat.BoatName}}</td>
+            <td>{{damagedBoat.Status}}</td>
+            <td>{{damagedBoat.RemovalOfServiceDate | date: "MM/dd/yyyy"}}</td>
+            <td>{{damagedBoat.Comments}}</td>
+            <td><a href="javascript:void(0);" ng-click="vm.showEditBoatStatusLogModal(damagedBoat.BoatStatusLogId)"></a></td>
+        </tr>
         </tbody>
     </table>
+</div>
+
+<div class="boat-status-log-modal modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add/Edit Boat Status Log</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <ng-include src="'app/views/reports/partials/boatStatusLogForm.html'"></ng-include>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>

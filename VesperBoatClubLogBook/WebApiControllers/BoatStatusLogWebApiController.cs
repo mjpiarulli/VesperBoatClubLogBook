@@ -24,5 +24,23 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return results;
         }
+
+        [Route("LoadBoatStatusLogById")]
+        [HttpGet]
+        public BoatStatusLogDto LoadBoatStatusLogById(int id)
+        {
+            var boatStatusLog = VesperLogBookService.GetBoatStatusLogById(id);
+
+            return boatStatusLog;
+        }
+
+        [Route("EditBoatStatusLog")]
+        [HttpPost]
+        public BoatStatusLogDto EditBoatStatusLog([FromBody] BoatStatusLogDto dto)
+        {
+            var editedDto = VesperLogBookService.EditBoatStatusLog(dto);
+
+            return editedDto;
+        }
     }
 }
