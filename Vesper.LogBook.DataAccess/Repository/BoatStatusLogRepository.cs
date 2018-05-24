@@ -16,6 +16,9 @@ namespace Vesper.LogBook.DataAccess.Repository
         {
             var query = Context.Set<BoatStatusLog>().AsQueryable();
 
+            if (search == null)
+                return query;
+
             if (!string.IsNullOrEmpty(search.BoatName))
                 query = query.Where(bsl => bsl.BoatName.Contains(search.BoatName));
             if (search.RemovalOfServiceStartDate.HasValue)

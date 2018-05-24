@@ -22,6 +22,7 @@
                         toastr.error("Error adding new member.");
                     } else {
                         toastr.success("Successfully added new member");
+                        vm.Member = null;
                     }
                 }, function() {
                     console.log("Error in addNewMember()");

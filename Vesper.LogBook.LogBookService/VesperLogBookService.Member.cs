@@ -27,5 +27,23 @@ namespace Vesper.LogBook.LogBookService
 
             return dto;
         });
+
+        public MemberDto GetMemberById(int id) => _uow.Uow(uow =>
+        {
+            var entity = uow.MemberRepository.Load(id);
+            var dto = _mapper.Map<Member, MemberDto>(entity);
+
+            return dto;
+        });
+
+        public MemberDto EditMember(MemberDto dto) => _uow.Uow(uow =>
+        {
+            var entity = uow.MemberRepository.Load(dto.MemberId);
+            _mapper.Map(dto, entity);
+            uow.MemberRepository.Edit(entity);
+            uow.Save();
+
+            return dto;
+        });
     }
 }

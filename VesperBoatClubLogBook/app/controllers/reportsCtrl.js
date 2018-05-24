@@ -3,7 +3,8 @@
 
     angular
         .module("app")
-        .controller("reportsCtrl", ["reportService", "boatService", "memberService", function (reportService, boatService, memberService) {
+        .controller("reportsCtrl", ["reportService", "boatService", "memberService", "boatStatusLogService",
+            function (reportService, boatService, memberService, boatStatusLogService) {
             var vm = this;
 
             vm.loading = false;
@@ -20,7 +21,7 @@
                 });
             };
 
-            reportService.getDamagedBoatList().then(function (response) {
+                boatStatusLogService.getDamagedBoatList().then(function (response) {
                 vm.damagedBoats = response.data;
             }, function () {
                 console.log("Error in getDamagedBoatList()");
@@ -28,7 +29,7 @@
 
             vm.searchBoatStatusLog = function (searchParams) {
                 vm.loading = true;
-                reportService.getBoatStatusLogSearch(searchParams).then(function (response) {
+                boatStatusLogService.getBoatStatusLogSearch(searchParams).then(function (response) {
                     vm.report = "app/views/reports/partials/boatStatusLogList.html";
                     vm.boatStatusLogSearchResults = response.data;
                 }, function () {

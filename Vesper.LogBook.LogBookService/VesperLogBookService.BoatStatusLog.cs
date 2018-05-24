@@ -24,5 +24,23 @@ namespace Vesper.LogBook.LogBookService
 
             return dtos;
         });
+
+        public BoatStatusLogDto GetBoatStatusLogById(int id) => _uow.Uow(uow =>
+        {
+            var entity = uow.BoatStatusLogRepository.Load(id);
+            var dto = _mapper.Map<BoatStatusLog, BoatStatusLogDto>(entity);
+
+            return dto;
+        });
+
+        public BoatStatusLogDto EditBoatStatusLog(BoatStatusLogDto dto) => _uow.Uow(uow =>
+        {
+            var entity = uow.BoatStatusLogRepository.Load(dto.BoatStatusLogId);
+            _mapper.Map(dto, entity);
+            uow.BoatStatusLogRepository.Edit(entity);
+            uow.Save();
+
+            return dto;
+        });
     }
 }

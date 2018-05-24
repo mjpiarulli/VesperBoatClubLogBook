@@ -7,5 +7,7 @@ namespace Vesper.Logbook.LogBookServiceContract
     {
         List<MemberDto> GetMembersAlphabeticalByLastName();
         MemberDto AddNewMember(MemberDto dto);
+        MemberDto GetMemberById(int id);
+        MemberDto EditMember(MemberDto dto);
     }
 }
