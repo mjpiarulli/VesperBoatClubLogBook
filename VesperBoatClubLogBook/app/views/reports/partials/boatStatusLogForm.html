@@ -1,0 +1,71 @@
+﻿<form id="boatStatusLogForm" name="boatStatusLogForm" ng-submit="vm.addEditBoatStatusLog(vm.boatStatusLog)">
+    <div class="box box-info">
+        <div class="box-body">
+            <input type="hidden" value="{{vm.boatStatusLog.BoatStatusLogId}}" />
+
+            <div class="form-group row">
+                <div class="col-lg-8">
+                    <label for="boatName">Boat Name</label>
+                    <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.boatStatusLog.BoatName">
+                        <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-4">
+                    <label for="status">Status</label>
+                    <select id="status" name="status" class="form-control selectpicker" data-live-search="true" ng-model="vm.boatStatusLog.Status">
+                        <option ng-repeat="boatStatus in vm.boatStatuses" value="{{boatStatus.Status}}">{{boatStatus.Status}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <label for="removalOfServiceDate">Removal Of Service Date</label>
+                    <div class="input-group" id="datetimepickerRemovalOfServiceDate" data-target-input="nearest">
+                        <input type="text" id="removalOfServiceDate" name="removalOfServiceDate" class="form-control datetimepicker-input" data-target="#datetimepickerRemovalOfServiceDate" ng-model="vm.boatStatusLog.RemovalOfServiceDate" data-toggle="datetimepicker" />
+                        <div class="input-group-append" data-target="#datetimepickerRemovalOfServiceDate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepickerRemovalOfServiceDate').datetimepicker({
+                                format: 'L'
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="col-lg-9">
+                    <label for="comment">Comment</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="5" ng-model="vm.boatStatusLog.Comments"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <label for="returnToServiceDate">Return To Service Date</label>
+                    <div class="input-group" id="datetimepickerReturnToServiceDate" data-target-input="nearest">
+                        <input type="text" id="returnToServiceDate" name="returnToServiceDate" class="form-control datetimepicker-input" data-target="#datetimepickerReturnToServiceDate" ng-model="vm.boatStatusLog.ReturnToServiceDate" data-toggle="datetimepicker" />
+                        <div class="input-group-append" data-target="#datetimepickerReturnToServiceDate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datetimepickerReturnToServiceDate').datetimepicker({
+                                format: 'L'
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="col-lg-9">
+                    <label for="commentOnReturn">Comment</label>
+                    <textarea class="form-control" id="commentOnReturn" name="commentOnReturn" rows="5" ng-model="vm.boatStatusLog.CommentOnReturn"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-3">
+                    <button type="submit" class="btn btn-info">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

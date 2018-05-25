@@ -6,7 +6,7 @@
             <th>Status</th>
             <th>Date</th>
             <th>Comments</th>
-            <th></th>
+            <th>Edit</th>
         </tr>
         </thead>
         <tbody>
@@ -15,14 +15,14 @@
             <td>{{damagedBoat.Status}}</td>
             <td>{{damagedBoat.RemovalOfServiceDate | date: "MM/dd/yyyy"}}</td>
             <td>{{damagedBoat.Comments}}</td>
-            <td><a href="javascript:void(0);" ng-click="vm.showEditBoatStatusLogModal(damagedBoat.BoatStatusLogId)"></a></td>
+            <td><a href="javascript:void(0);" ng-click="vm.showEditBoatStatusLogModal(damagedBoat.BoatStatusLogId)">Edit</a></td>
         </tr>
         </tbody>
     </table>
 </div>
 
-<div class="boat-status-log-modal modal fade" role="dialog">
-    <div class="modal-dialog">
+<div id="boat-status-log-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Add/Edit Boat Status Log</h4>
