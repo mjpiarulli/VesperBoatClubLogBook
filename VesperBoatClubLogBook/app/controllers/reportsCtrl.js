@@ -106,7 +106,7 @@
                         vm.report = "app/views/reports/partials/clubMileageByMemberReport.html";
                         vm.clubMileageReport = response.data;
                     }, function () {
-                        console.log("Error in getClubMileageByMemberReport()")
+                        console.log("Error in getClubMileageByMemberReport()");
                     }).finally(function () {
                         vm.loading = false;
                     });

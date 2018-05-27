@@ -62,11 +62,11 @@
                     if (vm.selectedBoatType === undefined)
                         return "Bow";
 
-                    var lastSeat = (vm.selectedBoatType.Seats - 1 == index);
+                    var lastSeat = (vm.selectedBoatType.Seats - 1 === index);
                     var hasCox = vm.selectedBoatType.HasCox;
                     if (hasCox && lastSeat)
                         return "Cox";
-                    else if (index == 0)
+                    else if (index === 0)
                         return "Bow";
                     else
                         return (index + 1).toString();

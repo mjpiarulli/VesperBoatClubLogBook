@@ -22,8 +22,8 @@
                 riggingService.getAllRiggingsAlphabetical().then(function(response) {
                     vm.riggings = response.data;
                 }, function() {
-                    console.log("Error in getAllRiggingsAlphabetical()")
-                    });
+                    console.log("Error in getAllRiggingsAlphabetical()");
+                });
 
                 useRestrictionService.getAllUseRestrictionsAlphabetical().then(function(response) {
                     vm.useRestrictions = response.data;
@@ -48,7 +48,7 @@
 
                 vm.addEditBoat = function (boat) {
                     boatService.addNewBoat(boat).then(function (response) {
-                        if (response.data.BoatId != 0) {
+                        if (response.data.BoatId !== 0) {
                             toastr.success("Successfully added new boat to the fleet");
                             vm.Boat = null;
                         } else {

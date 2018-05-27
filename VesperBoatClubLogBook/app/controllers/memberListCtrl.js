@@ -18,7 +18,7 @@
 
             vm.addNewMember = function(member) {
                 memberService.addNewMember(member).then(function(response) {
-                    if (response.data.MemberId == 0) {
+                    if (response.data.MemberId === 0) {
                         toastr.error("Error adding new member.");
                     } else {
                         toastr.success("Successfully added new member");
