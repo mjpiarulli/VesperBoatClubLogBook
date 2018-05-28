@@ -238,6 +238,7 @@
     <Content Include="app\controllers\logBookCtrl.js" />
     <Content Include="app\controllers\logBookSearchCtrl.js" />
     <Content Include="app\controllers\memberListCtrl.js" />
+    <Content Include="app\controllers\reportBoatDamageCtrl.js" />
     <Content Include="app\controllers\reportsCtrl.js" />
     <Content Include="app\services\boatService.js" />
     <Content Include="app\services\boatStatusLogService.js" />
@@ -259,6 +260,7 @@
     <Content Include="app\views\logBook\partials\safetyFirst.html" />
     <Content Include="app\views\memberList\memberList.html" />
     <Content Include="app\views\memberList\partials\memberForm.html" />
+    <Content Include="app\views\reportBoatDamage\reportBoatDamage.html" />
     <Content Include="app\views\reports\boatDamage.html" />
     <Content Include="app\views\reports\boatStatusLogSearch.html" />
     <Content Include="app\views\reports\clubLogBook.html" />

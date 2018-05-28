@@ -19,5 +19,9 @@
             this.editBoatStatusLog = function(boatStatusLog) {
                 return $http.post("api/boatStatusLog/editBoatStatusLog", boatStatusLog);
             };
+
+            this.addNewBoatStatusLog = function(boatStatusLog) {
+                return $http.post("api/boatStatusLog/addNewBoatStatusLog", boatStatusLog);
+            };
         });
 })();

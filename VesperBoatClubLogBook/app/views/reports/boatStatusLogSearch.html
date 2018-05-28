@@ -8,7 +8,7 @@
                 <div class="row form-group">
                     <div class="col-lg-6">
                         <label for="boatName" class="col-form-label">Boat Name</label>
-                        <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName">
+                        <select id="boatName" name="boatName" class="boatName form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName">
                             <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
                         </select>
                     </div>

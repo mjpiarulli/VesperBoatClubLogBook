@@ -1,14 +1,15 @@
 ﻿(function () {
-    'use strict';
+    "use strict";
 
-    var app = angular.module('app', ['ngRoute']);
+    var app = angular.module("app", ["ngRoute"]);
 
-    app.config(['$routeProvider', function ($routeProvider) {
+    app.config(["$routeProvider", function ($routeProvider) {
         var templateUrlBase = "app/views/";
         var logBookTemplateUrlBase = templateUrlBase + "logBook/";
+        var logBookSearchTemplateUrlBase = templateUrlBase + "logBookSearch/";
+        var reportBoatDamageUrlBase = templateUrlBase + "reportBoatDamage/";
         var memberListTemplateUrlBase = templateUrlBase + "memberList/";
         var fleetListTemplateUrlBase = templateUrlBase + "fleetList/";
-        var logBookSearchTemplateUrlBase = templateUrlBase + "logBookSearch/";
         var reportsTemplateUrlBase = templateUrlBase + "reports/";
 
         $routeProvider
@@ -22,6 +23,16 @@
                     templateUrl: logBookTemplateUrlBase + "logBook.html",
                     controller: "logBookCtrl as vm"
                 })
+            .when("/logbooksearch",
+                {
+                    templateUrl: logBookSearchTemplateUrlBase + "logBookSearch.html",
+                    controller: "logBookSearchCtrl as vm"
+                })
+            .when("/reportboatdamage",
+                {
+                    templateUrl: reportBoatDamageUrlBase + "reportBoatDamage.html",
+                    controller: "reportBoatDamageCtrl as vm"
+                })
             .when("/memberlist",
                 {
                     templateUrl: memberListTemplateUrlBase + "memberList.html",
@@ -31,11 +42,6 @@
                 {
                     templateUrl: fleetListTemplateUrlBase + "fleetList.html",
                     controller: "fleetListCtrl as vm"
-                })
-            .when("/logbooksearch",
-                {
-                    templateUrl: logBookSearchTemplateUrlBase + "logBookSearch.html",
-                    controller: "logBookSearchCtrl as vm"
                 })
             .when("/reports/equipmentusage",
                 {

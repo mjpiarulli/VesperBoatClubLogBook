@@ -9,5 +9,6 @@ namespace Vesper.Logbook.LogBookServiceContract
         List<BoatStatusLogDto> SearchBoatStatusLog(BoatStatusLogSearchParameter searchParam);
         BoatStatusLogDto GetBoatStatusLogById(int id);
         BoatStatusLogDto EditBoatStatusLog(BoatStatusLogDto dto);
+        BoatStatusLogDto AddNewBoatStatusLog(BoatStatusLogDto dto);
     }
 }

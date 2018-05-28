@@ -42,5 +42,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return editedDto;
         }
+
+        [Route("AddNewBoatStatusLog")]
+        [HttpPost]
+        public BoatStatusLogDto AddNewBoatStatusLog([FromBody] BoatStatusLogDto dto)
+        {
+            var newDto = VesperLogBookService.AddNewBoatStatusLog(dto);
+
+            return newDto;
+        }
     }
 }

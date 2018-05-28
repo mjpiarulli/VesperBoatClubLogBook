@@ -2,3 +2,4 @@
 packages/
 *.pdb
 *.dll
+.cache
