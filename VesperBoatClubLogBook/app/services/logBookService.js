@@ -15,5 +15,9 @@
             this.searchLogBook = function(searchParams) {
                 return $http.post("api/logbook/searchlogbook", searchParams);
             };
+
+            this.addNewLog = function(log) {
+                return $http.post("api/logBook/addNewLog", log);
+            };
         });
 })();

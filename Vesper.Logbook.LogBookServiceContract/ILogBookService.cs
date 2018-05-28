@@ -8,5 +8,6 @@ namespace Vesper.Logbook.LogBookServiceContract
     {
         int GetClubMileageYearToDate(DateTime date);
         List<LogBookDto> SearchLogBook(LogBookSearchParameter param);
+        LogBookDto AddNewLog(LogBookDto dto);
     }
 }
