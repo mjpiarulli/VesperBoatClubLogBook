@@ -6,6 +6,7 @@ namespace Vesper.Logbook.LogBookServiceContract
 {
     public interface ILogBookService
     {
+        LogBookDto GetLogBookById(int id);
         int GetClubMileageYearToDate(DateTime date);
         List<LogBookDto> SearchLogBook(LogBookSearchParameter param);
         LogBookDto AddNewLog(LogBookDto dto);

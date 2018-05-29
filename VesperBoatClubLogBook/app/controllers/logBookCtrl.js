@@ -71,20 +71,20 @@
                     vm.logBookForm.$setPristine();
                     vm.logBookForm.$setUntouched();
                 };
-                vm.addEditLog = function (log) {
+                vm.addEditLog = function(log) {
                     if (log.LogBookId === undefined) {
-                        logBookService.addNewLog(log).then(function (response) {
+                        logBookService.addNewLog(log).then(function(response) {
                             toastr.success("New log added successfully");
                             resetLogbookForm();
                         });
                     }
-                }
+                };
 
                 vm.getSeatNameByIndex = function (index) {
                     if (vm.selectedBoatType === undefined || vm.selectedBoatType === null)
                         return "Bow";
 
-                    var lastSeat = (vm.selectedBoatType.Seats - 1 === index);
+                    var lastSeat = vm.selectedBoatType.Seats - 1 === index;
                     var hasCox = vm.selectedBoatType.HasCox;
                     if (hasCox && lastSeat)
                         return "Cox";

@@ -55,5 +55,12 @@
                         vm.loading = false;
                     });
                 };
+
+                vm.showEditLogBookModal = function(id) {
+                    logBookService.getLogBookById(id).then(function(response) {
+                        vm.log = response.data;
+                        angular.element("#log-book-modal").modal("show");
+                    });
+                };
             }]);
 })();

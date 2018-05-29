@@ -4,6 +4,10 @@
     angular
         .module("app")
         .service("logBookService", function($http) {
+            this.getLogBookById = function(id) {
+                return $http.get("api/logBook/loadLogBookById?id=" + id);
+            };
+
             this.getClubMileageYearToDate = function() {
                 return $http.get("api/logbook/loadclubmileageyeartodate");
             };

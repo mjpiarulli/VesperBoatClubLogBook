@@ -8,6 +8,15 @@ namespace VesperBoatClubLogBook.WebApiControllers
     [RoutePrefix("api/logbook")]
     public class LogBookWebApiController : WebApiBaseController
     {
+        [Route("LoadLogBookById")]
+        [HttpGet]
+        public LogBookDto LoadLogBookById(int id)
+        {
+            var logBook = VesperLogBookService.GetLogBookById(id);
+
+            return logBook;
+        }
+
         [Route("loadclubmileageyeartodate")]
         [HttpGet]
         public int LoadClubMileageYearToDate()

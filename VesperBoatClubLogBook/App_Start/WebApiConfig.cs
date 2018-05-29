@@ -7,6 +7,8 @@ namespace VesperBoatClubLogBook
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling 
+                = Newtonsoft.Json.ReferenceLoopHandling.Ignore; 
 
             // Web API routes
             config.MapHttpAttributeRoutes();

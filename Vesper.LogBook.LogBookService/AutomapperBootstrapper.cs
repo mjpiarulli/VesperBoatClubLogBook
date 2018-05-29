@@ -48,8 +48,8 @@ namespace Vesper.LogBook.LogBookService
             {
                 cfg.CreateMap<MemberDto, Member>()
                     .ForMember(m => m.Boatings, o => o.Ignore());
-                cfg.CreateMap<Member, MemberDto>()
-                    .ForMember(m => m.Boatings, o => o.Ignore());
+                //cfg.CreateMap<Member, MemberDto>()
+                //    .ForMember(m => m.Boatings, o => o.Ignore());
             }).CreateMapper();
         }
     }

@@ -17,6 +17,6 @@ namespace Vesper.LogBook.Common
         public string FirstName { get; set; }
         public string MiddleInitial { get; set; }
 
-        public List<BoatingDto> Boatings { get; set; }
+        //public List<BoatingDto> Boatings { get; set; }
     }
 }

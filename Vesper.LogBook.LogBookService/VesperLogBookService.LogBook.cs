@@ -7,6 +7,14 @@ namespace Vesper.LogBook.LogBookService
 {
     public partial class VesperLogBookService
     {
+        public LogBookDto GetLogBookById(int id) => _uow.Uow(uow =>
+        {
+            var entity = uow.LogBookRepository.Load(id);
+            var dto = _mapper.Map<DataAccess.LogBook, LogBookDto>(entity);
+
+            return dto;
+        });
+
         public int GetClubMileageYearToDate(DateTime date) => _uow.Uow(uow =>
         {
             var firstDateOfTheYear = new DateTime(date.Year, 1, 1);
@@ -25,9 +33,16 @@ namespace Vesper.LogBook.LogBookService
                 {
                     Boatings = lb.Boatings.Select(b => new BoatingDto
                     {
+                        BoatingId = b.BoatingId,
+                        LogBookId = b.LogBookId,
+                        MemberId = b.MemberId,
+                        Seat = b.Seat,
+                        Order = b.Order,
                         Member = new MemberDto
                         {
+                            MemberId = b.MemberId,
                             FirstName = b.Member.FirstName,
+                            MiddleInitial = b.Member.MiddleInitial,
                             LastName = b.Member.LastName
                         }
                     }).ToList(),
@@ -35,6 +50,7 @@ namespace Vesper.LogBook.LogBookService
                     BoatType = lb.BoatType,
                     Comment = lb.Comment,
                     Date = lb.Date,
+                    LogBookId = lb.LogBookId,
                     MilesRowed = lb.MilesRowed ?? 0,
                     TimeOut = lb.TimeOut ?? lb.Date,
                     TimeIn = lb.TimeIn ?? lb.Date
