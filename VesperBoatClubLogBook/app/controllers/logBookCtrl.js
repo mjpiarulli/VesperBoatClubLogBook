@@ -7,8 +7,32 @@
             function (logBookService, boatService, memberService, boatTypeService, reportService) {
 
                 var vm = this;
+
+                var getSeatNameByIndex = function (index) {
+                    if (vm.selectedBoatType === undefined || vm.selectedBoatType === null)
+                        return "Bow";
+
+                    var lastSeat = vm.selectedBoatType.Seats - 1 === index;
+                    var hasCox = vm.selectedBoatType.HasCox;
+                    if (hasCox && lastSeat)
+                        return "Cox";
+                    else if (index === 0)
+                        return "Bow";
+                    else
+                        return (index + 1).toString();
+                };
+
+                var resetNewBoatings = function (seats) {
+                    vm.log.Boatings = new Array(seats);
+                    for (var i = 0; i < seats; i++) {
+                        vm.log.Boatings[i] = {};
+                        vm.log.Boatings[i].Order = i + 1;
+                        vm.log.Boatings[i].Seat = getSeatNameByIndex(i);
+                    }
+                };
+
                 vm.log = {};
-                vm.log.Boatings = [];
+                resetNewBoatings(1);
                 vm.submitAttempted = false;
 
 
@@ -32,7 +56,7 @@
                 boatService.getBoatList().then(function (response) {
                     vm.boats = response.data;
 
-                    setTimeout(function () { angular.element("#boatName").selectpicker({ liveSearching: true }); }, 50);
+                    setTimeout(function () { angular.element(".boatName").selectpicker({ liveSearching: true }); }, 50);
                 }, function () {
                     console.log("Error in getBoatList()");
                 });
@@ -52,18 +76,24 @@
                 });
 
                 vm.loadBoatsByType = function () {
-                    boatService.getBoatsByBoatType(vm.selectedBoatType.Type).then(function (response) {
+                    vm.selectedBoatType = vm.boatTypes.filter(bt => bt.Type == vm.log.BoatType)[0];
+                    resetNewBoatings(vm.selectedBoatType.Seats);
+                    boatService.getBoatsByBoatType(vm.log.BoatType).then(function (response) {
                         vm.boats = response.data;
-
-                        setTimeout(function () { angular.element("#boatName").selectpicker("refresh"); }, 50);
-                        setTimeout(function () { angular.element(".rowerName").selectpicker("refresh"); }, 50);
+                        setTimeout(function() {
+                            angular.element("#boatName").selectpicker("refresh");
+                            angular.element(".rowerName").selectpicker("refresh");
+                        }, 50);
                     }, function () {
                         console.log("Error in getBoatsByBoatType()");
                     });
                 };
                 var resetLogbookForm = function () {
+                    angular.element("#date").datetimepicker("clear");
+                    angular.element("#datetimepickerTimeOut").datetimepicker("clear");
+                    angular.element("#datetimepickerTimeIn").datetimepicker("clear");
                     vm.log = {};
-                    vm.log.Boatings = [];
+                    resetNewBoatings(1);
                     vm.selectedBoatType = null;
                     vm.submitAttempted = false;
                     setTimeout(function () { angular.element("#boatName").selectpicker("refresh"); }, 50);
@@ -77,23 +107,11 @@
                             toastr.success("New log added successfully");
                             resetLogbookForm();
                         });
+                    } else {
+                        logBookService.editLog(log).then(function(response) {
+                            toastr.success("Log edited successfully");
+                        });
                     }
                 };
-
-                vm.getSeatNameByIndex = function (index) {
-                    if (vm.selectedBoatType === undefined || vm.selectedBoatType === null)
-                        return "Bow";
-
-                    var lastSeat = vm.selectedBoatType.Seats - 1 === index;
-                    var hasCox = vm.selectedBoatType.HasCox;
-                    if (hasCox && lastSeat)
-                        return "Cox";
-                    else if (index === 0)
-                        return "Bow";
-                    else
-                        return (index + 1).toString();
-                };
-
-
             }]);
 })();

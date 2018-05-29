@@ -7,8 +7,8 @@
             <div class="box-body">
                 <div class="form-group row">
                     <div class="col-lg-6">
-                        <label for="rowerName" class="control-label">Rower's Name</label>
-                        <select name="rowerName" id="rowerName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.MemberId">
+                        <label for="rowerNameSearch" class="control-label">Rower's Name</label>
+                        <select name="rowerName" id="rowerNameSearch" class="rowerName form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.MemberId">
                             <option value="">Nothing selected</option>
                             <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
                         </select>
@@ -16,14 +16,15 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-lg-6">
-                        <label for="boatName" class="col-form-label">Boat Name</label>
-                        <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName">
+                        <label for="boatNameSearch" class="col-form-label">Boat Name</label>
+                        <select id="boatNameSearch" name="boatName" class="boatName form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatName">
+                            <option value="">Nothing selected</option>
                             <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
                         </select>
                     </div>
                     <div class="col-lg-3">
-                        <label for="boatType" class="col-form-label">Boat Type</label>
-                        <select id="boatType" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatType">
+                        <label for="boatTypeSearch" class="col-form-label">Boat Type</label>
+                        <select id="boatTypeSearch" name="boatType" class="boatType form-control selectpicker" data-live-search="true" ng-model="vm.searchParams.BoatType">
                             <option ng-repeat="boatType in vm.boatTypes" value="{{boatType.Type}}">{{boatType.Type}}</option>
                         </select>
                     </div>
@@ -84,7 +85,6 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add/Edit Log</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">

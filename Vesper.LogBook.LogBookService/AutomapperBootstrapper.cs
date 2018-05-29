@@ -31,25 +31,12 @@ namespace Vesper.LogBook.LogBookService
             }).CreateMapper();
         }
 
-        public static IMapper MapLogBook()
-        {
-            return new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<LogBookDto, DataAccess.LogBook>()
-                    .ForMember(l => l.Boatings, o => o.Ignore());
-                cfg.CreateMap<DataAccess.LogBook, LogBookDto>()
-                    .ForMember(l => l.Boatings, o => o.Ignore());
-            }).CreateMapper();
-        }
-
         public static IMapper MapMember()
         {
             return new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<MemberDto, Member>()
                     .ForMember(m => m.Boatings, o => o.Ignore());
-                //cfg.CreateMap<Member, MemberDto>()
-                //    .ForMember(m => m.Boatings, o => o.Ignore());
             }).CreateMapper();
         }
     }

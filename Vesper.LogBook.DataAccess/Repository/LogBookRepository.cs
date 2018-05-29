@@ -15,6 +15,9 @@ namespace Vesper.LogBook.DataAccess.Repository
         public IQueryable<LogBook> Search(LogBookSearchParameter param)
         {
             var query = Context.Set<LogBook>().AsQueryable();
+            if (param == null)
+                return query;
+
             if (param.StartDate.HasValue)
                 query = query.Where(lb => lb.Date >= param.StartDate.Value);
             if (param.EndDate.HasValue)

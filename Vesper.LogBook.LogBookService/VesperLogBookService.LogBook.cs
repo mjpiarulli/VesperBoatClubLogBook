@@ -69,5 +69,17 @@ namespace Vesper.LogBook.LogBookService
 
             return dto;
         });
+
+        public LogBookDto EditLog(LogBookDto dto) => _uow.Uow(uow =>
+        {
+            dto.Boatings.ForEach(b => b.Member = null);
+            var entity = _mapper.Map<LogBookDto, DataAccess.LogBook>(dto);
+            foreach (var boating in entity.Boatings)
+                uow.BoatingRepository.Edit(boating);
+            uow.LogBookRepository.Edit(entity);
+            uow.Save();
+
+            return dto;
+        });
     }
 }

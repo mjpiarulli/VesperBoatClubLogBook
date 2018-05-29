@@ -23,5 +23,9 @@
             this.addNewLog = function(log) {
                 return $http.post("api/logBook/addNewLog", log);
             };
+
+            this.editLog = function(log) {
+                return $http.post("api/logBook/editLog", log);
+            };
         });
 })();

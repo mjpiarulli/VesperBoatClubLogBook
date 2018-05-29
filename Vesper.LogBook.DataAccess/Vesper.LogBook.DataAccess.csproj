@@ -64,6 +64,7 @@
     <Compile Include="BoatType.cs">
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
+    <Compile Include="Interface\IBoatingRepository.cs" />
     <Compile Include="Interface\IBoatRepository.cs" />
     <Compile Include="Interface\IBoatStatusLogRepository.cs" />
     <Compile Include="Interface\IBoatStatusRepository.cs" />
@@ -79,6 +80,7 @@
       <DependentUpon>VesperLogBook.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BoatingRepository.cs" />
     <Compile Include="Repository\BoatRepository.cs" />
     <Compile Include="Repository\BoatStatusLogRepository.cs" />
     <Compile Include="Repository\BoatStatusRepository.cs" />

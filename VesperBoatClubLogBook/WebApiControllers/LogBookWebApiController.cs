@@ -52,5 +52,14 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return newLog;
         }
+
+        [Route("EditLog")]
+        [HttpPost]
+        public LogBookDto EditLog(LogBookDto dto)
+        {
+            var editedLog = VesperLogBookService.EditLog(dto);
+
+            return editedLog;
+        }
     }
 }

@@ -8,14 +8,16 @@
                 <div class="col-lg-4">
                     <label for="boatType" class="control-label">Boat Type</label>
                     <input type="hidden" ng-model="vm.log.BoatType" />
-                    <select id="boatType" name="boatType" class="form-control" ng-change="vm.loadBoatsByType(); vm.log.BoatType=vm.selectedBoatType.Type" ng-model="vm.selectedBoatType" ng-options="y.Type for (x, y) in vm.boatTypes" required></select>
+                    <select id="boatType" name="boatType" class="boatType form-control" ng-change="vm.loadBoatsByType()" ng-model="vm.log.BoatType" required>
+                        <option ng-repeat="boatType in vm.boatTypes" value="{{boatType.Type}}">{{boatType.Type}}</option>
+                    </select>
                     <div class="alert alert-danger" ng-show="vm.logBookForm.boatType.$invalid && (vm.logBookForm.boatType.$touched || vm.submitAttempted)">
                         <div ng-show="vm.logBookForm.boatType.$error.required">Boat Type is required</div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <label for="boatName" class="control-label">Boat Name</label>
-                    <select id="boatName" name="boatName" class="form-control selectpicker" data-live-search="true" ng-model="vm.log.BoatName" required>
+                    <select id="boatName" name="boatName" class="boatName form-control selectpicker" data-live-search="true" ng-model="vm.log.BoatName" required>
                         <option ng-repeat="boat in vm.boats" value="{{boat.Name}}">{{boat.Name}}</option>
                     </select>
                     <div class="alert alert-danger" ng-show="vm.logBookForm.boatName.$invalid && (vm.logBookForm.boatName.$touched || vm.submitAttempted)">
@@ -23,17 +25,16 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group row" ng-repeat="i in [].constructor(((vm.selectedBoatType.Seats) <= 0 ? 1 : (vm.selectedBoatType.Seats))) track by $index">
+            <div class="form-group row" ng-repeat="boating in vm.log.Boatings track by $index">
                 <div class="col-lg-4">
                     <label for="seat{{$index}}" class="control-label">Seat</label>
-                    <input type="hidden" ng-init="vm.log.Boatings[$index].Order = $index+1" />
-                    <input id="seat{{$index}}" name="seat{{$index}}" class=" seat form-control" ng-init="vm.log.Boatings[$index].Seat = vm.getSeatNameByIndex($index)" ng-value="vm.getSeatNameByIndex($index)" readonly />
+                    <input id="seat{{$index}}" name="seat{{$index}}" class=" seat form-control" ng-model="vm.log.Boatings[$index].Seat" readonly />
                 </div>
                 <div class="col-lg-8">
                     <label for="rowerName{{$index}}" class="control-label">Rower's Name</label>
                     <select id="rowerName{{$index}}" name="rowerName{{$index}}" class="rowerName form-control selectpicker" data-live-search="true" ng-model="vm.log.Boatings[$index].MemberId" required>
                         <option value="">Nothing selected</option>
-                        <option ng-repeat="member in vm.members" value="{{member.MemberId}}">{{member.FirstName}} {{member.LastName}}</option>
+                        <option ng-repeat="member in vm.members" ng-value="member.MemberId">{{member.FirstName}} {{member.LastName}}</option>
                     </select>
                     <div class="alert alert-danger" ng-messages="vm.logBookForm['rowerName' + i].$error" ng-show="vm.logBookForm['rowerName' + i].$invalid && (vm.logBookForm['rowerName' + i].$touched || vm.submitAttemped)">
                         <div ng-message="required">Rower Name is required</div>
@@ -44,7 +45,7 @@
                 <div class="col-lg-4">
                     <label for="date" class="control-label">Date</label>
                     <div class="input-group date" data-provide="datepicker">
-                        <input type="text" id="date" name="date" class="form-control datetimepicker-input" data-target="#date" ng-model="vm.log.Date" data-toggle="datetimepicker" required />
+                        <input type="text" id="date" name="date" class="form-control datetimepicker-input" data-target="#date" ng-model="vm.log.Date" data-toggle="datetimepicker" autocomplete="off" required />
                         <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
                         </div>
@@ -63,7 +64,7 @@
                 <div class="col-lg-4">
                     <label for="timeOut" class="control-label">Time Out</label>
                     <div class="input-group" id="datetimepickerTimeOut" data-target-input="nearest">
-                        <input type="text" id="timeOut" name="timeOut" class="form-control datetimepicker-input" data-target="#datetimepickerTimeOut" ng-model="vm.log.TimeOut" data-toggle="datetimepicker" required />
+                        <input type="text" id="timeOut" name="timeOut" class="form-control datetimepicker-input" data-target="#datetimepickerTimeOut" ng-model="vm.log.TimeOut" data-toggle="datetimepicker" autocomplete="off" required />
                         <div class="input-group-append" data-target="#datetimepickerTimeOut" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                         </div>
@@ -82,7 +83,7 @@
                 <div class="col-lg-4">
                     <label for="timeIn" class="control-label">Time In</label>
                     <div class="input-group" id="datetimepickerTimeIn" data-target-input="nearest">
-                        <input type="text" id="timeIn" name="timeIn" class="form-control datetimepicker-input" data-target="#datetimepickerTimeIn" ng-model="vm.log.TimeIn" data-toggle="datetimepicker" required />
+                        <input type="text" id="timeIn" name="timeIn" class="form-control datetimepicker-input" data-target="#datetimepickerTimeIn" ng-model="vm.log.TimeIn" data-toggle="datetimepicker" autocomplete="off" required />
                         <div class="input-group-append" data-target="#datetimepickerTimeIn" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                         </div>
