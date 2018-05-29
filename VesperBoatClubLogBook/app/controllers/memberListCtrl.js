@@ -6,11 +6,14 @@
         .controller("memberListCtrl", ["memberService", function (memberService) {
             var vm = this;
 
-            memberService.getMemberList().then(function (response) {
-                vm.members = response.data;
-            }, function () {
-                console.log("Error in getMemberList()");
-            });
+            var getMemberList = function() {
+                memberService.getMemberList().then(function (response) {
+                    vm.members = response.data;
+                }, function () {
+                    console.log("Error in getMemberList()");
+                });
+            };
+            getMemberList();
 
             vm.showNewMemberModal = function() {
                 angular.element(".add-member-modal").modal("show");
@@ -23,6 +26,7 @@
                     } else {
                         toastr.success("Successfully added new member");
                         vm.Member = null;
+                        getMemberList();
                     }
                 }, function() {
                     console.log("Error in addNewMember()");

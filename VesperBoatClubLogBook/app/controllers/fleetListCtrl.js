@@ -7,11 +7,14 @@
             function (boatService, boatTypeService, riggingService, useRestrictionService, boatStatusService) {
                 var vm = this;
 
-                boatService.getBoatList().then(function (response) {
-                    vm.fleet = response.data;
-                }, function () {
-                    console.log("Error in getFleetList()");
-                });
+                var getBoatList = function() {
+                    boatService.getBoatList().then(function (response) {
+                        vm.fleet = response.data;
+                    }, function () {
+                        console.log("Error in getFleetList()");
+                    });
+                };
+                getBoatList();
 
                 boatTypeService.getBoatTypesOrderedBySeats().then(function (response) {
                     vm.boatTypes = response.data;
@@ -51,6 +54,7 @@
                         if (response.data.BoatId !== 0) {
                             toastr.success("Successfully added new boat to the fleet");
                             vm.Boat = null;
+                            getBoatList();
                         } else {
                             toastr.error("Error adding new boat to fleet.");
                         }

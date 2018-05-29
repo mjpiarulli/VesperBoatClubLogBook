@@ -115,15 +115,15 @@
                         logBookService.addNewLog(log).then(function(response) {
                             toastr.success("New log added successfully");
                             resetLogbookForm();
+                            getMileageLeaderReport();
+                            getClubMileageYearToDate();
+                            getClubMileageLastYearToDate();
                         });
                     } else {
                         logBookService.editLog(log).then(function(response) {
                             toastr.success("Log edited successfully");
                         });
                     }
-                    getMileageLeaderReport();
-                    getClubMileageYearToDate();
-                    getClubMileageLastYearToDate();
                 };
             }]);
 })();
