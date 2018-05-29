@@ -35,23 +35,32 @@
                 resetNewBoatings(1);
                 vm.submitAttempted = false;
 
+                var getMileageLeaderReport = function() {
+                    reportService.getMileageLeaderReport().then(function (response) {
+                        vm.mileageLeaderReport = response.data;
+                    }, function () {
+                        console.log("Error in getMileageLeaderReport()");
+                    });
+                };
+                getMileageLeaderReport();
 
-                reportService.getMileageLeaderReport().then(function (response) {
-                    vm.mileageLeaderReport = response.data;
-                }, function () {
-                    console.log("Error in getMileageLeaderReport()");
-                });
+                var getClubMileageYearToDate = function() {
+                    logBookService.getClubMileageYearToDate().then(function(response) {
+                        vm.totalClubMileageYearToDate = response.data;
+                    }, function() {
+                        console.log("Error in getClubMileageYearToDate()");
+                    });
+                };
+                getClubMileageYearToDate();
 
-                logBookService.getClubMileageYearToDate().then(function (response) {
-                    vm.totalClubMileageYearToDate = response.data;
-                }, function () {
-                    console.log("Error in getClubMileageYearToDate()");
-                });
-                logBookService.getClubMileageLastYearToDate().then(function (response) {
-                    vm.totalClubMileageLastYearToDate = response.data;
-                }, function () {
-                    console.log("Error in getClubMileageLastYearToDate()");
-                });
+                var getClubMileageLastYearToDate = function() {
+                    logBookService.getClubMileageLastYearToDate().then(function (response) {
+                        vm.totalClubMileageLastYearToDate = response.data;
+                    }, function () {
+                        console.log("Error in getClubMileageLastYearToDate()");
+                    });
+                };
+                getClubMileageLastYearToDate();
 
                 boatService.getBoatList().then(function (response) {
                     vm.boats = response.data;
@@ -112,6 +121,9 @@
                             toastr.success("Log edited successfully");
                         });
                     }
+                    getMileageLeaderReport();
+                    getClubMileageYearToDate();
+                    getClubMileageLastYearToDate();
                 };
             }]);
 })();

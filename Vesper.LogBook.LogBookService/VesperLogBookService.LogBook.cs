@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Vesper.LogBook.Common;
 
@@ -21,6 +22,7 @@ namespace Vesper.LogBook.LogBookService
             var mileage = uow.LogBookRepository.FindBy(lb => lb.Date >= firstDateOfTheYear &&
                                                              lb.Date <= date &&
                                                              lb.MilesRowed.HasValue)
+                                                             .AsNoTracking()
                                                              .Sum(lb => lb.MilesRowed.Value);
 
             return mileage;
