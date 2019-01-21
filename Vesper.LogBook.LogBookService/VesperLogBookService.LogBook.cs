@@ -23,7 +23,9 @@ namespace Vesper.LogBook.LogBookService
                                                              lb.Date <= date &&
                                                              lb.MilesRowed.HasValue)
                                                              .AsNoTracking()
-                                                             .Sum(lb => lb.MilesRowed.Value);
+                                                                .Select(lb => lb.MilesRowed)
+                                                                .DefaultIfEmpty(0)
+                                                             .Sum(lb => lb.Value);
 
             return mileage;
         });
@@ -32,31 +34,31 @@ namespace Vesper.LogBook.LogBookService
         {
             var dtos = uow.LogBookRepository.Search(param)
             .Select(lb => new LogBookDto
+            {
+                Boatings = lb.Boatings.Select(b => new BoatingDto
                 {
-                    Boatings = lb.Boatings.Select(b => new BoatingDto
+                    BoatingId = b.BoatingId,
+                    LogBookId = b.LogBookId,
+                    MemberId = b.MemberId,
+                    Seat = b.Seat,
+                    Order = b.Order,
+                    Member = new MemberDto
                     {
-                        BoatingId = b.BoatingId,
-                        LogBookId = b.LogBookId,
                         MemberId = b.MemberId,
-                        Seat = b.Seat,
-                        Order = b.Order,
-                        Member = new MemberDto
-                        {
-                            MemberId = b.MemberId,
-                            FirstName = b.Member.FirstName,
-                            MiddleInitial = b.Member.MiddleInitial,
-                            LastName = b.Member.LastName
-                        }
-                    }).ToList(),
-                    BoatName = lb.BoatName,
-                    BoatType = lb.BoatType,
-                    Comment = lb.Comment,
-                    Date = lb.Date,
-                    LogBookId = lb.LogBookId,
-                    MilesRowed = lb.MilesRowed ?? 0,
-                    TimeOut = lb.TimeOut ?? lb.Date,
-                    TimeIn = lb.TimeIn ?? lb.Date
-                })
+                        FirstName = b.Member.FirstName,
+                        MiddleInitial = b.Member.MiddleInitial,
+                        LastName = b.Member.LastName
+                    }
+                }).ToList(),
+                BoatName = lb.BoatName,
+                BoatType = lb.BoatType,
+                Comment = lb.Comment,
+                Date = lb.Date,
+                LogBookId = lb.LogBookId,
+                MilesRowed = lb.MilesRowed ?? 0,
+                TimeOut = lb.TimeOut ?? lb.Date,
+                TimeIn = lb.TimeIn ?? lb.Date
+            })
             .ToList();
 
             return dtos;

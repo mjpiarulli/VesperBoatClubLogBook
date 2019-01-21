@@ -212,6 +212,8 @@
     <Content Include="admin-lte\css\skins\skin-green-light.min.css" />
     <Content Include="admin-lte\css\skins\skin-green.css" />
     <Content Include="admin-lte\css\skins\skin-green.min.css" />
+    <Content Include="admin-lte\css\skins\skin-pacra.min.css" />
+    <Content Include="admin-lte\css\skins\skin-pacra.css" />
     <Content Include="admin-lte\css\skins\skin-vesper.css" />
     <Content Include="admin-lte\css\skins\skin-purple-light.css" />
     <Content Include="admin-lte\css\skins\skin-purple-light.min.css" />
@@ -459,6 +461,7 @@
     <Content Include="Scripts\i18n\defaults-zh_CN.min.js" />
     <Content Include="Scripts\i18n\defaults-zh_TW.js" />
     <Content Include="Scripts\i18n\defaults-zh_TW.min.js" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

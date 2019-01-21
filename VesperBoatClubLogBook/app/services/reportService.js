@@ -9,11 +9,11 @@
             };
 
             this.getMileageLeaderReport = function() {
-                return $http.get("/api/report/LoadMileageLeaderReport");
+                return $http.get("api/report/LoadMileageLeaderReport");
             };
 
             this.getIndividualMileageReport = function(memberId, startDate, endDate) {
-                return $http.get("/api/report/LoadIndividualMileageReport?memberId=" + memberId + "&startDate=" + startDate + "&endDate=" + endDate);
+                return $http.get("api/report/LoadIndividualMileageReport?memberId=" + memberId + "&startDate=" + startDate + "&endDate=" + endDate);
             };
 
             this.getClubMileageByMemberReport = function (startDate, endDate) {
