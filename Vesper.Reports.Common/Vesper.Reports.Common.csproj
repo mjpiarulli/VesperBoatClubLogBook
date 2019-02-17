@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoatsCheckedOutEntry.cs" />
+    <Compile Include="BoatsCheckedOutReport.cs" />
     <Compile Include="ClubLogBookEntry.cs" />
     <Compile Include="ClubLogBookReport.cs" />
     <Compile Include="ClubMileageByMemberReport.cs" />

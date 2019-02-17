@@ -38,6 +38,16 @@ namespace Vesper.Reports.DataAccess.Repository
             return logBookMileageAndUsageByBoat;
         }
 
+        public BoatsCheckedOutReport GetBoatsCheckedOutReport()
+        {
+            const string boatsCheckedOutSql = BoatsCheckedOutReportSqlHelper.BoatsCheckedOutSql;
+
+            var boats = _context.Database.SqlQuery<BoatsCheckedOutEntry>(boatsCheckedOutSql).AsQueryable().AsNoTracking().ToList();
+            var boatsCheckedOutReport = new BoatsCheckedOutReport(boats);
+
+            return boatsCheckedOutReport;
+        }
+
         public MileageLeaderReport GetMileageLeaderReport()
         {
             var currentYear = DateTime.Now.Year;

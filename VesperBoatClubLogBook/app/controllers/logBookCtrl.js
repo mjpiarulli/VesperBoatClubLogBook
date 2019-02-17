@@ -35,6 +35,14 @@
                 resetNewBoatings(1);
                 vm.submitAttempted = false;
 
+                var getBoatsCheckedOutReport = function() {
+                    reportService.getBoatsCheckedOutReport().then(function(response) {
+                        vm.boatsCheckedOutReport = response.data;
+                    }, function() {
+                        console.log("Error in getBoatsCheckedOutReport()");
+                    });
+                };
+                getBoatsCheckedOutReport();
                 var getMileageLeaderReport = function() {
                     reportService.getMileageLeaderReport().then(function (response) {
                         vm.mileageLeaderReport = response.data;
@@ -97,6 +105,18 @@
                         console.log("Error in getBoatsByBoatType()");
                     });
                 };
+
+                vm.loadLogForCheckIn = function(id) {
+                    logBookService.getLogBookById(id).then(function(response) {
+                        vm.log = response.data;
+                        vm.selectedBoatType = vm.boatTypes.filter(bt => bt.Type == vm.log.BoatType)[0];
+                        setTimeout(function() {
+                            angular.element(".boatName").selectpicker("refresh");
+                            angular.element(".rowerName").selectpicker("refresh");
+                        }, 50);
+                    });
+                };
+
                 var resetLogbookForm = function () {
                     angular.element("#date").datetimepicker("clear");
                     angular.element("#datetimepickerTimeOut").datetimepicker("clear");
@@ -110,18 +130,26 @@
                     vm.logBookForm.$setPristine();
                     vm.logBookForm.$setUntouched();
                 };
+                vm.resetLogbookForm = resetLogbookForm;
+
+                var resetLogBookPage = function() {
+                    resetLogbookForm();
+                    getMileageLeaderReport();
+                    getClubMileageYearToDate();
+                    getClubMileageLastYearToDate();
+                    getBoatsCheckedOutReport();
+                };
+
                 vm.addEditLog = function(log) {
                     if (log.LogBookId === undefined) {
                         logBookService.addNewLog(log).then(function(response) {
                             toastr.success("New log added successfully");
-                            resetLogbookForm();
-                            getMileageLeaderReport();
-                            getClubMileageYearToDate();
-                            getClubMileageLastYearToDate();
+                            resetLogBookPage();
                         });
                     } else {
                         logBookService.editLog(log).then(function(response) {
                             toastr.success("Log edited successfully");
+                            resetLogBookPage();
                         });
                     }
                 };

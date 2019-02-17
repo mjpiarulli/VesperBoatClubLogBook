@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="app" ng-controller="layoutCtrl as vm">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="Content/font-awesome.min.css" />
     <link rel="stylesheet" href="Content/tether/tether.min.css" />
     <link rel="stylesheet" href="admin-lte/css/AdminLTE.min.css" />
-    <link rel="stylesheet" href="admin-lte/css/skins/skin-pacra.min.css" />
+    <link rel="stylesheet" ng-href="admin-lte/css/skins/{{vm.css}}" />
     <link rel="stylesheet" href="Content/toastr.min.css" />
     <link rel="stylesheet" href="Content/tempusdominus-bootstrap-4.min.css" />
     <base href="/">
-    <title>PENN AC Log Book</title>
+    <title>{{vm.title}}</title>
 </head>
-<body ng-controller="layoutCtrl as vm" class="hold-transition skin-pacra sidebar-mini">
+<body class="hold-transition {{vm.cssSkinClass}} sidebar-mini">
     <div class="wrapper">
         <header class="main-header">
             <a href="#home" class="logo">
-                <span class="logo-mini"><b>PAC</b></span>
-                <span class="logo-lg">Penn AC</span>
+                <span class="logo-mini"><b>{{vm.miniLogoText}}</b></span>
+                <span class="logo-lg">{{vm.logoText}}</span>
             </a>
             <nav class="navbar navbar-static-top" role="navigation">
                 <a href="javascript:void(0);" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -43,7 +43,7 @@
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
             </div>
-            <strong>Copyright &copy; {{vm.currentYear}} <a href="#">Penn AC Rowing Association</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; {{vm.currentYear}} <a href="#">{{vm.footerCopyrightText}}</a>.</strong> All rights reserved.
         </footer>
     </div>
 

@@ -8,6 +8,10 @@
                 return $http.get("api/report/loadlogbookmileageandusagebyboatreport?startDate=" + startDate + "&endDate=" + endDate);
             };
 
+            this.getBoatsCheckedOutReport = function() {
+                return $http.get("api/report/LoadBoatsCheckedOutReport");
+            };
+
             this.getMileageLeaderReport = function() {
                 return $http.get("api/report/LoadMileageLeaderReport");
             };

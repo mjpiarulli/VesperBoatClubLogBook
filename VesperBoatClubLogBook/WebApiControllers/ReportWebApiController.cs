@@ -15,6 +15,15 @@ namespace VesperBoatClubLogBook.WebApiControllers
 
             return report;
         }
+
+        [Route("LoadBoatsCheckedOutReport")]
+        [HttpGet]
+        public BoatsCheckedOutReport LoadBoatsCheckedOutReport()
+        {
+            var report = ReportService.GetBoatsCheckedOutReport();
+
+            return report;
+        }
         
 
         [Route("LoadMileageLeaderReport")]

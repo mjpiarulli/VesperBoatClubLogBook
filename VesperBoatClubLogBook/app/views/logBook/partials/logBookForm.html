@@ -5,9 +5,14 @@
         </div>
         <div class="box-body">
             <div class="form-group row">
+                <div class="col-lg-2">
+                    <a href="javascript:void(0);" ng-click="vm.resetLogbookForm()">Clear Log</a>
+                </div>
+            </div>
+            <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="boatType" class="control-label">Boat Type</label>
-                    <input type="hidden" ng-model="vm.log.BoatType" />
+                    <input type="hidden" ng-model="vm.log.BoatType"/>
                     <select id="boatType" name="boatType" class="boatType form-control" ng-change="vm.loadBoatsByType()" ng-model="vm.log.BoatType" required>
                         <option ng-repeat="boatType in vm.boatTypes" value="{{boatType.Type}}">{{boatType.Type}}</option>
                     </select>
@@ -28,7 +33,7 @@
             <div class="form-group row" ng-repeat="boating in vm.log.Boatings track by $index">
                 <div class="col-lg-4">
                     <label for="seat{{$index}}" class="control-label">Seat</label>
-                    <input id="seat{{$index}}" name="seat{{$index}}" class=" seat form-control" ng-model="vm.log.Boatings[$index].Seat" readonly />
+                    <input id="seat{{$index}}" name="seat{{$index}}" class=" seat form-control" ng-model="vm.log.Boatings[$index].Seat" readonly/>
                 </div>
                 <div class="col-lg-8">
                     <label for="rowerName{{$index}}" class="control-label">Rower's Name</label>
@@ -45,13 +50,13 @@
                 <div class="col-lg-4">
                     <label for="date" class="control-label">Date</label>
                     <div class="input-group date" data-provide="datepicker">
-                        <input type="text" id="date" name="date" class="form-control datetimepicker-input" data-target="#date" ng-model="vm.log.Date" data-toggle="datetimepicker" autocomplete="off" required />
+                        <input type="text" id="date" name="date" class="form-control datetimepicker-input" data-target="#date" ng-model="vm.log.Date" data-toggle="datetimepicker" autocomplete="off" required/>
                         <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
                         </div>
                     </div>
                     <script type="text/javascript">
-                        $(function () {
+                        $(function() {
                             $('#date').datetimepicker({
                                 format: 'L'
                             });
@@ -64,13 +69,13 @@
                 <div class="col-lg-4">
                     <label for="timeOut" class="control-label">Time Out</label>
                     <div class="input-group" id="datetimepickerTimeOut" data-target-input="nearest">
-                        <input type="text" id="timeOut" name="timeOut" class="form-control datetimepicker-input" data-target="#datetimepickerTimeOut" ng-model="vm.log.TimeOut" data-toggle="datetimepicker" autocomplete="off" required />
+                        <input type="text" id="timeOut" name="timeOut" class="form-control datetimepicker-input" data-target="#datetimepickerTimeOut" ng-model="vm.log.TimeOut" data-toggle="datetimepicker" autocomplete="off" required/>
                         <div class="input-group-append" data-target="#datetimepickerTimeOut" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                         </div>
                     </div>
                     <script type="text/javascript">
-                        $(function () {
+                        $(function() {
                             $('#datetimepickerTimeOut').datetimepicker({
                                 format: 'LT'
                             });
@@ -83,13 +88,13 @@
                 <div class="col-lg-4">
                     <label for="timeIn" class="control-label">Time In</label>
                     <div class="input-group" id="datetimepickerTimeIn" data-target-input="nearest">
-                        <input type="text" id="timeIn" name="timeIn" class="form-control datetimepicker-input" data-target="#datetimepickerTimeIn" ng-model="vm.log.TimeIn" data-toggle="datetimepicker" autocomplete="off" required />
+                        <input type="text" id="timeIn" name="timeIn" class="form-control datetimepicker-input" data-target="#datetimepickerTimeIn" ng-model="vm.log.TimeIn" data-toggle="datetimepicker" autocomplete="off"/>
                         <div class="input-group-append" data-target="#datetimepickerTimeIn" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-clock-o"></i></div>
                         </div>
                     </div>
                     <script type="text/javascript">
-                        $(function () {
+                        $(function() {
                             $('#datetimepickerTimeIn').datetimepicker({
                                 format: 'LT'
                             });
@@ -103,7 +108,7 @@
             <div class="form-group row">
                 <div class="col-lg-4">
                     <label for="milesRowed" class="control-label">Miles Rowed (1,600 meters = 1 mile)</label>
-                    <input type="number" min="0" id="milesRowed" name="milesRowed" class="form-control" ng-model="vm.log.MilesRowed" required />
+                    <input type="number" min="0" id="milesRowed" name="milesRowed" class="form-control" ng-model="vm.log.MilesRowed"/>
                     <div class="alert alert-danger" ng-show="vm.logBookForm.milesRowed.$invalid && (vm.logBookForm.milesRowed.$touched || vm.submitAttempted)">
                         <div ng-show="vm.logBookForm.milesRowed.$error.required">Miles Rowed is required</div>
                         <div ng-show="vm.logBookForm.milesRowed.$error.number">Miles Rowed must be a valid number</div>

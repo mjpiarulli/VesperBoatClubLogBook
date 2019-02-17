@@ -1,0 +1,23 @@
+﻿<div class="box box-info">
+    <div class="box-header">
+        <h3>Boats Checked Out</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Boat</th>
+                    <th>Checked Out</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="boat in vm.boatsCheckedOutReport.Boats">
+                    <td>{{boat.BoatName}}</td>
+                    <td>{{boat.CheckOutTime | date: "hh:mm a"}}</td>
+                    <td><a href="javascript:void(0);" ng-click="vm.loadLogForCheckIn(boat.LogBookId)">Check In</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

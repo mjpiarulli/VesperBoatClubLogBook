@@ -21,6 +21,13 @@ namespace Vesper.Reports.ReportService
             return report;
         });
 
+        public BoatsCheckedOutReport GetBoatsCheckedOutReport() => _uow.Uow(uow =>
+        {
+            var report = uow.ReportRepository.GetBoatsCheckedOutReport();
+
+            return report;
+        });
+
         public MileageLeaderReport GetMileageLeaderReport() => _uow.Uow(uow =>
         {
             var report = uow.ReportRepository.GetMileageLeaderReport();

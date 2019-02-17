@@ -10,9 +10,7 @@ namespace Vesper.LogBook.Common
         {
             LogBookId = 0;
             Date = SqlDateTime.MinValue.Value;
-            TimeIn = SqlDateTime.MinValue.Value;
             TimeOut = SqlDateTime.MinValue.Value;
-            MilesRowed = 0;
             Comment = string.Empty;
             BoatName = string.Empty;
             BoatType = string.Empty;
@@ -20,9 +18,9 @@ namespace Vesper.LogBook.Common
 
         public int LogBookId { get; set; }
         public DateTime Date { get; set; }
-        public DateTime TimeIn { get; set; }
+        public DateTime? TimeIn { get; set; }
         public DateTime TimeOut { get; set; }
-        public int MilesRowed { get; set; }
+        public int? MilesRowed { get; set; }
         public string Comment { get; set; }
         public string BoatName { get; set; }
         public string BoatType { get; set; }

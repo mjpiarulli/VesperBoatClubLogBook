@@ -5,3 +5,6 @@
 	entry manually before having the ng-repeat create all the member entries from the database.
 
 	Rower name validation isn't working correctly.  The danger div never shows up because the rower name html elements are in an ng-repeat
+
+DESIGN NOTES
+	Initial page loading isn't too important because the site is started once and for the most part stays on the home page
