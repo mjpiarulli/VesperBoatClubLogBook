@@ -7,6 +7,7 @@
             <thead>
                 <tr>
                     <th>Boat</th>
+                    <th>Members</th>
                     <th>Checked Out</th>
                     <th></th>
                 </tr>
@@ -14,6 +15,7 @@
             <tbody>
                 <tr ng-repeat="boat in vm.boatsCheckedOutReport.Boats">
                     <td>{{boat.BoatName}}</td>
+                    <td>{{boat.Members}}</td>
                     <td>{{boat.CheckOutTime | date: "hh:mm a"}}</td>
                     <td><a href="javascript:void(0);" ng-click="vm.loadLogForCheckIn(boat.LogBookId)">Check In</a></td>
                 </tr>

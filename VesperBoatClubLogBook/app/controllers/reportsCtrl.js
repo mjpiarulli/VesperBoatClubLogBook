@@ -38,12 +38,15 @@
                     console.log("Error in getDamagedBoatList()");
                 });
 
-                vm.addEditBoatStatusLog = function(boatStatusLog) {
-                    boatStatusLogService.editBoatStatusLog(boatStatusLog).then(function() {
+                vm.addEditBoatStatusLog = function (boatStatusLog) {
+                    boatStatusLogService.editBoatStatusLog(boatStatusLog).then(function () {
                         toastr.success("Successfully edited the boat status log.");
-                    }, function() {
+                    }, function () {
                         console.log("Error in editBoatStatusLog()");
                     });
+                    setTimeout(function () {
+                        angular.element(".boatName").selectpicker("refresh");
+                    }, 50);
                 };
 
                 boatService.getBoatList().then(function (response) {
@@ -80,6 +83,9 @@
                         console.log("Error in getBoatStatusLogSearch()");
                     }).finally(function () {
                         vm.loading = false;
+                        setTimeout(function () {
+                            angular.element(".boatName").selectpicker("refresh");
+                        }, 50);
                     });
                 };
 

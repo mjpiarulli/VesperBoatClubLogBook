@@ -10,6 +10,7 @@
                                                         join LogBook lb
                                                         on b.LogBookId = lb.LogBookId
                                                         Where lb.Date > '1/1/2018'
+                                                            And lb.MilesRowed Is Not Null
                                                         Group By m.FirstName, m.LastName
                                                         Order By MilesRowed desc
                                                         ";

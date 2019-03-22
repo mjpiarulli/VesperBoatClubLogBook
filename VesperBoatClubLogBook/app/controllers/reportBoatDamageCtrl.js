@@ -24,6 +24,11 @@
                             console.log("Error in editBoatStatusLog()");
                         });
                     }
+                    setTimeout(function() {
+                        angular.element("#boatName").selectpicker("refresh");
+                        angular.element("#status").selectpicker("refresh");
+                    }, 50);
+                    
                 };
 
                 boatService.getBoatList().then(function (response) {

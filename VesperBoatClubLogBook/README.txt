@@ -6,6 +6,9 @@
 
 	Rower name validation isn't working correctly.  The danger div never shows up because the rower name html elements are in an ng-repeat
 
+	Could not find a part of the path 'E:\git\VesperBoatClubLogBook\VesperBoatClubLogBook\bin\roslyn\csc.exe'
+		Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+
 DESIGN NOTES
 	Initial page loading isn't too important because the site is started once and for the most part stays on the home page
 
@@ -14,39 +17,12 @@ Teamviewer Info
 	1 197 095 314
 	5vkt88
 
-OUTSTANDING QUESTIONS
-	What to do with the clear log link
-		Check in link forces user to edit entry even if no edits need to be made
-	Boats checked out
-		List boat type-last name of bow
-		Move to bottom of page instead of on right side bar
-		Check In link
-			Users fill in miles and notes
-			time out is automatically populated with the current time
-	Safety First Section
-		Remove it
-		Make it editable
-			Anyone would then be able to edit it
-		Add realtime metrics
-			USGS flow rate, current air temp, wind chill, water temp, wind speed and direction
-	Mileage Leaders
-		Remove
-	Club Mileage YTD
-		Remove
-		Make it calculate based on collective member miles instead of boat miles
-	Default date, time out, and time in fields
-		Makes it confusing for users making the first entry of the day
-	Log Book
-		Remove date, time in, and time out
-		Rename Submit button to check out
-		Automatically populate date and time out with current date and current time
-
-TODO
-	Boat Status Log Search
-		Boat Name drop down issue
-	Report boat damage
-		Status drop down issue
-		Boat Type drop down issue
-	Log Book History Search
-		Change title to Log Book History Search instead of Boat Status Log Search
-FIXED
+TODO	
+	Safety First section
+		We're going to add the following 
+			water flow
+			water temp	
+			air temp
+			*wind speed 
+			*wind direction 
+	make sure that when total Club miles rowed is being calculated, it is the sum of individual miles rowed, and not boat miles 
