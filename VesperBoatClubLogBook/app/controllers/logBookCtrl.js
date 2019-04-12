@@ -162,26 +162,37 @@
                 };
 
                 vm.currentWaterCondition = {
-                    waterFlow: 0,
-                    waterTemperature: 0
+                    waterFlow: "N/A",
+                    waterTemperature: "N/A"
                 };
                 
 
                 vm.currentWeatherCondition = {
-                    airTemperature: 0,
-                    windSpeed: 0,
-                    windDirection: ""
+                    airTemperature: "N/A",
+                    windSpeed: "N/A",
+                    windDirection: "N/A"
                 };
 
                 var updateCurrentConditions = function() {
                     usgsService.getCurrentWaterConditions().then(function (response) {
                         vm.currentWaterCondition.waterTemperature = temperatureService.convertCelciusToFarenheit(response.data.value.timeSeries[0].values[0].value[0].value);
                         vm.currentWaterCondition.waterFlow = response.data.value.timeSeries[1].values[0].value[0].value;
+                    }).catch(function() {
+                        vm.currentWaterCondition = {
+                            waterFlow: "N/A",
+                            waterTemperature: "N/A"
+                        };
                     });
                     openWeatherService.getCurrentWeatherConditions().then(function (response) {
                         vm.currentWeatherCondition.airTemperature = temperatureService.convertKelvinToFarenheit(response.data.main.temp);
                         vm.currentWeatherCondition.windSpeed = velocityService.convertMetersPerSecondToMilesPerHour(response.data.wind.speed);
                         vm.currentWeatherCondition.windDirection = directionService.convertDegreesToCardinality(response.data.wind.deg);
+                    }).catch(function() {
+                        vm.currentWeatherCondition = {
+                            airTemperature: "N/A",
+                            windSpeed: "N/A",
+                            windDirection: "N/A"
+                        };
                     });
                 };
                 updateCurrentConditions();

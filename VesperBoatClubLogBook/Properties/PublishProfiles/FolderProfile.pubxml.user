@@ -118,10 +118,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/29/2018 19:58:13</publishTime>
     </File>
     <File Include="app/controllers/layoutCtrl.js">
-      <publishTime>05/12/2018 20:22:54</publishTime>
+      <publishTime>02/17/2019 12:07:57</publishTime>
     </File>
     <File Include="app/controllers/logBookCtrl.js">
-      <publishTime>05/29/2018 19:55:42</publishTime>
+      <publishTime>04/12/2019 17:06:47</publishTime>
     </File>
     <File Include="app/controllers/logBookSearchCtrl.js">
       <publishTime>05/29/2018 19:42:20</publishTime>
@@ -130,10 +130,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/29/2018 19:57:22</publishTime>
     </File>
     <File Include="app/controllers/reportBoatDamageCtrl.js">
-      <publishTime>05/27/2018 21:52:31</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/controllers/reportsCtrl.js">
-      <publishTime>05/27/2018 22:04:09</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/services/boatService.js">
       <publishTime>05/24/2018 18:29:41</publishTime>
@@ -147,20 +147,35 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="app/services/boatTypeService.js">
       <publishTime>05/24/2018 18:29:41</publishTime>
     </File>
+    <File Include="app/services/directionService.js">
+      <publishTime>04/12/2019 16:45:39</publishTime>
+    </File>
     <File Include="app/services/logBookService.js">
       <publishTime>05/29/2018 19:42:20</publishTime>
     </File>
     <File Include="app/services/memberService.js">
       <publishTime>05/24/2018 18:29:41</publishTime>
     </File>
+    <File Include="app/services/openWeatherService.js">
+      <publishTime>04/12/2019 16:45:39</publishTime>
+    </File>
     <File Include="app/services/reportService.js">
-      <publishTime>05/24/2018 18:29:41</publishTime>
+      <publishTime>02/17/2019 12:27:57</publishTime>
     </File>
     <File Include="app/services/riggingService.js">
       <publishTime>05/24/2018 18:29:41</publishTime>
     </File>
+    <File Include="app/services/temperatureService.js">
+      <publishTime>04/12/2019 16:45:39</publishTime>
+    </File>
     <File Include="app/services/useRestrictionService.js">
       <publishTime>05/24/2018 18:29:41</publishTime>
+    </File>
+    <File Include="app/services/usgsService.js">
+      <publishTime>04/12/2019 17:08:10</publishTime>
+    </File>
+    <File Include="app/services/velocityService.js">
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/views/fleetList/fleetList.html">
       <publishTime>05/24/2018 18:29:41</publishTime>
@@ -169,13 +184,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/28/2018 00:19:26</publishTime>
     </File>
     <File Include="app/views/logBook/logBook.html">
-      <publishTime>05/01/2018 21:00:14</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
+    </File>
+    <File Include="app/views/logBook/partials/boatsCheckedOut.html">
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/views/logBook/partials/clubMileage.html">
       <publishTime>05/01/2018 21:00:14</publishTime>
     </File>
+    <File Include="app/views/logBook/partials/currentConditions.html">
+      <publishTime>04/12/2019 16:45:39</publishTime>
+    </File>
     <File Include="app/views/logBook/partials/logBookForm.html">
-      <publishTime>05/29/2018 19:42:20</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/views/logBook/partials/mileageLeaders.html">
       <publishTime>05/12/2018 13:44:25</publishTime>
@@ -202,7 +223,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/24/2018 21:57:41</publishTime>
     </File>
     <File Include="app/views/reports/boatStatusLogSearch.html">
-      <publishTime>05/27/2018 22:04:31</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="app/views/reports/clubLogBook.html">
       <publishTime>05/24/2018 18:29:41</publishTime>
@@ -316,13 +337,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/10/2018 00:01:46</publishTime>
     </File>
     <File Include="bin/DataAccess.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/DataAccess.dll.config">
       <publishTime>05/01/2018 21:00:13</publishTime>
     </File>
     <File Include="bin/DataAccess.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/EntityFramework.BulkInsert.dll">
       <publishTime>08/01/2016 21:59:32</publishTime>
@@ -544,70 +565,70 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/15/2018 13:12:24</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.Common.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.Common.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.DataAccess.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.DataAccess.dll.config">
       <publishTime>05/24/2018 18:29:41</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.DataAccess.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.LogBookService.dll">
-      <publishTime>01/20/2019 21:20:21</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.LogBookService.dll.config">
       <publishTime>05/01/2018 21:00:13</publishTime>
     </File>
     <File Include="bin/Vesper.LogBook.LogBookService.pdb">
-      <publishTime>01/20/2019 21:20:21</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Logbook.LogBookServiceContract.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Logbook.LogBookServiceContract.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.Common.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.Common.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.DataAccess.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.DataAccess.dll.config">
       <publishTime>05/01/2018 21:00:13</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.DataAccess.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:44</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.ReportService.dll">
-      <publishTime>01/20/2019 21:20:21</publishTime>
+      <publishTime>04/12/2019 17:08:45</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.ReportService.dll.config">
       <publishTime>05/01/2018 21:00:13</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.ReportService.pdb">
-      <publishTime>01/20/2019 21:20:21</publishTime>
+      <publishTime>04/12/2019 17:08:45</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.ReportServiceContract.dll">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:45</publishTime>
     </File>
     <File Include="bin/Vesper.Reports.ReportServiceContract.pdb">
-      <publishTime>01/20/2019 21:20:20</publishTime>
+      <publishTime>04/12/2019 17:08:45</publishTime>
     </File>
     <File Include="bin/VesperBoatClubLogBook.dll">
-      <publishTime>01/20/2019 21:20:27</publishTime>
+      <publishTime>04/12/2019 17:08:50</publishTime>
     </File>
     <File Include="bin/VesperBoatClubLogBook.pdb">
-      <publishTime>01/20/2019 21:20:27</publishTime>
+      <publishTime>04/12/2019 17:08:50</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
@@ -781,10 +802,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/01/2018 21:00:14</publishTime>
     </File>
     <File Include="index.html">
-      <publishTime>01/20/2019 19:46:55</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="README.txt">
-      <publishTime>05/29/2018 19:42:20</publishTime>
+      <publishTime>04/12/2019 16:45:39</publishTime>
     </File>
     <File Include="Scripts/angular-mocks.js">
       <publishTime>05/01/2018 21:00:14</publishTime>
@@ -1432,7 +1453,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/01/2018 21:00:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/20/2019 21:20:27</publishTime>
+      <publishTime>04/12/2019 17:08:51</publishTime>
     </File>
   </ItemGroup>
 </Project>
